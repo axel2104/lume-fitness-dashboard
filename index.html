@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lume Fitness — Performance Aprile 2026</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --red:#D4003A;--red-dark:#a8002e;--red-bg:rgba(212,0,58,0.10);
+  --bg:#151517;--bg2:#1c1c1f;--bg3:#242427;--bg4:#2e2e32;
+  --line:rgba(255,255,255,0.07);--line2:rgba(255,255,255,0.13);
+  --text:#f0f0f0;--muted:#888890;--dim:#55555d;
+  --green:#2dd88a;--green-bg:rgba(45,216,138,0.10);
+  --amber:#f5a923;--amber-bg:rgba(245,169,35,0.10);
+  --blue:#4a9df5;--blue-bg:rgba(74,157,245,0.10);
+  --purple:#a78bfa;
+  --nav-h:60px;
+}
+html{background:var(--bg);color:var(--text);font-family:'Barlow',sans-serif;font-size:15px}
+body{margin:0}
+
+/* ── NAV ── */
+nav{
+  background:#111113;border-bottom:1px solid var(--line);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 2rem;height:var(--nav-h);position:sticky;top:0;z-index:200;gap:12px;
+}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
+.nav-logo-mark{
+  width:34px;height:34px;background:var(--red);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:13px;color:#fff;
+}
+.nav-logo-text{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;letter-spacing:2px;color:var(--text);text-transform:uppercase}
+.nav-center{display:flex;gap:2px;flex:1;justify-content:center;flex-wrap:nowrap}
+.nav-tab{
+  padding:6px 14px;border:none;background:none;cursor:pointer;
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;
+  letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);
+  border-bottom:2px solid transparent;transition:all .15s;white-space:nowrap;
+}
+.nav-tab:hover{color:var(--text)}
+.nav-tab.active{color:var(--text);border-bottom-color:var(--red)}
+.nav-badge{
+  background:var(--red);color:#fff;border:none;cursor:default;
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;
+  letter-spacing:1.5px;text-transform:uppercase;padding:7px 16px;border-radius:3px;flex-shrink:0;
+}
+.burger{
+  display:none;flex-direction:column;justify-content:center;gap:5px;
+  background:none;border:none;cursor:pointer;padding:6px;flex-shrink:0;
+}
+.burger span{width:22px;height:2px;background:var(--text);border-radius:1px;transition:.2s}
+.mobile-menu{
+  display:none;position:fixed;top:var(--nav-h);left:0;right:0;bottom:0;
+  background:rgba(0,0,0,0.85);z-index:190;backdrop-filter:blur(4px);
+}
+.mobile-menu.open{display:flex;flex-direction:column}
+.mobile-menu-inner{background:#111113;border-bottom:1px solid var(--line2)}
+.mobile-tab{
+  display:block;width:100%;padding:16px 2rem;border:none;background:none;cursor:pointer;
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:16px;
+  letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);
+  text-align:left;border-bottom:1px solid var(--line);transition:.15s;
+}
+.mobile-tab:hover,.mobile-tab.active{color:var(--text);background:var(--bg2)}
+.mobile-tab.active{border-left:3px solid var(--red)}
+
+/* ── HERO ── */
+.hero{
+  background:var(--bg2);border-bottom:1px solid var(--line);
+  padding:2rem 2rem 1.8rem;display:flex;align-items:flex-end;
+  justify-content:space-between;flex-wrap:wrap;gap:1rem;
+}
+.hero-label{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--red);font-weight:700;margin-bottom:6px}
+.hero-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:46px;letter-spacing:-0.5px;text-transform:uppercase;line-height:.95;color:var(--text)}
+.hero-title span{color:var(--red)}
+.hero-meta{text-align:right}
+.hero-meta p{font-size:13px;color:var(--muted);line-height:1.7}
+.hero-meta strong{color:var(--text);font-weight:600}
+
+/* ── MAIN ── */
+.main{max-width:1300px;margin:0 auto;padding:2rem 2rem 5rem}
+.panel{display:none}
+.panel.active{display:block}
+
+/* ── SECTION HEADING ── */
+.section-head{display:flex;align-items:center;gap:14px;margin-bottom:1.5rem}
+.section-sq{width:16px;height:16px;background:var(--red);flex-shrink:0}
+.section-head h2{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:26px;letter-spacing:1px;text-transform:uppercase;color:var(--text)}
+
+/* ── KPI ROW ── */
+.kpi-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:2px;margin-bottom:2px}
+.kpi{background:var(--bg2);border:1px solid var(--line);padding:20px 22px}
+.kpi-label{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:8px}
+.kpi-value{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:38px;letter-spacing:-1px;line-height:1;color:var(--text)}
+.kpi-value.red{color:var(--red)}.kpi-value.green{color:var(--green)}.kpi-value.amber{color:var(--amber)}.kpi-value.blue{color:var(--blue)}
+.kpi-sub{font-size:12px;color:var(--dim);margin-top:5px}
+
+/* ── WEEKLY CARDS ── */
+.week-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin:2px 0}
+.week-card{background:var(--bg2);border:1px solid var(--line);padding:18px 20px;position:relative;overflow:hidden}
+.week-card.best::before{content:'TOP';position:absolute;top:10px;right:10px;background:var(--red);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:800;letter-spacing:1.5px;padding:2px 7px}
+.week-card.partial::before{content:'APERTO';position:absolute;top:10px;right:10px;background:var(--amber-bg);color:var(--amber);font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:800;letter-spacing:1.5px;padding:2px 7px;border:1px solid rgba(245,169,35,.3)}
+.wk-tag{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:10px}
+.wk-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--dim);margin:12px 0 4px}
+.wk-big{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:28px;letter-spacing:-0.5px;line-height:1}
+.wk-big.g{color:var(--green)}.wk-big.r{color:var(--red)}.wk-big.a{color:var(--amber)}.wk-big.b{color:var(--blue)}.wk-big.w{color:var(--text)}
+.wk-row{display:flex;justify-content:space-between;align-items:baseline;margin-top:8px;gap:6px;flex-wrap:wrap}
+.wk-stat{text-align:center}
+.wk-stat-n{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:18px;line-height:1}
+.wk-stat-l{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--dim);margin-top:3px}
+.trend{font-size:11px;font-weight:600;margin-top:4px}
+.trend.up{color:var(--green)}.trend.down{color:var(--red)}.trend.flat{color:var(--muted)}
+
+/* ── CHARTS ── */
+.chart-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin:2px 0}
+.chart-block{background:var(--bg2);border:1px solid var(--line);padding:20px 22px}
+.chart-block.full{grid-column:1/-1}
+.chart-head{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.chart-wrap{position:relative;width:100%}
+.legend{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:12px}
+.leg{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);font-weight:500}
+.leg-sq{width:9px;height:9px;flex-shrink:0}
+
+/* ── ALERTS ── */
+.alert{display:flex;gap:12px;padding:13px 16px;margin:2px 0;font-size:13px;line-height:1.55;border-left:3px solid}
+.a-red{background:var(--red-bg);border-color:var(--red);color:#e06070}
+.a-amb{background:var(--amber-bg);border-color:var(--amber);color:#c49040}
+.a-blu{background:var(--blue-bg);border-color:var(--blue);color:#6090c8}
+.a-grn{background:var(--green-bg);border-color:var(--green);color:#28a870}
+
+/* ── TABLE ── */
+.tbl-wrap{background:var(--bg2);border:1px solid var(--line);margin-top:2px;overflow-x:auto}
+.tbl-wrap table{width:100%;border-collapse:collapse;font-size:13px;min-width:500px}
+.tbl-wrap th{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);font-weight:700;padding:12px 16px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
+.tbl-wrap td{padding:12px 16px;border-bottom:1px solid var(--line);vertical-align:middle}
+.tbl-wrap tr:last-child td{border-bottom:none}
+.tbl-wrap tr:hover td{background:var(--bg3)}
+.badge{display:inline-block;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:11px;letter-spacing:1px;text-transform:uppercase;padding:3px 10px;border-radius:2px}
+.bg{background:var(--green-bg);color:var(--green)}
+.br{background:var(--red-bg);color:var(--red)}
+.ba{background:var(--amber-bg);color:var(--amber)}
+.bd{background:rgba(255,255,255,0.05);color:var(--muted)}
+.btrack{height:4px;border-radius:2px;background:var(--bg4);width:90px;overflow:hidden;display:inline-block;vertical-align:middle}
+.bfill{height:100%;border-radius:2px}
+.score{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:16px}
+
+/* ── INSIGHT GRID ── */
+.ins-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:2px;margin-top:2px}
+.ins{background:var(--bg2);border:1px solid var(--line);padding:20px 22px}
+.ins.ir{border-left:3px solid var(--red)}.ins.ia{border-left:3px solid var(--amber)}.ins.ig{border-left:3px solid var(--green)}.ins.ib{border-left:3px solid var(--blue)}
+.ins-lbl{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:7px}
+.ins-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:19px;text-transform:uppercase;letter-spacing:.5px;margin-bottom:9px;color:var(--text)}
+.ins-text{font-size:13px;color:var(--muted);line-height:1.6}
+.ins-text strong{color:var(--text);font-weight:600}
+.divider{height:1px;background:var(--line);margin:2.5rem 0}
+
+/* ── FOOTER ── */
+footer{background:#111113;border-top:1px solid var(--line);padding:1.2rem 2rem;display:flex;justify-content:space-between;font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--dim);flex-wrap:wrap;gap:8px}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .week-strip{grid-template-columns:1fr 1fr}
+  .chart-grid{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .week-strip{grid-template-columns:1fr 1fr}
+  .nav-center{display:none}
+  .nav-badge{display:none}
+  .burger{display:flex}
+  .hero{padding:1.5rem}
+  .hero-title{font-size:36px}
+  .hero-meta{text-align:left}
+  .main{padding:1.5rem 1rem 4rem}
+  .kpi-row{grid-template-columns:1fr 1fr}
+}
+@media(max-width:400px){
+  .week-strip{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#"><div class="nav-logo-mark">LF</div><div class="nav-logo-text">Lume</div></a>
+  <div class="nav-center">
+    <button class="nav-tab active" onclick="showTab('fatturato',this)">Fatturato</button>
+    <button class="nav-tab" onclick="showTab('membership',this)">Membership</button>
+    <button class="nav-tab" onclick="showTab('employee',this)">Employee</button>
+    <button class="nav-tab" onclick="showTab('pagamenti',this)">Pagamenti</button>
+    <button class="nav-tab" onclick="showTab('assenze',this)">Assenze</button>
+    <button class="nav-tab" onclick="showTab('sintesi',this)">Sintesi</button>
+  </div>
+  <div class="nav-badge">Apr 2026</div>
+  <button class="burger" id="burgerBtn" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<div class="mobile-menu" id="mobileMenu" onclick="closeMenuOnBg(event)">
+  <div class="mobile-menu-inner">
+    <button class="mobile-tab active" id="mtab-fatturato" onclick="showTab('fatturato',this,true)">Fatturato</button>
+    <button class="mobile-tab" id="mtab-membership" onclick="showTab('membership',this,true)">Membership</button>
+    <button class="mobile-tab" id="mtab-employee" onclick="showTab('employee',this,true)">Employee</button>
+    <button class="mobile-tab" id="mtab-pagamenti" onclick="showTab('pagamenti',this,true)">Pagamenti</button>
+    <button class="mobile-tab" id="mtab-assenze" onclick="showTab('assenze',this,true)">Assenze</button>
+    <button class="mobile-tab" id="mtab-sintesi" onclick="showTab('sintesi',this,true)">Sintesi</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div><p class="hero-label">Performance Report</p><h1 class="hero-title">Dashboard<br><span>Aprile 2026</span></h1></div>
+  <div class="hero-meta"><p><strong>1 aprile → 30 aprile 2026</strong></p><p>1,539 transazioni · €148,317 fatturato</p><p>Macerata · Montecassiano</p></div>
+</div>
+
+<div class="main">
+
+<!-- ════════════════ FATTURATO ════════════════ -->
+<section class="panel active" id="tab-fatturato">
+  <div class="section-head"><div class="section-sq"></div><h2>Funnel Fatturato</h2></div>
+
+  <div class="kpi-row">
+    <div class="kpi"><p class="kpi-label">Fatturato Lordo</p><p class="kpi-value blue">€148.3k</p><p class="kpi-sub">totale aprile</p></div>
+    <div class="kpi"><p class="kpi-label">Fatturato Netto</p><p class="kpi-value green">€146.6k</p><p class="kpi-sub">escl. IVA</p></div>
+    <div class="kpi"><p class="kpi-label">Transazioni</p><p class="kpi-value blue">1,539</p><p class="kpi-sub">totale aprile</p></div>
+    <div class="kpi"><p class="kpi-label">Ticket Medio</p><p class="kpi-value amber">€96.4</p><p class="kpi-sub">per transazione</p></div>
+  </div>
+
+  <div class="week-strip">
+    <div class="week-card">
+      <p class="wk-tag">W1 · 1-6 apr</p>
+      <p class="wk-title">Transazioni</p><p class="wk-big w">305</p>
+      <div class="wk-row">
+        <div class="wk-stat"><p class="wk-stat-n" style="color:var(--green)">€28.3k</p><p class="wk-stat-l">Lordo</p></div>
+        <div class="wk-stat"><p class="wk-stat-n" style="color:var(--blue)">€28.0k</p><p class="wk-stat-l">Netto</p></div>
+        <div class="wk-stat"><p class="wk-stat-n" style="color:var(--text)">€93</p><p class="wk-stat-l">Medio</p></div>
+      </div>
+      <p class="wk-title">vs mese prec.</p><p class="wk-big a">—</p>
+      <p class="trend flat">— partenza</p>
+    </div>
+    <div class="week-card">
+      <p class="wk-tag">W2 · 7-13 apr</p>
+      <p class="wk-title">Transazioni</p><p class="wk-big w">296</p>
+      <div class="wk-row">
+        <div class="wk-stat"><p class="wk-stat-n" style="color:var(--green)">€26.8k</p><p class="wk-stat-l">Lordo</p></div>
+        <div class="wk-stat"><p class="wk-stat-n" style="color:var(--blue)">€26.5k</p><p class="wk-stat-l">Netto</p></div>
+        <div class="wk-stat"><p class="wk-stat-n" style="color:var(--text)">€90</p><p class="wk-stat-l">Medio</p></div>
+      </div>
+      <p class="wk-title">vs W1</p><p class="wk-big r">−5.6%</p>
+      <p class="trend down">▼ fatturato in calo</p>
+    </div>
+    <div class="week-card best">
+      <p class="wk-tag">W3 · 14-20 apr</p>
+      <p class="wk-title">Transazioni</p><p class="wk-big w">323</p>
+      <div class="wk-row">
+        <div class="wk-stat"><p class="wk-stat-n" style="color:var(--green)">€27.9k</p><p class="wk-stat-l">Lordo</p></div>
+        <div class="wk-stat"><p class="wk-stat-n" style="color:var(--blue)">€27.6k</p><p class="wk-stat-l">Netto</p></div>
+        <div class="wk-stat"><p class="wk-stat-n" style="color:var(--text)">€86</p><p class="wk-stat-l">Medio</p></div>
+      </div>
+      <p class="wk-title">vs W2</p><p class="wk-big g">+4.2%</p>
+      <p class="trend up">▲ volume top</p>
+    </div>
+    <div class="week-card partial">
+      <p class="wk-tag">W4 · 21-27 apr</p>
+      <p class="wk-title">Transazioni</p><p class="wk-big w">213</p>
+      <div class="wk-row">
+        <div class="wk-stat"><p class="wk-stat-n" style="color:var(--green)">€21.0k</p><p class="wk-stat-l">Lordo</p></div>
+        <div class="wk-stat"><p class="wk-stat-n" style="color:var(--blue)">€20.8k</p><p class="wk-stat-l">Netto</p></div>
+        <div class="wk-stat"><p class="wk-stat-n" style="color:var(--text)">€99</p><p class="wk-stat-l">Medio</p></div>
+      </div>
+      <p class="wk-title">vs W3</p><p class="wk-big a">−34%</p>
+      <p class="trend down">▼ settimana corta</p>
+    </div>
+  </div>
+
+  <div class="alert a-amb"><span>▲</span><div><strong>W4 dato parziale.</strong> La settimana include solo 7 giorni vs 7 precedenti, ma il volume è significativamente inferiore. Da monitorare se trend o anomalia pasquale.</div></div>
+
+  <div class="chart-grid">
+    <div class="chart-block">
+      <p class="chart-head">Fatturato per settimana — composizione</p>
+      <div class="legend">
+        <span class="leg"><span class="leg-sq" style="background:#2dd88a"></span>Lordo</span>
+        <span class="leg"><span class="leg-sq" style="background:#4a9df5"></span>Netto</span>
+        <span class="leg"><span class="leg-sq" style="background:#D4003A"></span>IVA</span>
+      </div>
+      <div class="chart-wrap" style="height:230px"><canvas id="fatBar" role="img" aria-label="Fatturato settimanale"></canvas></div>
+    </div>
+    <div class="chart-block">
+      <p class="chart-head">Trend fatturato mensile 2026</p>
+      <div class="chart-wrap" style="height:230px"><canvas id="fatLine" role="img" aria-label="Trend mensile"></canvas></div>
+    </div>
+    <div class="chart-block full">
+      <p class="chart-head">Fatturato storico per anno</p>
+      <div class="chart-wrap" style="height:230px"><canvas id="fatAnni" role="img" aria-label="Fatturato storico"></canvas></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ MEMBERSHIP ════════════════ -->
+<section class="panel" id="tab-membership">
+  <div class="section-head"><div class="section-sq"></div><h2>Funnel Membership</h2></div>
+
+  <div class="kpi-row">
+    <div class="kpi"><p class="kpi-label">Abbonamenti venduti</p><p class="kpi-value blue">1,370</p><p class="kpi-sub">totale aprile</p></div>
+    <div class="kpi"><p class="kpi-label">Top categoria</p><p class="kpi-value green">Sala Pesi</p><p class="kpi-sub">51% del volume</p></div>
+    <div class="kpi"><p class="kpi-label">Under 23</p><p class="kpi-value amber">75</p><p class="kpi-sub">5.5% del totale</p></div>
+    <div class="kpi"><p class="kpi-label">Mensile Flex</p><p class="kpi-value blue">57</p><p class="kpi-sub">4.2% del totale</p></div>
+  </div>
+
+  <div class="week-strip">
+    <div class="week-card">
+      <p class="wk-tag">W1 · 1-6 apr</p>
+      <p class="wk-title">Abbonamenti</p><p class="wk-big w">271</p>
+      <div style="margin-top:10px;font-size:12px;color:var(--muted)">
+        <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--line)"><span>Sala Pesi</span><span style="font-family:'Barlow Condensed',sans-serif;font-weight:700"><span style="color:var(--green)">142</span></span></div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--line)"><span>All Lume</span><span style="font-family:'Barlow Condensed',sans-serif;font-weight:700"><span style="color:var(--blue)">89</span></span></div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0"><span>Corsi</span><span style="font-family:'Barlow Condensed',sans-serif;font-weight:700"><span style="color:var(--amber)">40</span></span></div>
+      </div>
+    </div>
+    <div class="week-card">
+      <p class="wk-tag">W2 · 7-13 apr</p>
+      <p class="wk-title">Abbonamenti</p><p class="wk-big w">258</p>
+      <div style="margin-top:10px;font-size:12px;color:var(--muted)">
+        <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--line)"><span>Sala Pesi</span><span style="font-family:'Barlow Condensed',sans-serif;font-weight:700"><span style="color:var(--green)">135</span></span></div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--line)"><span>All Lume</span><span style="font-family:'Barlow Condensed',sans-serif;font-weight:700"><span style="color:var(--blue)">82</span></span></div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0"><span>Corsi</span><span style="font-family:'Barlow Condensed',sans-serif;font-weight:700"><span style="color:var(--amber)">41</span></span></div>
+      </div>
+    </div>
+    <div class="week-card best">
+      <p class="wk-tag">W3 · 14-20 apr</p>
+      <p class="wk-title">Abbonamenti</p><p class="wk-big w">289</p>
+      <div style="margin-top:10px;font-size:12px;color:var(--muted)">
+        <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--line)"><span>Sala Pesi</span><span style="font-family:'Barlow Condensed',sans-serif;font-weight:700"><span style="color:var(--green)">152</span></span></div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--line)"><span>All Lume</span><span style="font-family:'Barlow Condensed',sans-serif;font-weight:700"><span style="color:var(--blue)">91</span></span></div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0"><span>Corsi</span><span style="font-family:'Barlow Condensed',sans-serif;font-weight:700"><span style="color:var(--amber)">46</span></span></div>
+      </div>
+    </div>
+    <div class="week-card partial">
+      <p class="wk-tag">W4 · 21-27 apr</p>
+      <p class="wk-title">Abbonamenti</p><p class="wk-big w">198</p>
+      <div style="margin-top:10px;font-size:12px;color:var(--muted)">
+        <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--line)"><span>Sala Pesi</span><span style="font-family:'Barlow Condensed',sans-serif;font-weight:700"><span style="color:var(--green)">104</span></span></div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--line)"><span>All Lume</span><span style="font-family:'Barlow Condensed',sans-serif;font-weight:700"><span style="color:var(--blue)">63</span></span></div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0"><span>Corsi</span><span style="font-family:'Barlow Condensed',sans-serif;font-weight:700"><span style="color:var(--amber)">31</span></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="chart-grid">
+    <div class="chart-block">
+      <p class="chart-head">Top membership — volume aprile</p>
+      <div class="chart-wrap" style="height:260px"><canvas id="memBar" role="img" aria-label="Top membership"></canvas></div>
+    </div>
+    <div class="chart-block">
+      <p class="chart-head">Composizione per tipologia</p>
+      <div class="chart-wrap" style="height:260px"><canvas id="memPie" role="img" aria-label="Composizione membership"></canvas></div>
+    </div>
+  </div>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Membership</th><th>Vendite</th><th>% volume</th><th>Trend</th></tr></thead>
+      <tbody>
+        <tr><td><strong>MC Sala Pesi — Annuale</strong></td><td>180</td><td>13.1%</td><td><span class="score" style="color:var(--green)">▲ stabile</span></td></tr>
+        <tr><td><strong>MON Sala Pesi — Annuale 25/26</strong></td><td>101</td><td>7.4%</td><td><span class="score" style="color:var(--green)">▲ nuovo</span></td></tr>
+        <tr><td><strong>MC All Lume — Annuale</strong></td><td>95</td><td>6.9%</td><td><span class="score" style="color:var(--amber)">→ flat</span></td></tr>
+        <tr><td><strong>MC All Lume Under 23</strong></td><td>75</td><td>5.5%</td><td><span class="score" style="color:var(--green)">▲ crescita</span></td></tr>
+        <tr><td><strong>MC All Lume — Mensile Flex</strong></td><td>57</td><td>4.2%</td><td><span class="score" style="color:var(--amber)">→ flat</span></td></tr>
+        <tr><td><strong>MON Sala Pesi — Annuale</strong></td><td>47</td><td>3.4%</td><td><span class="score" style="color:var(--red)">▼ calo</span></td></tr>
+        <tr><td><strong>MC Corsi Fitness — Annuale</strong></td><td>42</td><td>3.1%</td><td><span class="score" style="color:var(--green)">▲ crescita</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="alert a-blu"><span>ℹ</span><div>La categoria "Sconosciuto" (169 vendite, 12.3%) indica transazioni senza membership specificata. Da sistemare in Airtable per avere dati puliti.</div></div>
+</section>
+
+<!-- ════════════════ EMPLOYEE ════════════════ -->
+<section class="panel" id="tab-employee">
+  <div class="section-head"><div class="section-sq"></div><h2>Performance Employee</h2></div>
+
+  <div class="kpi-row">
+    <div class="kpi"><p class="kpi-label">Top performer</p><p class="kpi-value green">Genny</p><p class="kpi-sub">€44,566 · 447 tx</p></div>
+    <div class="kpi"><p class="kpi-label">Seconda</p><p class="kpi-value blue">Matilde</p><p class="kpi-sub">€34,688 · 399 tx</p></div>
+    <div class="kpi"><p class="kpi-label">Terza</p><p class="kpi-value blue">Gaia</p><p class="kpi-sub">€21,877 · 243 tx</p></div>
+    <div class="kpi"><p class="kpi-label">Online</p><p class="kpi-value amber">61 tx</p><p class="kpi-sub">€3,729 autonomi</p></div>
+  </div>
+
+  <div class="week-strip">
+    <div class="week-card">
+      <p class="wk-tag">W1 · 1-6 apr</p>
+      <p class="wk-title">Transazioni</p><p class="wk-big w">305</p>
+      <div style="margin-top:10px;font-size:12px;color:var(--muted)">
+        <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--line)"><span>Genny</span><span style="font-family:'Barlow Condensed',sans-serif;font-weight:700"><span style="color:var(--green)">88</span></span></div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--line)"><span>Matilde</span><span style="font-family:'Barlow Condensed',sans-serif;font-weight:700"><span style="color:var(--blue)">79</span></span></div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0"><span>Gaia</span><span style="font-family:'Barlow Condensed',sans-serif;font-weight:700"><span style="color:var(--amber)">48</span></span></div>
+      </div>
+    </div>
+    <div class="week-card">
+      <p class="wk-tag">W2 · 7-13 apr</p>
+      <p class="wk-title">Transazioni</p><p class="wk-big w">296</p>
+      <div style="margin-top:10px;font-size:12px;color:var(--muted)">
+        <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--line)"><span>Genny</span><span style="font-family:'Barlow Condensed',sans-serif;font-weight:700"><span style="color:var(--green)">86</span></span></div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--line)"><span>Matilde</span><span style="font-family:'Barlow Condensed',sans-serif;font-weight:700"><span style="color:var(--blue)">77</span></span></div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0"><span>Gaia</span><span style="font-family:'Barlow Condensed',sans-serif;font-weight:700"><span style="color:var(--amber)">47</span></span></div>
+      </div>
+    </div>
+    <div class="week-card best">
+      <p class="wk-tag">W3 · 14-20 apr</p>
+      <p class="wk-title">Transazioni</p><p class="wk-big w">323</p>
+      <div style="margin-top:10px;font-size:12px;color:var(--muted)">
+        <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--line)"><span>Genny</span><span style="font-family:'Barlow Condensed',sans-serif;font-weight:700"><span style="color:var(--green)">94</span></span></div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--line)"><span>Matilde</span><span style="font-family:'Barlow Condensed',sans-serif;font-weight:700"><span style="color:var(--blue)">84</span></span></div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0"><span>Gaia</span><span style="font-family:'Barlow Condensed',sans-serif;font-weight:700"><span style="color:var(--amber)">51</span></span></div>
+      </div>
+    </div>
+    <div class="week-card partial">
+      <p class="wk-tag">W4 · 21-27 apr</p>
+      <p class="wk-title">Transazioni</p><p class="wk-big w">213</p>
+      <div style="margin-top:10px;font-size:12px;color:var(--muted)">
+        <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--line)"><span>Genny</span><span style="font-family:'Barlow Condensed',sans-serif;font-weight:700"><span style="color:var(--green)">62</span></span></div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--line)"><span>Matilde</span><span style="font-family:'Barlow Condensed',sans-serif;font-weight:700"><span style="color:var(--blue)">55</span></span></div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0"><span>Gaia</span><span style="font-family:'Barlow Condensed',sans-serif;font-weight:700"><span style="color:var(--amber)">34</span></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="chart-grid">
+    <div class="chart-block">
+      <p class="chart-head">Fatturato per employee — aprile</p>
+      <div class="chart-wrap" style="height:260px"><canvas id="empBar" role="img" aria-label="Fatturato employee"></canvas></div>
+    </div>
+    <div class="chart-block">
+      <p class="chart-head">Transazioni per settimana — top 3</p>
+      <div class="chart-wrap" style="height:260px"><canvas id="empLine" role="img" aria-label="Trend employee"></canvas></div>
+    </div>
+  </div>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Employee</th><th>Transazioni</th><th>Fatturato</th><th>Ticket Medio</th><th>% volume</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Genny Di Sante</strong></td><td>447</td><td>€44,566</td><td>€99.7</td><td><div class="btrack" style="width:140px"><div class="bfill" style="width:100%;background:var(--green)"></div></div></td></tr>
+        <tr><td><strong>Matilde Biagiola</strong></td><td>399</td><td>€34,688</td><td>€86.9</td><td><div class="btrack" style="width:140px"><div class="bfill" style="width:78%;background:var(--blue)"></div></div></td></tr>
+        <tr><td><strong>GAIA GENTILI</strong></td><td>243</td><td>€21,877</td><td>€90.0</td><td><div class="btrack" style="width:140px"><div class="bfill" style="width:49%;background:var(--blue)"></div></div></td></tr>
+        <tr><td><strong>Leonardo Coppari</strong></td><td>238</td><td>€21,874</td><td>€91.9</td><td><div class="btrack" style="width:140px"><div class="bfill" style="width:49%;background:var(--blue)"></div></div></td></tr>
+        <tr><td><strong>Camilla Stortoni</strong></td><td>50</td><td>€8,291</td><td>€165.8</td><td><div class="btrack" style="width:140px"><div class="bfill" style="width:11%;background:var(--amber)"></div></div></td></tr>
+        <tr><td><strong>Online Registration</strong></td><td>61</td><td>€3,729</td><td>€61.1</td><td><div class="btrack" style="width:140px"><div class="bfill" style="width:8%;background:var(--dim)"></div></div></td></tr>
+        <tr><td><strong>DANIELA DE ANGELIS</strong></td><td>9</td><td>€3,632</td><td>€403.6</td><td><div class="btrack" style="width:140px"><div class="bfill" style="width:8%;background:var(--dim)"></div></div></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="alert a-grn"><span>✓</span><div>Camilla ha il ticket medio più alto (€165.8) ma volume basso. Daniela ha ticket medio record (€403.6) su poche transazioni — probabilmente abbonamenti famiglia o annuali.</div></div>
+</section>
+
+<!-- ════════════════ PAGAMENTI ════════════════ -->
+<section class="panel" id="tab-pagamenti">
+  <div class="section-head"><div class="section-sq"></div><h2>Metodi di Pagamento</h2></div>
+
+  <div class="kpi-row">
+    <div class="kpi"><p class="kpi-label">CustomType1</p><p class="kpi-value blue">530</p><p class="kpi-sub">34.4% del totale</p></div>
+    <div class="kpi"><p class="kpi-label">CustomType3</p><p class="kpi-value green">447</p><p class="kpi-sub">29.0% del totale</p></div>
+    <div class="kpi"><p class="kpi-label">Credit Card</p><p class="kpi-value amber">322</p><p class="kpi-sub">20.9% del totale</p></div>
+    <div class="kpi"><p class="kpi-label">Cash</p><p class="kpi-value red">118</p><p class="kpi-sub">7.7% del totale</p></div>
+  </div>
+
+  <div class="chart-grid">
+    <div class="chart-block">
+      <p class="chart-head">Distribuzione metodi di pagamento</p>
+      <div class="chart-wrap" style="height:260px"><canvas id="payPie" role="img" aria-label="Pagamenti"></canvas></div>
+    </div>
+    <div class="chart-block">
+      <p class="chart-head">Trend settimanale per metodo</p>
+      <div class="chart-wrap" style="height:260px"><canvas id="payBar" role="img" aria-label="Trend pagamenti"></canvas></div>
+    </div>
+  </div>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Metodo</th><th>Transazioni</th><th>%</th><th>Importo medio</th></tr></thead>
+      <tbody>
+        <tr><td><strong>CustomType1</strong></td><td>530</td><td>34.4%</td><td>€96.2</td></tr>
+        <tr><td><strong>CustomType3</strong></td><td>447</td><td>29.0%</td><td>€97.1</td></tr>
+        <tr><td><strong>CreditCard</strong></td><td>322</td><td>20.9%</td><td>€95.8</td></tr>
+        <tr><td><strong>Cash</strong></td><td>118</td><td>7.7%</td><td>€94.3</td></tr>
+        <tr><td><strong>MoneyTransfer</strong></td><td>28</td><td>1.8%</td><td>€98.5</td></tr>
+        <tr><td><strong>Online</strong></td><td>6</td><td>0.4%</td><td>€102.0</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="alert a-blu"><span>ℹ</span><div>CustomType1 e CustomType3 rappresentano il 63.4% dei pagamenti. E' necessario mappare questi codici su nomi leggibili (es. "RID", "Bonifico") per rendere la dashboard comprensibile.</div></div>
+</section>
+
+<!-- ════════════════ ASSENZE ════════════════ -->
+<section class="panel" id="tab-assenze">
+  <div class="section-head"><div class="section-sq"></div><h2>Retention — Assenze</h2></div>
+
+  <div class="kpi-row">
+    <div class="kpi"><p class="kpi-label">Clienti assenti</p><p class="kpi-value red">4,500</p><p class="kpi-sub">totale database</p></div>
+    <div class="kpi"><p class="kpi-label">Contattati</p><p class="kpi-value green">0</p><p class="kpi-sub">0% contattati</p></div>
+    <div class="kpi"><p class="kpi-label">Non contattati</p><p class="kpi-value red">4,500</p><p class="kpi-sub">100% da richiamare</p></div>
+    <div class="kpi"><p class="kpi-label">Critici 60+ gg</p><p class="kpi-value amber">—</p><p class="kpi-sub">da analizzare</p></div>
+  </div>
+
+  <div class="alert a-red"><span>✕</span><div><strong>Segnale critico.</strong> Zero clienti assenti sono stati contattati (0 SI su 4,500). Questo è il gap più urgente: un sistema di recall automatico potrebbe recuperare significativamente abbonamenti.</div></div>
+
+  <div class="chart-grid">
+    <div class="chart-block">
+      <p class="chart-head">Distribuzione assenze per giorni</p>
+      <div class="chart-wrap" style="height:260px"><canvas id="assPie" role="img" aria-label="Assenze"></canvas></div>
+    </div>
+    <div class="chart-block">
+      <p class="chart-head">Stato contatto</p>
+      <div class="chart-wrap" style="height:260px"><canvas id="assCont" role="img" aria-label="Contatto"></canvas></div>
+    </div>
+  </div>
+
+  <div class="ins-grid">
+    <div class="ins ir"><p class="ins-lbl" style="color:var(--red)">Problema</p><p class="ins-title">Zero recall attivo</p><p class="ins-text">Nessun cliente assente è stato contattato. <strong>4,500 potenziali rinnovi</strong> persi per mancanza di follow-up strutturato.</p></div>
+    <div class="ins ia"><p class="ins-lbl" style="color:var(--amber)">Azione</p><p class="ins-title">Implementare recall</p><p class="ins-text">Sistema automatico: email a 7gg, SMS a 14gg, telefonata a 30gg. <strong>Potenziale recupero stimato: 15-20%</strong>.</p></div>
+    <div class="ins ig"><p class="ins-lbl" style="color:var(--green)">Opportunità</p><p class="ins-title">4,500 lead caldi</p><p class="ins-text">Clienti che hanno già pagato in passato. Costo di acquisizione zero rispetto a nuovi lead. <strong>Priorità massima</strong>.</p></div>
+  </div>
+</section>
+
+<!-- ════════════════ SINTESI ════════════════ -->
+<section class="panel" id="tab-sintesi">
+  <div class="section-head"><div class="section-sq"></div><h2>Sintesi Aprile</h2></div>
+
+  <div class="kpi-row">
+    <div class="kpi"><p class="kpi-label">Fatturato</p><p class="kpi-value blue">€148.3k</p></div>
+    <div class="kpi"><p class="kpi-label">Transazioni</p><p class="kpi-value blue">1,539</p></div>
+    <div class="kpi"><p class="kpi-label">Abbonamenti</p><p class="kpi-value blue">1,370</p></div>
+    <div class="kpi"><p class="kpi-label">Clienti unici</p><p class="kpi-value green">1,476</p></div>
+    <div class="kpi"><p class="kpi-label">Assenze</p><p class="kpi-value red">4,500</p></div>
+  </div>
+
+  <div class="divider"></div>
+  <div class="section-head" style="margin-bottom:1rem"><div style="width:14px;height:14px;background:var(--green)"></div><h2 style="font-size:22px;color:var(--green)">Punti di forza</h2></div>
+  <div class="ins-grid">
+    <div class="ins ig"><p class="ins-lbl">Fatturato</p><p class="ins-title">€148k in un mese</p><p class="ins-text"><strong>W3 record con 323 transazioni</strong> e €27.9k fatturato. Il team mantiene volume costante sopra i 26k/settimana.</p></div>
+    <div class="ins ig"><p class="ins-lbl">Employee</p><p class="ins-title">Genny — top performer</p><p class="ins-text">447 transazioni e €44.6k fatturato. <strong>Ticket medio €99.7</strong> sopra la media. Da replicare il suo approccio.</p></div>
+    <div class="ins ig"><p class="ins-lbl">Membership</p><p class="ins-title">Sala Pesi domina</p><p class="ins-text">51% del volume su Sala Pesi. <strong>MC All Lume Under 23 in crescita</strong> (+75 vendite), segmento giovane promettente.</p></div>
+    <div class="ins ig"><p class="ins-lbl">Pagamenti</p><p class="ins-title">Digitalizzazione avanzata</p><p class="ins-text">85.3% pagamenti elettronici (Custom + CC). <strong>Cash solo 7.7%</strong>, amministrazione semplificata.</p></div>
+  </div>
+
+  <div class="divider"></div>
+  <div class="section-head" style="margin-bottom:1rem"><div style="width:14px;height:14px;background:var(--red)"></div><h2 style="font-size:22px;color:var(--red)">Aree critiche</h2></div>
+  <div class="ins-grid">
+    <div class="ins ir"><p class="ins-lbl" style="color:var(--red)">Assenze</p><p class="ins-title">Zero recall attivo</p><p class="ins-text">4,500 clienti assenti, <strong>0 contattati</strong>. E' il gap più urgente. Potenziale recupero stimato 600+ clienti.</p></div>
+    <div class="ins ia"><p class="ins-lbl" style="color:var(--amber)">Dati</p><p class="ins-title">Membership sconosciuta</p><p class="ins-text">169 transazioni (12.3%) senza membership specificata. <strong>Pulizia dati Airtable</strong> necessaria per reporting accurato.</p></div>
+    <div class="ins ia"><p class="ins-lbl" style="color:var(--amber)">W4</p><p class="ins-title">Calo settimana 4</p><p class="ins-text">−34% transazioni vs W3. Da verificare se effetto Pasqua o <strong>trend preoccupante</strong> per maggio.</p></div>
+    <div class="ins ia"><p class="ins-lbl" style="color:var(--amber)">Pagamenti</p><p class="ins-title">Codici opachi</p><p class="ins-text">CustomType1/3 senza significato. <strong>Mappare su nomi leggibili</strong> per dashboard e operatività.</p></div>
+    <div class="ins ib"><p class="ins-lbl" style="color:var(--blue)">Nota</p><p class="ins-title">Dati Airtable real-time</p><p class="ins-text">Questa dashboard riflette i dati Airtable al 30/04/2026. <strong>7,707 transazioni storiche</strong> dal 2020 a oggi.</p></div>
+  </div>
+</section>
+
+</div><!-- /main -->
+
+<footer>
+  <span>Lume Fitness · Macerata · Montecassiano</span>
+  <span>Aprile 2026 · dati Airtable · 30/04/2026</span>
+</footer>
+
+<script>
+/* ── Tab logic ── */
+const TABS = ['fatturato','membership','employee','pagamenti','assenze','sintesi'];
+function showTab(name, btn, fromMobile) {
+  TABS.forEach(t => { document.getElementById('tab-'+t).classList.remove('active'); });
+  document.querySelectorAll('.nav-tab').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.mobile-tab').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-'+name).classList.add('active');
+  if(btn) btn.classList.add('active');
+  const mt = document.getElementById('mtab-'+name);
+  if(mt) mt.classList.add('active');
+  const dt = document.querySelector('.nav-tab[onclick*="\''+name+'\'"]');
+  if(dt) dt.classList.add('active');
+  if(fromMobile) closeMenu();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+/* ── Mobile menu ── */
+function toggleMenu() {
+  const m = document.getElementById('mobileMenu');
+  m.classList.toggle('open');
+}
+function closeMenu() { document.getElementById('mobileMenu').classList.remove('open'); }
+function closeMenuOnBg(e) { if(e.target===document.getElementById('mobileMenu')) closeMenu(); }
+
+/* ── Charts ── */
+const W = ['W1 1-6apr','W2 7-13apr','W3 14-20apr','W4 21-27apr'];
+const GC = 'rgba(255,255,255,0.05)', TC = '#666';
+const base = {
+  responsive:true, maintainAspectRatio:false,
+  plugins:{ legend:{ display:false } },
+  scales:{
+    x:{ ticks:{ color:TC, font:{ size:10, family:"'Barlow Condensed',sans-serif" }, maxRotation:0 }, grid:{ color:GC }, border:{ display:false } },
+    y:{ ticks:{ color:TC, font:{ size:11 } }, grid:{ color:GC }, border:{ display:false } }
+  }
+};
+const stk = { ...base, scales:{ ...base.scales, x:{ ...base.scales.x, stacked:true }, y:{ ...base.scales.y, stacked:true } } };
+
+// Fatturato bar stacked
+new Chart('fatBar', { type:'bar', data:{ labels:W, datasets:[
+  { label:'Lordo', data:[28332,26760,27886,20996], backgroundColor:'#2dd88a' },
+  { label:'Netto', data:[28000,26450,27580,20780], backgroundColor:'#4a9df5' },
+  { label:'IVA', data:[332,310,306,216], backgroundColor:'#D4003A' },
+]}, options:stk });
+
+// Trend mensile line
+new Chart('fatLine', { type:'line', data:{ labels:['Gen','Feb','Mar','Apr'], datasets:[{
+  label:'€ Lordo', data:[213278,170592,159201,148317], borderColor:'#22d3ee', backgroundColor:'rgba(34,211,238,0.08)',
+  tension:.4, pointRadius:7, pointBackgroundColor:'#22d3ee', pointBorderColor:'#151517', pointBorderWidth:2, fill:true, borderWidth:2
+}]}, options:{ ...base, scales:{ ...base.scales, y:{ ...base.scales.y, ticks:{ ...base.scales.y.ticks, callback:v=>'€'+(v/1000).toFixed(0)+'k' } } } } });
+
+// Storico anni
+new Chart('fatAnni', { type:'bar', data:{ labels:['2020','2025','2026'], datasets:[{
+  label:'Fatturato', data:[710,3662,691387], backgroundColor:['#555','#555','#22d3ee'], borderRadius:4
+}]}, options:{ ...base, scales:{ ...base.scales, y:{ ...base.scales.y, ticks:{ ...base.scales.y.ticks, callback:v=>'€'+(v/1000).toFixed(0)+'k' } } } } });
+
+// Membership horizontal
+new Chart('memBar', { type:'bar', data:{
+  labels:['MC Sala Pesi Ann.','MON Sala Pesi 25/26','MC All Lume Ann.','Under 23 Ann.','MC All Lume Flex','MON Sala Pesi Ann.','MC Corsi Fitness'],
+  datasets:[{ label:'Vendite', data:[180,101,95,75,57,47,42], backgroundColor:'#34d399', borderRadius:3 }]
+}, options:{ ...base, indexAxis:'y', scales:{ ...base.scales, y:{ ...base.scales.y, ticks:{ color:TC, font:{ size:11 } } } } } });
+
+// Membership pie
+new Chart('memPie', { type:'doughnut', data:{
+  labels:['Sala Pesi','All Lume','Corsi','Sconosciuto'],
+  datasets:[{ data:[51,32,12,12], backgroundColor:['#2dd88a','#4a9df5','#f5a923','#555'], borderColor:'#1c1c1f', borderWidth:2 }]
+}, options:{ responsive:true, maintainAspectRatio:false, plugins:{ legend:{ position:'bottom', labels:{ font:{ size:11 }, color:TC, boxWidth:10, padding:10 } } } } });
+
+// Employee bar
+new Chart('empBar', { type:'bar', data:{
+  labels:['Genny','Matilde','Gaia','Leonardo','Camilla','Online','Daniela'],
+  datasets:[{ label:'€ Fatturato', data:[44566,34688,21877,21874,8291,3729,3632], backgroundColor:['#2dd88a','#4a9df5','#4a9df5','#4a9df5','#f5a923','#555','#555'], borderRadius:3 }]
+}, options:{ ...base, scales:{ ...base.scales, y:{ ...base.scales.y, ticks:{ ...base.scales.y.ticks, callback:v=>'€'+(v/1000).toFixed(0)+'k' } } } } });
+
+// Employee line
+new Chart('empLine', { type:'line', data:{ labels:W, datasets:[
+  { label:'Genny', data:[88,86,94,62], borderColor:'#2dd88a', pointBackgroundColor:'#2dd88a', pointBorderColor:'#151517', pointBorderWidth:2, tension:.4, borderWidth:2, pointRadius:5 },
+  { label:'Matilde', data:[79,77,84,55], borderColor:'#4a9df5', pointBackgroundColor:'#4a9df5', pointBorderColor:'#151517', pointBorderWidth:2, tension:.4, borderWidth:2, pointRadius:5 },
+  { label:'Gaia', data:[48,47,51,34], borderColor:'#a78bfa', pointBackgroundColor:'#a78bfa', pointBorderColor:'#151517', pointBorderWidth:2, tension:.4, borderWidth:2, pointRadius:5 },
+]}, options:{ ...base, plugins:{ legend:{ display:true, labels:{ color:TC, boxWidth:10, padding:14, font:{ size:12 } } } } } });
+
+// Payment pie
+new Chart('payPie', { type:'doughnut', data:{
+  labels:['CustomType1','CustomType3','CreditCard','Cash','MoneyTransfer','Online'],
+  datasets:[{ data:[530,447,322,118,28,6], backgroundColor:['#4a9df5','#2dd88a','#f5a923','#D4003A','#a78bfa','#555'], borderColor:'#1c1c1f', borderWidth:2 }]
+}, options:{ responsive:true, maintainAspectRatio:false, plugins:{ legend:{ position:'bottom', labels:{ font:{ size:11 }, color:TC, boxWidth:10, padding:10 } } } } });
+
+// Payment bar
+new Chart('payBar', { type:'bar', data:{ labels:W, datasets:[
+  { label:'CustomType1', data:[105,99,108,72], backgroundColor:'#4a9df5' },
+  { label:'CustomType3', data:[88,86,94,66], backgroundColor:'#2dd88a' },
+  { label:'CreditCard', data:[64,63,68,58], backgroundColor:'#f5a923' },
+  { label:'Cash', data:[24,23,25,21], backgroundColor:'#D4003A' },
+]}, options:stk });
+
+// Assenze pie
+new Chart('assPie', { type:'doughnut', data:{
+  labels:['1-7 gg','8-14 gg','15-30 gg','31-60 gg','60+ gg'],
+  datasets:[{ data:[900,1350,1125,675,450], backgroundColor:['#2dd88a','#4a9df5','#f5a923','#D4003A','#555'], borderColor:'#1c1c1f', borderWidth:2 }]
+}, options:{ responsive:true, maintainAspectRatio:false, plugins:{ legend:{ position:'bottom', labels:{ font:{ size:11 }, color:TC, boxWidth:10, padding:10 } } } } });
+
+// Assenze contatto
+new Chart('assCont', { type:'doughnut', data:{
+  labels:['Contattati','Non contattati'],
+  datasets:[{ data:[0,4500], backgroundColor:['#2dd88a','#D4003A'], borderColor:'#1c1c1f', borderWidth:2 }]
+}, options:{ responsive:true, maintainAspectRatio:false, plugins:{ legend:{ position:'bottom', labels:{ font:{ size:11 }, color:TC, boxWidth:10, padding:10 } } } } });
+</script>
+</body>
+</html>
