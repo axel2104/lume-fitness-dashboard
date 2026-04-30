@@ -1,0 +1,3849 @@
+{
+  "date_range": {
+    "min": "2020-02-25",
+    "max": "2026-04-30"
+  },
+  "centers": [
+    "ALL",
+    "MC",
+    "MON"
+  ],
+  "daily": {
+    "ALL": {
+      "2026-04-01": {
+        "count": 168,
+        "lordo": 12933,
+        "netto": 12865.389999999998
+      },
+      "2026-04-02": {
+        "count": 67,
+        "lordo": 8456,
+        "netto": 8396.310000000001
+      },
+      "2026-04-03": {
+        "count": 56,
+        "lordo": 5518,
+        "netto": 5484.629999999999
+      },
+      "2026-04-04": {
+        "count": 14,
+        "lordo": 1425,
+        "netto": 1424.1
+      },
+      "2026-04-06": {
+        "count": 6,
+        "lordo": 732,
+        "netto": 732
+      },
+      "2026-04-07": {
+        "count": 66,
+        "lordo": 5762,
+        "netto": 5743.08
+      },
+      "2026-04-08": {
+        "count": 57,
+        "lordo": 5646,
+        "netto": 5521.59
+      },
+      "2026-04-09": {
+        "count": 99,
+        "lordo": 9178,
+        "netto": 9103.169999999998
+      },
+      "2026-04-10": {
+        "count": 60,
+        "lordo": 4283,
+        "netto": 4196.610000000001
+      },
+      "2026-04-11": {
+        "count": 11,
+        "lordo": 1148,
+        "netto": 1041.6000000000001
+      },
+      "2026-04-12": {
+        "count": 3,
+        "lordo": 743,
+        "netto": 676.28
+      },
+      "2026-04-13": {
+        "count": 69,
+        "lordo": 11020,
+        "netto": 10971.31
+      },
+      "2026-04-14": {
+        "count": 121,
+        "lordo": 9846,
+        "netto": 9705.159999999996
+      },
+      "2026-04-15": {
+        "count": 34,
+        "lordo": 3050,
+        "netto": 2982.3799999999997
+      },
+      "2026-04-16": {
+        "count": 55,
+        "lordo": 5173,
+        "netto": 4989.969999999999
+      },
+      "2026-04-17": {
+        "count": 63,
+        "lordo": 5801,
+        "netto": 5746.000000000001
+      },
+      "2026-04-18": {
+        "count": 47,
+        "lordo": 3141,
+        "netto": 3029.18
+      },
+      "2026-04-19": {
+        "count": 3,
+        "lordo": 875,
+        "netto": 875
+      },
+      "2026-04-20": {
+        "count": 73,
+        "lordo": 5679.0,
+        "netto": 5632.12
+      },
+      "2026-04-21": {
+        "count": 37,
+        "lordo": 3843,
+        "netto": 3767.2599999999998
+      },
+      "2026-04-22": {
+        "count": 43,
+        "lordo": 5012,
+        "netto": 5005.51
+      },
+      "2026-04-23": {
+        "count": 66,
+        "lordo": 5920,
+        "netto": 5867.710000000001
+      },
+      "2026-04-24": {
+        "count": 65,
+        "lordo": 6056,
+        "netto": 5964.030000000001
+      },
+      "2026-04-26": {
+        "count": 2,
+        "lordo": 165,
+        "netto": 165
+      },
+      "2026-04-27": {
+        "count": 39,
+        "lordo": 5275,
+        "netto": 5244.360000000001
+      },
+      "2026-04-28": {
+        "count": 93,
+        "lordo": 10200,
+        "netto": 10034.98
+      },
+      "2026-04-29": {
+        "count": 97,
+        "lordo": 9623,
+        "netto": 9613.989999999998
+      },
+      "2026-04-30": {
+        "count": 25,
+        "lordo": 1814,
+        "netto": 1799.57
+      }
+    },
+    "MC": {
+      "2026-04-01": {
+        "count": 79,
+        "lordo": 6538,
+        "netto": 6528.98
+      },
+      "2026-04-02": {
+        "count": 33,
+        "lordo": 3426,
+        "netto": 3422.21
+      },
+      "2026-04-03": {
+        "count": 33,
+        "lordo": 3937,
+        "netto": 3905.4300000000003
+      },
+      "2026-04-04": {
+        "count": 13,
+        "lordo": 1420,
+        "netto": 1420
+      },
+      "2026-04-07": {
+        "count": 4,
+        "lordo": 1096,
+        "netto": 1086.98
+      },
+      "2026-04-08": {
+        "count": 20,
+        "lordo": 1838,
+        "netto": 1819.96
+      },
+      "2026-04-09": {
+        "count": 66,
+        "lordo": 6480,
+        "netto": 6470.98
+      },
+      "2026-04-10": {
+        "count": 17,
+        "lordo": 1274,
+        "netto": 1258.8400000000001
+      },
+      "2026-04-13": {
+        "count": 35,
+        "lordo": 5544,
+        "netto": 5534.98
+      },
+      "2026-04-14": {
+        "count": 54,
+        "lordo": 4695,
+        "netto": 4676.96
+      },
+      "2026-04-15": {
+        "count": 1,
+        "lordo": 486,
+        "netto": 486
+      },
+      "2026-04-16": {
+        "count": 15,
+        "lordo": 2350,
+        "netto": 2350
+      },
+      "2026-04-17": {
+        "count": 51,
+        "lordo": 4184,
+        "netto": 4184
+      },
+      "2026-04-18": {
+        "count": 36,
+        "lordo": 1920,
+        "netto": 1920
+      },
+      "2026-04-19": {
+        "count": 2,
+        "lordo": 590,
+        "netto": 590
+      },
+      "2026-04-20": {
+        "count": 43,
+        "lordo": 2432,
+        "netto": 2404.94
+      },
+      "2026-04-21": {
+        "count": 12,
+        "lordo": 660,
+        "netto": 660
+      },
+      "2026-04-22": {
+        "count": 30,
+        "lordo": 4052,
+        "netto": 4052
+      },
+      "2026-04-23": {
+        "count": 53,
+        "lordo": 4260,
+        "netto": 4260
+      },
+      "2026-04-24": {
+        "count": 51,
+        "lordo": 3522,
+        "netto": 3522
+      },
+      "2026-04-27": {
+        "count": 19,
+        "lordo": 3694,
+        "netto": 3684.98
+      },
+      "2026-04-28": {
+        "count": 59,
+        "lordo": 8068,
+        "netto": 8049.959999999999
+      },
+      "2026-04-29": {
+        "count": 79,
+        "lordo": 8134,
+        "netto": 8134
+      },
+      "2026-04-30": {
+        "count": 18,
+        "lordo": 1536,
+        "netto": 1536
+      }
+    },
+    "MON": {
+      "2026-04-01": {
+        "count": 79,
+        "lordo": 5864,
+        "netto": 5864
+      },
+      "2026-04-02": {
+        "count": 23,
+        "lordo": 4132,
+        "netto": 4132
+      },
+      "2026-04-03": {
+        "count": 15,
+        "lordo": 1243,
+        "netto": 1243
+      },
+      "2026-04-06": {
+        "count": 5,
+        "lordo": 724,
+        "netto": 724
+      },
+      "2026-04-07": {
+        "count": 51,
+        "lordo": 4181,
+        "netto": 4181
+      },
+      "2026-04-08": {
+        "count": 22,
+        "lordo": 3157,
+        "netto": 3147.98
+      },
+      "2026-04-09": {
+        "count": 18,
+        "lordo": 1653,
+        "netto": 1653
+      },
+      "2026-04-10": {
+        "count": 32,
+        "lordo": 2328,
+        "netto": 2313.5699999999997
+      },
+      "2026-04-12": {
+        "count": 1,
+        "lordo": 365,
+        "netto": 365
+      },
+      "2026-04-13": {
+        "count": 25,
+        "lordo": 4587,
+        "netto": 4555.429999999999
+      },
+      "2026-04-14": {
+        "count": 57,
+        "lordo": 4381,
+        "netto": 4359.17
+      },
+      "2026-04-15": {
+        "count": 20,
+        "lordo": 1917,
+        "netto": 1907.98
+      },
+      "2026-04-16": {
+        "count": 26,
+        "lordo": 1718,
+        "netto": 1708.98
+      },
+      "2026-04-17": {
+        "count": 3,
+        "lordo": 986,
+        "netto": 986
+      },
+      "2026-04-18": {
+        "count": 7,
+        "lordo": 723,
+        "netto": 695.94
+      },
+      "2026-04-20": {
+        "count": 20,
+        "lordo": 2835.0,
+        "netto": 2825.98
+      },
+      "2026-04-21": {
+        "count": 16,
+        "lordo": 2173,
+        "netto": 2173
+      },
+      "2026-04-22": {
+        "count": 8,
+        "lordo": 879,
+        "netto": 875.21
+      },
+      "2026-04-23": {
+        "count": 2,
+        "lordo": 432,
+        "netto": 432
+      },
+      "2026-04-24": {
+        "count": 2,
+        "lordo": 1126,
+        "netto": 1126
+      },
+      "2026-04-26": {
+        "count": 1,
+        "lordo": 150,
+        "netto": 150
+      },
+      "2026-04-27": {
+        "count": 4,
+        "lordo": 679,
+        "netto": 669.98
+      },
+      "2026-04-28": {
+        "count": 24,
+        "lordo": 936,
+        "netto": 936
+      },
+      "2026-04-29": {
+        "count": 2,
+        "lordo": 695,
+        "netto": 695
+      },
+      "2026-04-30": {
+        "count": 3,
+        "lordo": 240,
+        "netto": 230.98
+      }
+    }
+  },
+  "weekly": {
+    "ALL": {
+      "2020-W09": {
+        "count": 1,
+        "lordo": 710,
+        "netto": 710,
+        "employees": {
+          "Sconosciuto": 1
+        },
+        "memberships": {
+          "MC All Lume - Annuale (Soluzione Unica) test": 1
+        },
+        "payments": {
+          "Sconosciuto": 1
+        },
+        "centri": {
+          "MC": 1
+        }
+      },
+      "2025-W01": {
+        "count": 1,
+        "lordo": 190,
+        "netto": 190,
+        "employees": {
+          "Genny Di Sante": 1
+        },
+        "memberships": {
+          "MC Sala Pesi - Annuale (Soluzione Unica)": 1
+        },
+        "payments": {
+          "Cash": 1
+        },
+        "centri": {
+          "MC": 1
+        }
+      },
+      "2025-W09": {
+        "count": 1,
+        "lordo": 564,
+        "netto": 564,
+        "employees": {
+          "Genny Di Sante": 1
+        },
+        "memberships": {
+          "MC Corsi Fitness - Annuale (Soluzione Unica)": 1
+        },
+        "payments": {
+          "CreditCard": 1
+        },
+        "centri": {
+          "MC": 1
+        }
+      },
+      "2025-W23": {
+        "count": 1,
+        "lordo": 228,
+        "netto": 228,
+        "employees": {
+          "Leonardo Coppari": 1
+        },
+        "memberships": {
+          "MON Scuola Nuoto Bambini Monosettimanle - Stagionale 25/26(PREVENDITA)": 1
+        },
+        "payments": {
+          "CreditCard": 1
+        },
+        "centri": {
+          "MON": 1
+        }
+      },
+      "2025-W25": {
+        "count": 1,
+        "lordo": 250,
+        "netto": 250,
+        "employees": {
+          "Leonardo Coppari": 1
+        },
+        "memberships": {
+          "Certificato Medico": 1
+        },
+        "payments": {
+          "MoneyTransfer": 1
+        },
+        "centri": {
+          "ALTRO": 1
+        }
+      },
+      "2025-W37": {
+        "count": 2,
+        "lordo": 594,
+        "netto": 594,
+        "employees": {
+          "Alex Pop": 2
+        },
+        "memberships": {
+          "MC All Lume - Annuale (Soluzione Unica)": 2
+        },
+        "payments": {
+          "CreditCard": 1,
+          "CustomType3": 1
+        },
+        "centri": {
+          "MC": 2
+        }
+      },
+      "2025-W46": {
+        "count": 1,
+        "lordo": 621,
+        "netto": 621,
+        "employees": {
+          "Leonardo Coppari": 1
+        },
+        "memberships": {
+          "MON All Lume Fitness + Acqua - Annuale (Soluzione Unica) 25/26": 1
+        },
+        "payments": {
+          "CustomType3": 1
+        },
+        "centri": {
+          "MON": 1
+        }
+      },
+      "2025-W48": {
+        "count": 1,
+        "lordo": 550,
+        "netto": 550,
+        "employees": {
+          "Leonardo Coppari": 1
+        },
+        "memberships": {
+          "MON All Lume Nuoto Libero - Annuale (Soluzione Unica)": 1
+        },
+        "payments": {
+          "Cash": 1
+        },
+        "centri": {
+          "MON": 1
+        }
+      },
+      "2025-W51": {
+        "count": 2,
+        "lordo": 340,
+        "netto": 311.15,
+        "employees": {
+          "GAIA GENTILI": 1,
+          "Genny Di Sante": 1
+        },
+        "memberships": {
+          "MON All Lume Nuoto Libero - Annuale (Soluzione Unica)": 1,
+          "Sconosciuto": 1
+        },
+        "payments": {
+          "CreditCard": 2
+        },
+        "centri": {
+          "MON": 1,
+          "ALTRO": 1
+        }
+      },
+      "2025-W52": {
+        "count": 2,
+        "lordo": 325,
+        "netto": 325,
+        "employees": {
+          "Genny Di Sante": 2
+        },
+        "memberships": {
+          "Guest Pass GOLD 7gg - LUME": 1,
+          "Sconosciuto": 1
+        },
+        "payments": {
+          "CreditCard": 1,
+          "Cash": 1
+        },
+        "centri": {
+          "ALTRO": 2
+        }
+      },
+      "2026-W01": {
+        "count": 178,
+        "lordo": 17273.0,
+        "netto": 17090.66,
+        "employees": {
+          "Genny Di Sante": 32,
+          "Matilde Biagiola": 42,
+          "Leonardo Coppari": 31,
+          "GAIA GENTILI": 18,
+          "Sconosciuto": 44,
+          "Online Registration": 11
+        },
+        "memberships": {
+          "MC Sala Pesi - Annuale (Soluzione Unica) 25/26": 2,
+          "MC All Lume - Mensile (Flex)": 29,
+          "MC Sala Pesi - Annuale (12 Rate) 25/26": 26,
+          "MC All Lume - Annuale (12 Rate) 25/26": 37,
+          "MON Scuola Nuoto Adulti - Annuale (12 Rate)": 12,
+          "Sconosciuto": 14,
+          "MON Scuola Nuoto Bambini Monosettimanale - Stagionale": 10,
+          "MON All Lume Nuoto Libero - Mensile (Flex)": 2,
+          "MON Scuola Nuoto Bambini Monosettimanale - Mensile Flex": 6,
+          "MON All Lume Fitness + Acqua - Annuale (Soluzione Unica) 25/26": 2,
+          "MON All Lume Fitness - Mensile (Flex)": 11,
+          "MC Corsi Fitness - Annuale (Soluzione Unica)": 2,
+          "MON All Lume Fitness + Acqua - Mensile (Flex)": 2,
+          "MC Sala Pesi - Annuale (12 Rate)": 1,
+          "MON All Lume Nuoto Libero - Annuale (Soluzione Unica)": 2,
+          "MON Scuola Nuoto Bambini Bisettimanale - Mensile Flex": 3,
+          "MON All Lume AcquaFitness - Mensile (Flex)": 3,
+          "MON Sala Pesi - Annuale (Soluzione Unica)": 1,
+          "MC All Lume (Under 23) - Mensile (Flex)": 1,
+          "MC All Lume - Annuale (Soluzione Unica)": 4,
+          "MON All Lume Fitness - Annuale (Soluzione Unica) 25/26": 1,
+          "MON All Lume Fitness (Over 65) - Annuale (Soluzione Unica)": 1,
+          "Guest Pass GOLD 7gg - LUME - Ref": 2,
+          "MC All Lume (Under 23) - Annuale (Soluzione Unica)": 1,
+          "MON All Lume AcquaFitness - Annuale (Soluzione Unica)": 1,
+          "MC Sala Pesi - Annuale (Soluzione Unica)": 1,
+          "Guest Pass GOLD 7gg - LUME": 1
+        },
+        "payments": {
+          "CreditCard": 52,
+          "CustomType1": 48,
+          "CustomType3": 24,
+          "Cash": 9,
+          "Sconosciuto": 44,
+          "MoneyTransfer": 1
+        },
+        "centri": {
+          "MC": 104,
+          "MON": 57,
+          "ALTRO": 17
+        }
+      },
+      "2026-W02": {
+        "count": 355,
+        "lordo": 39348,
+        "netto": 38956.49,
+        "employees": {
+          "GAIA GENTILI": 58,
+          "Matilde Biagiola": 132,
+          "Sconosciuto": 14,
+          "Leonardo Coppari": 61,
+          "Genny Di Sante": 63,
+          "DANIELA DE ANGELIS": 3,
+          "Elena Marchegiani": 15,
+          "Online Registration": 8,
+          "Alex Pop": 1
+        },
+        "memberships": {
+          "MON Sala Pesi - Annuale (12 Rate) 25/26": 12,
+          "MC Corsi Fitness - Annuale (12 Rate)": 12,
+          "Guest Pass GOLD 7gg - LUME": 7,
+          "MC All Lume - Annuale (Soluzione Unica)": 2,
+          "MON All Lume Fitness + Acqua - Annuale (12 Rate) 25/26": 24,
+          "MC Crossfit 2V - Annuale (12 Rate)": 24,
+          "MC Sala Pesi - Annuale (12 Rate) 25/26": 52,
+          "MC All Lume - Mensile (Flex)": 7,
+          "MON All Lume Fitness + Acqua (Under 23) - Mensile (Flex)": 2,
+          "Sconosciuto": 17,
+          "MC All Lume - Annuale (12 Rate) 25/26": 11,
+          "MC Sala Pesi - Annuale (12 Rate)": 24,
+          "MON All Lume Fitness - Mensile (Flex)": 3,
+          "MC Corsi Fitness - Annuale (12 Rate) 25/26": 24,
+          "MC Sala Pesi - Annuale (Soluzione Unica)": 8,
+          "MON All Lume Nuoto Libero - Annuale (12 Rate)": 25,
+          "MON All Lume Fitness - Annuale (12 Rate)": 12,
+          "MON All Lume Nuoto Libero - Annuale (Soluzione Unica)": 4,
+          "MC Crossfit 3V - Annuale (12 Rate)": 12,
+          "MC Crossfit OPEN - Annuale (12 Rate)": 12,
+          "MON Sala Pesi - Annuale (Soluzione Unica) 25/26": 2,
+          "MC Corsi Fitness - Annuale (Soluzione Unica)": 2,
+          "Guest Pass GOLD 7gg - LUME - Ref": 8,
+          "MC Sala Pesi - Annuale (Soluzione Unica) 25/26": 8,
+          "MC Corsi Fitness - Annuale (Soluzione Unica) 25/26": 1,
+          "MON Scuola Nuoto Bambini Monosettimanale - Stagionale": 7,
+          "MON All Lume Fitness - Annuale (Soluzione Unica) 25/26": 3,
+          "MON Sala Pesi Entry Level - Annuale (Soluzione Unica) 25/26": 2,
+          "MC All Lume (Over 65) - Annuale (Soluzione Unica)": 2,
+          "MC Crossfit 3V - Annuale (Soluzione Unica)": 3,
+          "MON All Lume Fitness + Acqua - Annuale (Soluzione Unica) 25/26": 3,
+          "MC Crossfit 2V - Annuale (Soluzione Unica)": 1,
+          "OLD Acqua fitness": 1,
+          "Certificato Temporaneo": 1,
+          "MON All Lume Fitness (Over 65) - Annuale (Soluzione Unica)": 1,
+          "MON All Lume AcquaFitness - Annuale (Soluzione Unica)": 3,
+          "MON Sala Pesi - Annuale (Soluzione Unica)": 3,
+          "MC All Lume - Annuale (Soluzione Unica) 25/26": 2,
+          "MON All Lume Fitness - Annuale (Soluzione Unica)": 1,
+          "MC All Lume (Under 23) - Annuale (Soluzione Unica)": 1,
+          "MON Scuola Nuoto Bambini Monosettimanale - Mensile Flex": 3,
+          "MC All Lume GOLD - Annuale (Soluzione Unica)": 1,
+          "MC Crossfit OPEN - Annuale (Soluzione Unica)": 1,
+          "MON Corsi Fitness - Annuale (Soluzione Unica)": 1
+        },
+        "payments": {
+          "CustomType3": 49,
+          "CustomType1": 194,
+          "CreditCard": 69,
+          "Sconosciuto": 14,
+          "Cash": 22,
+          "MoneyTransfer": 4,
+          "Online": 3
+        },
+        "centri": {
+          "MON": 111,
+          "MC": 210,
+          "ALTRO": 34
+        }
+      },
+      "2026-W03": {
+        "count": 614,
+        "lordo": 50649.0,
+        "netto": 50298.06,
+        "employees": {
+          "GAIA GENTILI": 31,
+          "Leonardo Coppari": 158,
+          "Genny Di Sante": 108,
+          "DANIELA DE ANGELIS": 33,
+          "Matilde Biagiola": 263,
+          "Online Registration": 14,
+          "Sconosciuto": 7
+        },
+        "memberships": {
+          "MON All Lume Fitness + Acqua (Under 23) - Annuale (12 Rate)": 36,
+          "Guest Pass GOLD 7gg - LUME - Ref": 18,
+          "Sconosciuto": 28,
+          "MC Corsi Fitness - Annuale (12 Rate) 25/26": 24,
+          "MC Sala Pesi - Annuale (12 Rate) 25/26": 89,
+          "MC All Lume - Annuale (Soluzione Unica) 25/26": 7,
+          "MC Sala Pesi - Annuale (12 Rate)": 88,
+          "MC Corsi Fitness - Annuale (12 Rate)": 25,
+          "MON Sala Pesi - Annuale (12 Rate) 25/26": 25,
+          "MC All Lume (Under 23) - Annuale (Soluzione Unica)": 5,
+          "MC Crossfit OPEN - Annuale (12 Rate)": 12,
+          "MC All Lume (Over 65) - Annuale (12 Rate)": 24,
+          "MC All Lume GOLD - Annuale (12 Rate) 25/26": 12,
+          "MON Sala Pesi - Annuale (12 Rate)": 24,
+          "OLD Corsi Fitness Macerata": 1,
+          "MC Crossfit 3V - Annuale (12 Rate)": 12,
+          "MON All Lume Fitness - Annuale (12 Rate) 25/26": 13,
+          "MON Scuola Nuoto Bambini Monosettimanale - Stagionale": 7,
+          "MON All Lume Fitness - Mensile (Flex)": 6,
+          "MC All Lume - Annuale (12 Rate) 25/26": 50,
+          "MON Scuola Nuoto Bambini Bisettimanale - Stagionale": 6,
+          "MON All Lume AcquaFitness - Annuale (Soluzione Unica)": 3,
+          "MON All Lume Fitness + Acqua - Annuale (12 Rate) 25/26": 12,
+          "MC Corsi Fitness - Annuale (Soluzione Unica)": 8,
+          "MON All Lume Fitness - Annuale (12 Rate)": 12,
+          "MON Sala Pesi - Annuale (Soluzione Unica) 25/26": 5,
+          "MC Sala Pesi - Annuale (Soluzione Unica) 25/26": 2,
+          "MC Sala Pesi - Annuale (Soluzione Unica)": 6,
+          "MC Crossfit OPEN - Mensile (Flex)": 1,
+          "MON Sala Pesi - Annuale (Soluzione Unica)": 3,
+          "Guest Pass GOLD 7gg - LUME": 9,
+          "MON All Lume Fitness (Over 65) - Annuale (Soluzione Unica)": 1,
+          "MC All Lume (Under 23) - Annuale (12 Rate)": 13,
+          "MON All Lume AcquaFitness - Mensile (Flex)": 1,
+          "MC All Lume - Annuale (12 Rate)": 3,
+          "MON All Lume Fitness - Annuale (Soluzione Unica) 25/26": 2,
+          "MC All Lume - Mensile (Flex)": 5,
+          "MON All Lume Nuoto Libero - Annuale (Soluzione Unica)": 2,
+          "MON All Lume Fitness + Acqua - Mensile (Flex)": 2,
+          "Certificato Medico": 2,
+          "MC Crossfit 3V - Annuale (Soluzione Unica)": 2,
+          "MC All Lume - Annuale (Soluzione Unica)": 1,
+          "MC All Lume (Over 65) - Annuale (Soluzione Unica)": 1,
+          "MON All Lume Fitness - Annuale (Soluzione Unica)": 2,
+          "MON All Lume Nuoto Libero - Mensile (Flex)": 1,
+          "MON All Lume Fitness + Acqua - Annuale (Soluzione Unica) 25/26": 1,
+          "MON Scuola Nuoto Bambini Bisettimanale - Stagionale 25/26 (PREVENDITA)": 1,
+          "OLD Acqua fitness": 1
+        },
+        "payments": {
+          "CustomType1": 255,
+          "Cash": 40,
+          "CreditCard": 96,
+          "CustomType3": 206,
+          "MoneyTransfer": 10,
+          "Sconosciuto": 7
+        },
+        "centri": {
+          "MON": 165,
+          "ALTRO": 59,
+          "MC": 390
+        }
+      },
+      "2026-W04": {
+        "count": 569,
+        "lordo": 52537.0,
+        "netto": 51996.74,
+        "employees": {
+          "Genny Di Sante": 131,
+          "Online Registration": 11,
+          "Sconosciuto": 17,
+          "GAIA GENTILI": 18,
+          "Leonardo Coppari": 208,
+          "Matilde Biagiola": 181,
+          "Alex Pop": 1,
+          "DANIELA DE ANGELIS": 2
+        },
+        "memberships": {
+          "MC Sala Pesi - Annuale (12 Rate)": 37,
+          "MC Corsi Fitness - Annuale (12 Rate) 25/26": 24,
+          "Sconosciuto": 26,
+          "Certificato Medico": 4,
+          "MON Sala Pesi - Annuale (12 Rate) 25/26": 78,
+          "MON All Lume Fitness - Annuale (12 Rate)": 15,
+          "MC Sala Pesi - Annuale (12 Rate) 25/26": 84,
+          "MON All Lume Fitness - Annuale (12 Rate) 25/26": 40,
+          "MON Scuola Nuoto Bambini Monosettimanale - Stagionale": 28,
+          "MC Corsi Fitness - Annuale (12 Rate)": 13,
+          "Guest Pass GOLD 7gg - LUME": 12,
+          "MC All Lume (Under 23) - Annuale (12 Rate)": 26,
+          "MC Sala Pesi - Annuale (Soluzione Unica) 25/26": 12,
+          "MC All Lume - Annuale (12 Rate) 25/26": 37,
+          "MC All Lume (Over 65) - Annuale (Soluzione Unica)": 4,
+          "MON Sala Pesi Entry Level - Annuale (Soluzione Unica) 25/26": 1,
+          "Guest Pass GOLD 7gg - LUME - Ref": 11,
+          "MC Corsi Fitness - Annuale (Soluzione Unica)": 2,
+          "MC All Lume (Over 65) - Annuale (12 Rate)": 12,
+          "MON All Lume Fitness + Acqua - Annuale (Soluzione Unica)": 1,
+          "MON Sala Pesi - Annuale (Soluzione Unica) 25/26": 4,
+          "MC All Lume - Annuale (12 Rate)": 12,
+          "MC Sala Pesi - Annuale (Soluzione Unica)": 4,
+          "MON All Lume Nuoto Libero - Annuale (Soluzione Unica)": 3,
+          "MC All Lume - Annuale (Soluzione Unica) 25/26": 3,
+          "Mensile Omaggio - back": 2,
+          "On Ramp": 2,
+          "MC Crossfit 3V - Annuale (Soluzione Unica)": 1,
+          "MON All Lume Nuoto Libero - Mensile (Flex)": 2,
+          "MC Crossfit OPEN - Annuale (Soluzione Unica)": 6,
+          "MC All Lume - Annuale (Soluzione Unica)": 3,
+          "MON All Lume AcquaFitness - Annuale (Soluzione Unica)": 7,
+          "MON All Lume Nuoto Libero - Annuale (12 Rate)": 12,
+          "MON All Lume Fitness - Annuale (Soluzione Unica)": 2,
+          "MON Sala Pesi - Annuale (Soluzione Unica)": 3,
+          "MC Crossfit OPEN - Annuale (12 Rate)": 12,
+          "MC All Lume - Mensile (Flex)": 6,
+          "MC Crossfit OPEN - Mensile (Flex)": 1,
+          "MON All Lume Fitness - Mensile (Flex)": 5,
+          "MON Scuola Nuoto Bambini Bisettimanale - Mensile Flex": 1,
+          "MON Scuola Nuoto Bambini Bisettimanale - Stagionale": 6,
+          "MON All Lume Fitness + Acqua - Annuale (12 Rate) 25/26": 1,
+          "MON Scuola Nuoto Bambini Monosettimanale - Mensile Flex": 1,
+          "MON All Lume Fitness - Annuale (Soluzione Unica) 25/26": 1,
+          "MON All Lume Fitness + Acqua - Annuale (Soluzione Unica) 25/26": 1,
+          "MON All Lume AcquaFitness - Annuale (12 Rate)": 1
+        },
+        "payments": {
+          "CustomType3": 168,
+          "CustomType1": 226,
+          "CreditCard": 117,
+          "Sconosciuto": 17,
+          "Cash": 34,
+          "MoneyTransfer": 7
+        },
+        "centri": {
+          "MC": 299,
+          "ALTRO": 57,
+          "MON": 213
+        }
+      },
+      "2026-W05": {
+        "count": 772,
+        "lordo": 57515.65,
+        "netto": 56989.24,
+        "employees": {
+          "GAIA GENTILI": 206,
+          "Sconosciuto": 55,
+          "Genny Di Sante": 131,
+          "Matilde Biagiola": 147,
+          "Leonardo Coppari": 193,
+          "Chiara Messi": 21,
+          "Online Registration": 17,
+          "DANIELA DE ANGELIS": 2
+        },
+        "memberships": {
+          "MON Sala Pesi - Annuale (12 Rate) 25/26": 135,
+          "MC All Lume - Mensile (Flex)": 33,
+          "MC All Lume - Annuale (12 Rate) 25/26": 75,
+          "MON Scuola Nuoto Bambini Monosettimanale - Stagionale": 34,
+          "MON Sala Pesi Entry Level - Annuale (12 Rate) 25/26": 24,
+          "MON All Lume Fitness - Annuale (12 Rate) 25/26": 87,
+          "MON All Lume AcquaFitness - Annuale (12 Rate)": 61,
+          "MC Sala Pesi - Annuale (12 Rate) 25/26": 49,
+          "Guest Pass GOLD 7gg - LUME - Ref": 14,
+          "MON All Lume AcquaFitness - Annuale (Soluzione Unica)": 7,
+          "Certificato Temporaneo": 1,
+          "Sconosciuto": 28,
+          "MON All Lume Fitness - Mensile (Flex)": 12,
+          "MON All Lume Fitness + Acqua - Annuale (12 Rate) 25/26": 26,
+          "Guest Pass GOLD 7gg - LUME": 8,
+          "MC All Lume (Under 23) - Annuale (12 Rate)": 16,
+          "MON All Lume Nuoto Libero - Mensile (Flex)": 3,
+          "MC All Lume (Over 65) - Annuale (12 Rate)": 25,
+          "MC Sala Pesi - Annuale (Soluzione Unica) 25/26": 7,
+          "MON All Lume Fitness - Annuale (12 Rate)": 24,
+          "MON All Lume Nuoto Libero - Annuale (12 Rate)": 12,
+          "MON All Lume Fitness + Acqua (Under 23) - Annuale (12 Rate)": 12,
+          "MC Corsi Fitness - Annuale (12 Rate) 25/26": 12,
+          "MC Sala Pesi - Annuale (Soluzione Unica)": 4,
+          "MC Crossfit OPEN - Annuale (12 Rate)": 12,
+          "MON All Lume Fitness + Acqua - Annuale (Soluzione Unica) 25/26": 12,
+          "MC Crossfit OPEN - Annuale (Soluzione Unica)": 1,
+          "MC Corsi Fitness - Annuale (Soluzione Unica)": 2,
+          "MON Sala Pesi - Annuale (Soluzione Unica)": 4,
+          "MON Scuola Nuoto Adulti - Mensile (Flex)": 3,
+          "MON All Lume Fitness - Annuale (Soluzione Unica) 25/26": 4,
+          "MON All Lume Nuoto Libero - Annuale (Soluzione Unica)": 3,
+          "MC All Lume - Annuale (Soluzione Unica)": 1,
+          "Reformer - LUME": 1,
+          "MON Corsi Fitness - Annuale (Soluzione Unica)": 1,
+          "MC Crossfit OPEN - Mensile (Flex)": 1,
+          "MC Crossfit Special 2 (Mensile)": 1,
+          "MON All Lume AcquaFitness - Mensile (Flex)": 3,
+          "MC All Lume (Over 65) - Annuale (Soluzione Unica)": 2,
+          "MC All Lume - Annuale (12 Rate)": 2,
+          "MON All Lume Fitness + Acqua - Mensile (Flex)": 2,
+          "Certificato Medico": 1,
+          "OLD Sala Pesi Macerata": 1,
+          "MC Crossfit 2V - Annuale (Soluzione Unica)": 1,
+          "MON Corsi Fitness - Annuale (12 Rate)": 1,
+          "MC All Lume (Under 23) - Annuale (Soluzione Unica)": 1,
+          "MON All Lume Fitness + Acqua (Under 23) - Mensile (Flex)": 1,
+          "MON All Lume Fitness - Annuale (Soluzione Unica)": 1,
+          "MON Scuola Nuoto Adulti - Annuale (Soluzione Unica)": 1
+        },
+        "payments": {
+          "CustomType1": 279,
+          "Sconosciuto": 55,
+          "CreditCard": 100,
+          "MoneyTransfer": 24,
+          "CustomType3": 279,
+          "Cash": 33,
+          "Online": 2
+        },
+        "centri": {
+          "MON": 473,
+          "MC": 245,
+          "ALTRO": 54
+        }
+      },
+      "2026-W06": {
+        "count": 552,
+        "lordo": 45678.65,
+        "netto": 45114.81,
+        "employees": {
+          "Leonardo Coppari": 138,
+          "Matilde Biagiola": 160,
+          "DANIELA DE ANGELIS": 56,
+          "Genny Di Sante": 129,
+          "GAIA GENTILI": 29,
+          "Online Registration": 24,
+          "Sconosciuto": 15,
+          "Chiara Messi": 1
+        },
+        "memberships": {
+          "MON Sala Pesi - Annuale (Soluzione Unica)": 6,
+          "MC All Lume (Under 23) - Annuale (12 Rate)": 62,
+          "MC All Lume - Annuale (12 Rate) 25/26": 50,
+          "MC All Lume - Annuale (12 Rate)": 24,
+          "MON All Lume Nuoto Libero - Annuale (12 Rate)": 3,
+          "MC Sala Pesi - Annuale (12 Rate) 25/26": 125,
+          "MON Sala Pesi - Annuale (12 Rate) 25/26": 16,
+          "MON Scuola Nuoto Bambini Monosettimanale - Stagionale": 13,
+          "Sconosciuto": 36,
+          "Guest Pass GOLD 7gg - LUME": 23,
+          "MC All Lume - Mensile (Flex)": 5,
+          "MC Sala Pesi - Annuale (12 Rate)": 23,
+          "MC All Lume (Over 65) - Annuale (12 Rate)": 13,
+          "MON Sala Pesi Entry Level - Annuale (12 Rate) 25/26": 12,
+          "Guest Pass GOLD 7gg - LUME - Ref": 7,
+          "MON All Lume Fitness - Annuale (12 Rate)": 12,
+          "MON All Lume AcquaFitness - Mensile (Flex)": 2,
+          "MON All Lume Fitness - Annuale (12 Rate) 25/26": 26,
+          "MON All Lume Fitness - Mensile (Flex)": 4,
+          "MON All Lume Fitness + Acqua (Under 23) - Annuale (Soluzione Unica)": 1,
+          "MC Sala Pesi - Annuale (Soluzione Unica) 25/26": 2,
+          "MON All Lume AcquaFitness - Annuale (12 Rate)": 13,
+          "Certificato Medico": 5,
+          "MON Scuola Nuoto Bambini Monosettimanale - Mensile Flex": 6,
+          "MON All Lume Fitness (Over 65) - Annuale (12 Rate)": 12,
+          "MON All Lume Fitness + Acqua (Under 23) - Annuale (12 Rate)": 12,
+          "MC Crossfit 3V - Annuale (Soluzione Unica)": 5,
+          "MC All Lume (Under 23) - Mensile (Flex)": 2,
+          "MON All Lume Fitness + Acqua - Annuale (Soluzione Unica) 25/26": 4,
+          "MC All Lume - Annuale (Soluzione Unica) 25/26": 4,
+          "MON All Lume Nuoto Libero - Annuale (Soluzione Unica)": 4,
+          "MC All Lume - Annuale (Soluzione Unica)": 3,
+          "MON All Lume Nuoto Libero - Mensile (Flex)": 2,
+          "MC Crossfit OPEN - Mensile (Flex)": 1,
+          "MC Corsi Fitness - Annuale (Soluzione Unica) 25/26": 2,
+          "MC Crossfit OPEN - Annuale (12 Rate)": 1,
+          "MON Sala Pesi - Annuale (Soluzione Unica) 25/26": 2,
+          "On Ramp": 2,
+          "MON Scuola Nuoto Bambini Bisettimanale - Mensile Flex": 1,
+          "MC Sala Pesi - Annuale (Soluzione Unica)": 1,
+          "MON All Lume Fitness + Acqua - Annuale (Soluzione Unica)": 1,
+          "MON All Lume Fitness + Acqua - Annuale (12 Rate)": 1,
+          "MC Crossfit OPEN - Annuale (Soluzione Unica)": 1,
+          "MON Corsi Fitness - Annuale (Soluzione Unica)": 1,
+          "MON Sala Pesi Entry Level - Annuale (Soluzione Unica) 25/26": 1
+        },
+        "payments": {
+          "CreditCard": 108,
+          "CustomType1": 271,
+          "Cash": 26,
+          "CustomType3": 122,
+          "MoneyTransfer": 8,
+          "Sconosciuto": 15,
+          "Online": 2
+        },
+        "centri": {
+          "MON": 155,
+          "MC": 324,
+          "ALTRO": 73
+        }
+      },
+      "2026-W07": {
+        "count": 578,
+        "lordo": 43148.0,
+        "netto": 42821.41,
+        "employees": {
+          "Genny Di Sante": 256,
+          "Online Registration": 15,
+          "GAIA GENTILI": 68,
+          "Leonardo Coppari": 143,
+          "Matilde Biagiola": 83,
+          "Sconosciuto": 10,
+          "DANIELA DE ANGELIS": 2,
+          "Chiara Messi": 1
+        },
+        "memberships": {
+          "MC All Lume - Annuale (12 Rate) 25/26": 64,
+          "MC All Lume (Under 23) - Annuale (12 Rate)": 85,
+          "Guest Pass GOLD 7gg - LUME - Ref": 10,
+          "MON Sala Pesi - Annuale (12 Rate) 25/26": 74,
+          "MC Sala Pesi - Annuale (12 Rate)": 37,
+          "MC Corsi Fitness - Annuale (12 Rate) 25/26": 13,
+          "MC Corsi Fitness - Annuale (Soluzione Unica)": 5,
+          "MC Sala Pesi - Annuale (12 Rate) 25/26": 75,
+          "MON All Lume AcquaFitness - Annuale (12 Rate)": 37,
+          "MON All Lume Fitness - Annuale (12 Rate) 25/26": 12,
+          "MON Scuola Nuoto Bambini Monosettimanale - Mensile Flex": 3,
+          "MON All Lume Fitness - Annuale (12 Rate)": 12,
+          "MC All Lume - Annuale (12 Rate)": 12,
+          "Sconosciuto": 33,
+          "MON All Lume AcquaFitness - Annuale (Soluzione Unica)": 6,
+          "MC Corsi Fitness - Annuale (Soluzione Unica) 25/26": 3,
+          "MON All Lume Fitness - Annuale (Soluzione Unica)": 3,
+          "MON Scuola Nuoto Bambini Monosettimanale - Stagionale": 17,
+          "MON Sala Pesi - Annuale (Soluzione Unica) 25/26": 1,
+          "MON Sala Pesi - Annuale (Soluzione Unica)": 6,
+          "MC Corsi Fitness - Annuale (12 Rate)": 24,
+          "MC All Lume (Under 23) - Annuale (Soluzione Unica)": 4,
+          "OLD Acqua": 1,
+          "MON Scuola Nuoto Bambini Monosettimanle - Stagionale 25/26(PREVENDITA)": 1,
+          "MC All Lume - Mensile (Flex)": 6,
+          "MON All Lume AcquaFitness - Mensile (Flex)": 2,
+          "Guest Pass GOLD 7gg - LUME": 5,
+          "MON All Lume Fitness + Acqua (Under 23) - Annuale (Soluzione Unica)": 2,
+          "MON All Lume Fitness + Acqua - Annuale (Soluzione Unica) 25/26": 2,
+          "MON All Lume Fitness + Acqua - Annuale (12 Rate) 25/26": 9,
+          "MC Sala Pesi - Annuale (Soluzione Unica) 25/26": 2,
+          "MON All Lume Nuoto Libero - Annuale (Soluzione Unica)": 2,
+          "MC All Lume - Annuale (Soluzione Unica)": 3,
+          "MON All Lume Fitness - Mensile (Flex)": 2,
+          "MON Scuola Nuoto Bambini Bisettimanale - Stagionale 25/26 (PREVENDITA)": 1,
+          "MC All Lume (Over 65) - Annuale (12 Rate)": 1,
+          "MC Sala Pesi - Annuale (Soluzione Unica)": 2,
+          "MC All Lume (Over 65) - Annuale (Soluzione Unica)": 1
+        },
+        "payments": {
+          "CustomType3": 226,
+          "CustomType1": 222,
+          "CreditCard": 98,
+          "Online": 1,
+          "Sconosciuto": 10,
+          "Cash": 18,
+          "MoneyTransfer": 3
+        },
+        "centri": {
+          "MC": 337,
+          "ALTRO": 49,
+          "MON": 192
+        }
+      },
+      "2026-W08": {
+        "count": 404,
+        "lordo": 38429,
+        "netto": 37937.48,
+        "employees": {
+          "Genny Di Sante": 161,
+          "Leonardo Coppari": 99,
+          "Sconosciuto": 17,
+          "GAIA GENTILI": 40,
+          "Matilde Biagiola": 75,
+          "Online Registration": 11,
+          "DANIELA DE ANGELIS": 1
+        },
+        "memberships": {
+          "MC Sala Pesi - Annuale (12 Rate) 25/26": 12,
+          "MC Crossfit OPEN - Annuale (12 Rate)": 12,
+          "MON All Lume Nuoto Libero - Annuale (12 Rate)": 38,
+          "MC All Lume - Annuale (12 Rate) 25/26": 25,
+          "MON All Lume Fitness - Annuale (12 Rate)": 2,
+          "MON All Lume Fitness + Acqua (Under 23) - Annuale (12 Rate)": 13,
+          "MC Corsi Fitness - Annuale (12 Rate) 25/26": 13,
+          "Guest Pass GOLD 7gg - LUME": 19,
+          "MC Corsi Fitness - Annuale (12 Rate)": 24,
+          "MON All Lume AcquaFitness - Annuale (12 Rate)": 24,
+          "MC Corsi Fitness - Annuale (Soluzione Unica) 25/26": 4,
+          "Guest Pass GOLD 7gg - LUME - Ref": 10,
+          "MC Crossfit 2V - Annuale (12 Rate)": 13,
+          "MC Sala Pesi - Annuale (12 Rate)": 37,
+          "MON All Lume Fitness + Acqua - Annuale (12 Rate) 25/26": 6,
+          "MC Sala Pesi - Annuale (Soluzione Unica) 25/26": 5,
+          "MC All Lume - Mensile (Flex)": 4,
+          "MC Crossfit 3V - Annuale (12 Rate)": 26,
+          "MON Sala Pesi - Annuale (12 Rate) 25/26": 13,
+          "MON All Lume Fitness - Annuale (12 Rate) 25/26": 14,
+          "MC Sala Pesi - Annuale (Soluzione Unica)": 3,
+          "MC Corsi Fitness - Annuale (Soluzione Unica)": 6,
+          "MON All Lume AcquaFitness - Annuale (Soluzione Unica)": 1,
+          "MON Corsi Fitness - Annuale (Soluzione Unica)": 1,
+          "MON All Lume Fitness - Annuale (Soluzione Unica) 25/26": 2,
+          "MON All Lume Fitness - Annuale (Soluzione Unica)": 5,
+          "MON Corsi Fitness - Annuale (12 Rate)": 2,
+          "Sconosciuto": 31,
+          "MC All Lume (Under 23) - Annuale (12 Rate)": 12,
+          "MON All Lume Fitness + Acqua - Annuale (Soluzione Unica) 25/26": 2,
+          "MeseOmaggioLume": 4,
+          "MON All Lume Fitness - Mensile (Flex)": 2,
+          "MC All Lume - Annuale (Soluzione Unica)": 2,
+          "MON All Lume Nuoto Libero - Annuale (Soluzione Unica)": 2,
+          "MC All Lume (Under 23) - Annuale (Soluzione Unica)": 1,
+          "MON Sala Pesi - Annuale (Soluzione Unica) 25/26": 2,
+          "Certificato Medico": 2,
+          "Mensile Omaggio - back": 1,
+          "MON Sala Pesi - Annuale (Soluzione Unica)": 3,
+          "MC Crossfit OPEN - Annuale (Soluzione Unica)": 3,
+          "MON Scuola Nuoto Bambini Monosettimanale - Mensile Flex": 1,
+          "GuestPass GOLD 1gg - LUME": 1,
+          "MC All Lume Fitness + Crossfit - Annuale (Soluzione Unica)": 1
+        },
+        "payments": {
+          "CustomType3": 110,
+          "CustomType1": 158,
+          "Sconosciuto": 17,
+          "CreditCard": 95,
+          "Cash": 19,
+          "MoneyTransfer": 5
+        },
+        "centri": {
+          "MC": 203,
+          "MON": 133,
+          "ALTRO": 68
+        }
+      },
+      "2026-W09": {
+        "count": 470,
+        "lordo": 43454.0,
+        "netto": 42966.25,
+        "employees": {
+          "GAIA GENTILI": 36,
+          "Genny Di Sante": 108,
+          "Matilde Biagiola": 146,
+          "Camilla Stortoni": 67,
+          "Sconosciuto": 55,
+          "DANIELA DE ANGELIS": 4,
+          "Online Registration": 21,
+          "Leonardo Coppari": 20,
+          "Chiara Messi": 13
+        },
+        "memberships": {
+          "Sconosciuto": 36,
+          "MC Sala Pesi - Annuale (12 Rate)": 61,
+          "MC All Lume - Annuale (12 Rate)": 35,
+          "MC All Lume - Mensile (Flex)": 36,
+          "MC Sala Pesi - Annuale (Soluzione Unica)": 9,
+          "MC Crossfit OPEN - Annuale (12 Rate)": 36,
+          "Guest Pass GOLD 7gg - LUME": 11,
+          "MC All Lume - Annuale (Soluzione Unica)": 5,
+          "MON All Lume Fitness + Acqua (Under 23) - Annuale (12 Rate)": 12,
+          "MON All Lume Fitness + Acqua - Mensile (Flex)": 2,
+          "MON All Lume AcquaFitness - Annuale (12 Rate)": 12,
+          "MC All Lume - Annuale (12 Rate) 25/26": 12,
+          "MC Corsi Fitness - Annuale (Soluzione Unica)": 3,
+          "MC Sala Pesi - Annuale (12 Rate) 25/26": 61,
+          "MC All Lume (Under 23) - Annuale (12 Rate)": 13,
+          "MC All Lume (Over 65) - Annuale (12 Rate)": 1,
+          "MON All Lume Fitness - Annuale (12 Rate) 25/26": 12,
+          "MC Corsi Fitness - Annuale (12 Rate) 25/26": 24,
+          "MC Crossfit OPEN - Mensile (Flex)": 3,
+          "MON Sala Pesi - Annuale (12 Rate) 25/26": 13,
+          "MC Sala Pesi - Annuale (Soluzione Unica) 25/26": 8,
+          "MON Corsi Fitness - Annuale (12 Rate)": 12,
+          "Guest Pass GOLD 7gg - LUME - Ref": 6,
+          "MON Sala Pesi - Annuale (Soluzione Unica) 25/26": 3,
+          "MON All Lume Nuoto Libero - Mensile (Flex)": 2,
+          "MC Corsi Fitness - Annuale (12 Rate)": 12,
+          "MON All Lume Nuoto Libero - Annuale (Soluzione Unica)": 5,
+          "Certificato Medico": 1,
+          "MON All Lume AcquaFitness - Annuale (Soluzione Unica)": 1,
+          "On Ramp": 1,
+          "MON Sala Pesi - Annuale (Soluzione Unica)": 3,
+          "MON All Lume AcquaFitness - Mensile (Flex)": 3,
+          "MON All Lume Fitness - Annuale (Soluzione Unica) 25/26": 1,
+          "MON Sala Pesi - Annuale (12 Rate)": 1,
+          "MON All Lume Fitness - Mensile (Flex)": 4,
+          "MC All Lume (Under 23) - Mensile (Flex)": 1,
+          "MC Corsi Fitness - Annuale (Soluzione Unica) 25/26": 2,
+          "MON Scuola Nuoto Adulti - Annuale (Soluzione Unica)": 1,
+          "MC All Lume - Annuale (Soluzione Unica) 25/26": 2,
+          "MC Crossfit Special 2 (Mensile)": 1,
+          "MON All Lume Fitness + Acqua - Annuale (12 Rate)": 1,
+          "MC All Lume (Under 23) - Annuale (Soluzione Unica)": 1,
+          "Mensile Omaggio - back": 1
+        },
+        "payments": {
+          "CreditCard": 71,
+          "CustomType1": 147,
+          "CustomType3": 167,
+          "Sconosciuto": 55,
+          "MoneyTransfer": 3,
+          "Cash": 27
+        },
+        "centri": {
+          "ALTRO": 56,
+          "MC": 326,
+          "MON": 88
+        }
+      },
+      "2026-W10": {
+        "count": 424,
+        "lordo": 45431,
+        "netto": 44924.31,
+        "employees": {
+          "GAIA GENTILI": 71,
+          "Genny Di Sante": 175,
+          "Leonardo Coppari": 34,
+          "DANIELA DE ANGELIS": 16,
+          "Chiara Messi": 14,
+          "Matilde Biagiola": 72,
+          "Sconosciuto": 22,
+          "Camilla Stortoni": 9,
+          "Online Registration": 11
+        },
+        "memberships": {
+          "MON All Lume Fitness - Annuale (Soluzione Unica)": 2,
+          "Guest Pass GOLD 7gg - LUME - Ref": 10,
+          "MC Corsi Fitness - Annuale (12 Rate)": 25,
+          "MC All Lume - Annuale (12 Rate) 25/26": 72,
+          "Sconosciuto": 31,
+          "MC Crossfit 3V - Annuale (12 Rate)": 25,
+          "MC Corsi Fitness - Annuale (12 Rate) 25/26": 12,
+          "MON Sala Pesi - Annuale (12 Rate) 25/26": 12,
+          "MC All Lume - Annuale (Soluzione Unica)": 3,
+          "MC All Lume Fitness + Crossfit - Annuale (Soluzione Unica)": 2,
+          "MON All Lume Fitness - Mensile (Flex)": 9,
+          "MON Scuola Nuoto Bambini Bisettimanale - Stagionale": 17,
+          "MC Sala Pesi Entry Level (12 Rate)": 13,
+          "MC All Lume (Under 23) - Annuale (Soluzione Unica)": 3,
+          "MC Crossfit OPEN - Annuale (12 Rate)": 12,
+          "MC All Lume (Under 23) - Annuale (12 Rate)": 12,
+          "MC Sala Pesi - Annuale (12 Rate) 25/26": 25,
+          "MC Sala Pesi - Annuale (Soluzione Unica) 25/26": 4,
+          "MC All Lume (Over 65) - Annuale (Soluzione Unica)": 1,
+          "MON Scuola Nuoto Adulti - Annuale (12 Rate)": 24,
+          "MON Scuola Nuoto Bambini Monosettimanale - Mensile Flex": 9,
+          "Certificato Temporaneo": 3,
+          "Guest Pass GOLD 7gg - LUME": 12,
+          "MON All Lume Nuoto Libero - Annuale (Soluzione Unica)": 1,
+          "MON All Lume Nuoto Libero - Mensile (Flex)": 2,
+          "MC All Lume - Annuale (Soluzione Unica) 25/26": 2,
+          "MC Corsi Fitness - Annuale (Soluzione Unica)": 5,
+          "MON All Lume Fitness + Acqua - Annuale (Soluzione Unica) 25/26": 2,
+          "OLD Acqua": 2,
+          "MC Sala Pesi - Annuale (12 Rate)": 12,
+          "MC All Lume - Mensile (Flex)": 14,
+          "MON All Lume Nuoto Libero - Annuale (12 Rate)": 4,
+          "MON All Lume Fitness + Acqua (Under 23) - Annuale (12 Rate)": 2,
+          "MC Sala Pesi - Annuale (Soluzione Unica)": 5,
+          "MC Crossfit 3V - Annuale (Soluzione Unica)": 2,
+          "MC Crossfit OPEN - Annuale (Soluzione Unica)": 1,
+          "MON All Lume AcquaFitness - Mensile (Flex)": 4,
+          "MON Sala Pesi - Annuale (Soluzione Unica) 25/26": 6,
+          "MON All Lume AcquaFitness - Annuale (Soluzione Unica)": 3,
+          "On Ramp": 2,
+          "MON All Lume Fitness + Acqua (Under 23) - Annuale (Soluzione Unica)": 2,
+          "MC Crossfit 2V - Annuale (Soluzione Unica)": 2,
+          "MON All Lume Fitness + Acqua - Annuale (12 Rate) 25/26": 1,
+          "MON All Lume Fitness (Over 65) - Annuale (Soluzione Unica)": 3,
+          "MON All Lume Fitness - Annuale (Soluzione Unica) 25/26": 1,
+          "MeseOmaggioLume": 1,
+          "MC All Lume - Annuale (12 Rate)": 1,
+          "MON All Lume Fitness - Annuale (12 Rate) 25/26": 1,
+          "Certificato Medico": 1,
+          "MON Scuola Nuoto Bambini Bisettimanale - Mensile Flex": 1,
+          "MON All Lume Fitness + Acqua (Under 23) - Mensile (Flex)": 1,
+          "MON Scuola Nuoto Adulti - Annuale (Soluzione Unica)": 1,
+          "MC Crossfit OPEN - Mensile (Flex)": 1
+        },
+        "payments": {
+          "CreditCard": 111,
+          "CustomType1": 149,
+          "CustomType3": 98,
+          "MoneyTransfer": 9,
+          "Cash": 33,
+          "Sconosciuto": 22,
+          "Online": 2
+        },
+        "centri": {
+          "MON": 108,
+          "ALTRO": 62,
+          "MC": 254
+        }
+      },
+      "2026-W11": {
+        "count": 494,
+        "lordo": 45954.0,
+        "netto": 45513.8,
+        "employees": {
+          "Genny Di Sante": 246,
+          "Leonardo Coppari": 152,
+          "Matilde Biagiola": 6,
+          "Online Registration": 12,
+          "Chiara Messi": 12,
+          "GAIA GENTILI": 45,
+          "Sconosciuto": 17,
+          "Camilla Stortoni": 2,
+          "DANIELA DE ANGELIS": 2
+        },
+        "memberships": {
+          "MC Sala Pesi - Annuale (12 Rate) 25/26": 39,
+          "MC Sala Pesi - Annuale (12 Rate)": 51,
+          "Sconosciuto": 39,
+          "MC All Lume (Under 23) - Annuale (12 Rate)": 50,
+          "MON Sala Pesi - Annuale (12 Rate)": 26,
+          "MON Sala Pesi - Annuale (12 Rate) 25/26": 51,
+          "MC Corsi Fitness - Annuale (12 Rate)": 26,
+          "MON All Lume AcquaFitness - Annuale (Soluzione Unica)": 7,
+          "Guest Pass GOLD 7gg - LUME - Ref": 14,
+          "MON All Lume Fitness + Acqua (Under 23) - Annuale (Soluzione Unica)": 5,
+          "MC All Lume (Over 65) - Annuale (12 Rate)": 24,
+          "MON Sala Pesi - Annuale (Soluzione Unica)": 7,
+          "MON Scuola Nuoto Bambini Monosettimanale - Stagionale": 10,
+          "Guest Pass GOLD 7gg - LUME": 8,
+          "MC Corsi Fitness - Annuale (12 Rate) 25/26": 12,
+          "MC All Lume - Annuale (12 Rate)": 14,
+          "MC All Lume - Mensile (Flex)": 4,
+          "MON All Lume Fitness - Annuale (Soluzione Unica) 25/26": 2,
+          "MON All Lume Fitness + Acqua (Under 23) - Annuale (12 Rate)": 13,
+          "MON All Lume Fitness + Acqua - Annuale (12 Rate) 25/26": 3,
+          "MON All Lume Fitness - Annuale (12 Rate) 25/26": 14,
+          "MC Crossfit OPEN - Mensile (Flex)": 2,
+          "MC All Lume - Annuale (12 Rate) 25/26": 27,
+          "MON Scuola Nuoto Bambini Bisettimanale - Stagionale": 6,
+          "MON All Lume Nuoto Libero - Mensile (Flex)": 3,
+          "MC Crossfit 3V - Annuale (Soluzione Unica)": 2,
+          "MC All Lume GOLD - Annuale (Soluzione Unica) 25/26": 2,
+          "Certificato Medico": 1,
+          "MON Corsi Fitness - Annuale (12 Rate)": 1,
+          "MC All Lume - Annuale (Soluzione Unica)": 5,
+          "MON Sala Pesi Entry Level - Annuale (Soluzione Unica) 25/26": 1,
+          "MON Sala Pesi - Annuale (Soluzione Unica) 25/26": 5,
+          "MC All Lume - Annuale (Soluzione Unica) 25/26": 1,
+          "MC Sala Pesi - Annuale (Soluzione Unica)": 5,
+          "MC Corsi Fitness - Annuale (Soluzione Unica)": 2,
+          "MON All Lume Fitness + Acqua - Annuale (Soluzione Unica) 25/26": 2,
+          "MON All Lume Nuoto Libero - Annuale (Soluzione Unica)": 2,
+          "MC Crossfit OPEN - Annuale (12 Rate)": 1,
+          "MC Corsi Fitness - Annuale (Soluzione Unica) 25/26": 1,
+          "MC Crossfit OPEN - Annuale (Soluzione Unica)": 2,
+          "MON Corsi Fitness - Annuale (Soluzione Unica)": 1,
+          "Mensile Omaggio - back": 1,
+          "MON Scuola Nuoto Adulti - Annuale (Soluzione Unica)": 1,
+          "MC Sala Pesi - Annuale (Soluzione Unica) 25/26": 1
+        },
+        "payments": {
+          "CustomType1": 200,
+          "CustomType3": 135,
+          "CreditCard": 109,
+          "Cash": 27,
+          "MoneyTransfer": 6,
+          "Sconosciuto": 17
+        },
+        "centri": {
+          "MC": 271,
+          "ALTRO": 63,
+          "MON": 160
+        }
+      },
+      "2026-W12": {
+        "count": 346,
+        "lordo": 30955.0,
+        "netto": 30528.56,
+        "employees": {
+          "Matilde Biagiola": 76,
+          "Genny Di Sante": 73,
+          "Camilla Stortoni": 27,
+          "Leonardo Coppari": 99,
+          "Sconosciuto": 8,
+          "GAIA GENTILI": 18,
+          "Chiara Messi": 29,
+          "Online Registration": 11,
+          "DANIELA DE ANGELIS": 5
+        },
+        "memberships": {
+          "MC Crossfit OPEN - Annuale (12 Rate)": 24,
+          "MC All Lume (Under 23) - Annuale (12 Rate)": 36,
+          "MON All Lume Nuoto Libero - Annuale (Soluzione Unica)": 2,
+          "MON Sala Pesi - Annuale (12 Rate) 25/26": 37,
+          "MC Sala Pesi - Annuale (12 Rate)": 12,
+          "MON Sala Pesi - Annuale (Soluzione Unica)": 6,
+          "MC All Lume - Annuale (12 Rate) 25/26": 12,
+          "Sconosciuto": 35,
+          "MON All Lume Fitness + Acqua - Annuale (12 Rate) 25/26": 26,
+          "MON All Lume Fitness - Annuale (12 Rate) 25/26": 13,
+          "MC All Lume (Over 65) - Annuale (Soluzione Unica)": 3,
+          "MC Sala Pesi - Annuale (12 Rate) 25/26": 38,
+          "MON All Lume AcquaFitness - Annuale (12 Rate)": 12,
+          "MC Crossfit OPEN - Annuale (Soluzione Unica)": 2,
+          "MON All Lume Fitness + Acqua (Under 23) - Annuale (12 Rate)": 14,
+          "MC All Lume - Annuale (12 Rate)": 12,
+          "Guest Pass GOLD 7gg - LUME": 14,
+          "MC Crossfit 3V - Annuale (Soluzione Unica)": 2,
+          "MC Sala Pesi - Annuale (Soluzione Unica)": 7,
+          "MON Scuola Nuoto Bambini Bisettimanale - Stagionale": 3,
+          "Guest Pass GOLD 7gg - LUME - Ref": 14,
+          "MON Corsi Fitness - Annuale (12 Rate) 25/26": 1,
+          "MC All Lume - Mensile (Flex)": 3,
+          "MC All Lume - Annuale (Soluzione Unica) 25/26": 1,
+          "MON All Lume Fitness - Annuale (Soluzione Unica) 25/26": 2,
+          "MON Scuola Nuoto Bambini Monosettimanale - Stagionale": 5,
+          "MC Sala Pesi - Annuale (Soluzione Unica) 25/26": 1,
+          "MON Scuola Nuoto Bambini Bisettimanale - Stagionale 25/26 (PREVENDITA)": 1,
+          "MC Corsi Fitness - Annuale (Soluzione Unica) 25/26": 1,
+          "MON All Lume AcquaFitness - Mensile (Flex)": 2,
+          "On Ramp": 1,
+          "MON Sala Pesi - Annuale (Soluzione Unica) 25/26": 2,
+          "MC Corsi Fitness - Annuale (Soluzione Unica)": 1,
+          "Certificato Medico": 1
+        },
+        "payments": {
+          "CustomType1": 122,
+          "CustomType3": 110,
+          "CreditCard": 79,
+          "Cash": 22,
+          "Sconosciuto": 8,
+          "MoneyTransfer": 5
+        },
+        "centri": {
+          "MC": 155,
+          "MON": 126,
+          "ALTRO": 65
+        }
+      },
+      "2026-W13": {
+        "count": 342,
+        "lordo": 28674.99,
+        "netto": 28054.48,
+        "employees": {
+          "GAIA GENTILI": 71,
+          "Online Registration": 12,
+          "Matilde Biagiola": 122,
+          "Genny Di Sante": 64,
+          "Sconosciuto": 9,
+          "Camilla Stortoni": 9,
+          "Leonardo Coppari": 54,
+          "Chiara Messi": 1
+        },
+        "memberships": {
+          "Guest Pass GOLD 7gg - LUME": 5,
+          "MC All Lume - Annuale (Soluzione Unica)": 2,
+          "MC Crossfit 3V - Annuale (12 Rate)": 12,
+          "MC All Lume - Annuale (12 Rate) 25/26": 13,
+          "MC All Lume - Annuale (12 Rate)": 24,
+          "MON Sala Pesi - Annuale (Soluzione Unica)": 5,
+          "MC Sala Pesi - Annuale (12 Rate)": 25,
+          "MC Crossfit OPEN - Annuale (12 Rate)": 24,
+          "MON Scuola Nuoto Bambini Monosettimanale - Stagionale": 10,
+          "MON Scuola Nuoto Adulti - Annuale (12 Rate)": 24,
+          "MON Sala Pesi - Annuale (12 Rate) 25/26": 14,
+          "MON All Lume AcquaFitness - Annuale (12 Rate)": 24,
+          "MC Corsi Fitness - Annuale (12 Rate) 25/26": 24,
+          "Sconosciuto": 35,
+          "MON All Lume Fitness (Over 65) - Annuale (Soluzione Unica)": 3,
+          "MC Sala Pesi - Annuale (12 Rate) 25/26": 38,
+          "Certificato Medico": 1,
+          "MC All Lume - Mensile (Flex)": 8,
+          "MON All Lume AcquaFitness - Annuale (Soluzione Unica)": 2,
+          "MC Sala Pesi - Annuale (Soluzione Unica)": 5,
+          "MON Sala Pesi - Annuale (Soluzione Unica) 25/26": 2,
+          "Guest Pass GOLD 7gg - LUME - Ref": 13,
+          "MON Sala Pesi - Annuale (12 Rate)": 12,
+          "MC Crossfit Special 2 (Mensile)": 1,
+          "MON All Lume Fitness + Acqua (Under 23) - Annuale (12 Rate)": 3,
+          "MC Corsi Fitness - Annuale (Soluzione Unica) 25/26": 1,
+          "MC Crossfit 2V - Annuale (12 Rate)": 1,
+          "MON All Lume Nuoto Libero - Mensile (Flex)": 2,
+          "MC Corsi Fitness - Annuale (Soluzione Unica)": 1,
+          "MON All Lume Fitness - Annuale (Soluzione Unica) 25/26": 2,
+          "MON All Lume Fitness + Acqua (Under 23) - Annuale (Soluzione Unica)": 2,
+          "MON All Lume Fitness - Mensile (Flex)": 2,
+          "MC All Lume - Annuale (Soluzione Unica) 25/26": 1,
+          "MON Corsi Fitness - Annuale (Soluzione Unica)": 1
+        },
+        "payments": {
+          "CreditCard": 63,
+          "CustomType1": 135,
+          "CustomType3": 96,
+          "Sconosciuto": 9,
+          "MoneyTransfer": 8,
+          "Cash": 31
+        },
+        "centri": {
+          "ALTRO": 54,
+          "MC": 180,
+          "MON": 108
+        }
+      },
+      "2026-W14": {
+        "count": 362,
+        "lordo": 32355,
+        "netto": 32175.4,
+        "employees": {
+          "Genny Di Sante": 99,
+          "GAIA GENTILI": 60,
+          "Matilde Biagiola": 61,
+          "Leonardo Coppari": 69,
+          "Sconosciuto": 56,
+          "Online Registration": 10,
+          "Camilla Stortoni": 4,
+          "DANIELA DE ANGELIS": 3
+        },
+        "memberships": {
+          "Guest Pass GOLD 7gg - LUME": 5,
+          "MC Sala Pesi - Annuale (12 Rate)": 24,
+          "MON Corsi Fitness - Annuale (12 Rate)": 12,
+          "MC All Lume - Annuale (12 Rate) 25/26": 12,
+          "MC Sala Pesi - Annuale (12 Rate) 25/26": 25,
+          "MON All Lume Fitness - Annuale (12 Rate) 25/26": 12,
+          "MON All Lume AcquaFitness - Mensile (Flex)": 6,
+          "MC All Lume - Mensile (Flex)": 41,
+          "Sconosciuto": 28,
+          "MON All Lume Fitness + Acqua - Annuale (Soluzione Unica) 25/26": 2,
+          "MC All Lume (Over 65) - Annuale (12 Rate)": 24,
+          "MC All Lume - Annuale (12 Rate)": 23,
+          "MON All Lume AcquaFitness - Annuale (12 Rate)": 13,
+          "Certificato Medico": 1,
+          "MON Scuola Nuoto Bambini Monosettimanale - Mensile Flex": 8,
+          "Guest Pass GOLD 7gg - LUME - Ref": 9,
+          "MC All Lume (Under 23) - Annuale (12 Rate)": 13,
+          "MON All Lume AcquaFitness - Annuale (Soluzione Unica)": 3,
+          "MON Sala Pesi - Annuale (12 Rate) 25/26": 24,
+          "MON All Lume Fitness + Acqua - Mensile (Flex)": 2,
+          "MON All Lume Nuoto Libero - Mensile (Flex)": 5,
+          "MC Crossfit OPEN - Mensile (Flex)": 6,
+          "MC Crossfit OPEN - Annuale (Soluzione Unica)": 2,
+          "MC Sala Pesi - Annuale (Soluzione Unica) 25/26": 5,
+          "MC Sala Pesi - Annuale (Soluzione Unica)": 4,
+          "MON All Lume Fitness + Acqua - Annuale (12 Rate) 25/26": 12,
+          "MC All Lume - Annuale (Soluzione Unica)": 1,
+          "MON All Lume Nuoto Libero - Annuale (Soluzione Unica)": 4,
+          "MON Sala Pesi - Annuale (12 Rate)": 12,
+          "MON All Lume Fitness + Acqua (Under 23) - Annuale (12 Rate)": 2,
+          "MON All Lume Fitness - Mensile (Flex)": 10,
+          "MC Crossfit 3V - Annuale (Soluzione Unica)": 2,
+          "MON Sala Pesi - Annuale (Soluzione Unica) 25/26": 2,
+          "MC Corsi Fitness - Annuale (Soluzione Unica)": 2,
+          "MC All Lume (Under 23) - Mensile (Flex)": 1,
+          "MON All Lume Fitness - Annuale (Soluzione Unica)": 2,
+          "MC Crossfit OPEN - Annuale (12 Rate)": 1,
+          "MON Scuola Nuoto Bambini Bisettimanale - Mensile Flex": 1,
+          "MON All Lume Fitness + Acqua (Under 23) - Mensile (Flex)": 1
+        },
+        "payments": {
+          "CreditCard": 76,
+          "CustomType3": 119,
+          "CustomType1": 87,
+          "Sconosciuto": 56,
+          "Cash": 16,
+          "Online": 4,
+          "MoneyTransfer": 4
+        },
+        "centri": {
+          "ALTRO": 43,
+          "MC": 186,
+          "MON": 133
+        }
+      },
+      "2026-W15": {
+        "count": 302,
+        "lordo": 27492,
+        "netto": 27014.33,
+        "employees": {
+          "Sconosciuto": 18,
+          "Leonardo Coppari": 47,
+          "GAIA GENTILI": 76,
+          "Matilde Biagiola": 81,
+          "Genny Di Sante": 44,
+          "Online Registration": 11,
+          "Camilla Stortoni": 21,
+          "Chiara Messi": 2,
+          "DANIELA DE ANGELIS": 2
+        },
+        "memberships": {
+          "Guest Pass GOLD 7gg - LUME": 12,
+          "MON Sala Pesi - Annuale (12 Rate) 25/26": 17,
+          "MON Corsi Fitness - Annuale (12 Rate) 25/26": 12,
+          "MON All Lume Fitness + Acqua - Annuale (12 Rate) 25/26": 23,
+          "MC Corsi Fitness - Annuale (12 Rate)": 4,
+          "MC All Lume (Over 65) - Annuale (12 Rate)": 13,
+          "MON All Lume Fitness - Annuale (Soluzione Unica)": 2,
+          "MON Sala Pesi Entry Level - Annuale (12 Rate) 25/26": 12,
+          "Sconosciuto": 42,
+          "MC Corsi Fitness - Annuale (12 Rate) 25/26": 13,
+          "MON Scuola Nuoto Bambini Monosettimanale - Mensile Flex": 1,
+          "MON Sala Pesi - Annuale (12 Rate)": 11,
+          "MC Sala Pesi - Annuale (12 Rate)": 24,
+          "MON All Lume Fitness + Acqua (Under 23) - Annuale (12 Rate)": 12,
+          "Certificato Medico": 1,
+          "Guest Pass GOLD 7gg - LUME - Ref": 8,
+          "MC Sala Pesi - Annuale (Soluzione Unica)": 5,
+          "MC All Lume (Under 23) - Annuale (12 Rate)": 24,
+          "MON All Lume AcquaFitness - Mensile (Flex)": 3,
+          "MON All Lume Fitness + Acqua - Annuale (Soluzione Unica) 25/26": 5,
+          "MON Scuola Nuoto Adulti - Annuale (Soluzione Unica)": 1,
+          "MC All Lume (Under 23) - Annuale (Soluzione Unica)": 1,
+          "MON All Lume AcquaFitness - Annuale (12 Rate)": 14,
+          "MON Sala Pesi - Annuale (Soluzione Unica)": 1,
+          "MC All Lume - Annuale (12 Rate)": 12,
+          "MON Sala Pesi - Annuale (Soluzione Unica) 25/26": 2,
+          "MC All Lume - Mensile (Flex)": 6,
+          "MON All Lume Fitness - Mensile (Flex)": 2,
+          "OLD Acqua": 2,
+          "MON Scuola Nuoto Bambini Bisettimanale - Stagionale": 4,
+          "MC All Lume - Annuale (Soluzione Unica)": 2,
+          "MC Corsi Fitness - Annuale (Soluzione Unica)": 1,
+          "MC Crossfit 2V - Annuale (12 Rate)": 1,
+          "MeseOmaggioLume": 1,
+          "MC Crossfit 3V - Annuale (Soluzione Unica)": 1,
+          "MON All Lume Fitness + Acqua - Annuale (Soluzione Unica)": 1,
+          "MON All Lume Fitness + Acqua - Mensile (Flex)": 2,
+          "MON All Lume AcquaFitness - Annuale (Soluzione Unica)": 3,
+          "MON All Lume Nuoto Libero - Annuale (Soluzione Unica)": 1
+        },
+        "payments": {
+          "Sconosciuto": 18,
+          "CreditCard": 64,
+          "CustomType3": 61,
+          "CustomType1": 118,
+          "Cash": 36,
+          "Online": 1,
+          "MoneyTransfer": 4
+        },
+        "centri": {
+          "ALTRO": 66,
+          "MON": 129,
+          "MC": 107
+        }
+      },
+      "2026-W16": {
+        "count": 392,
+        "lordo": 38906,
+        "netto": 38299.0,
+        "employees": {
+          "DANIELA DE ANGELIS": 3,
+          "Genny Di Sante": 135,
+          "GAIA GENTILI": 93,
+          "Leonardo Coppari": 56,
+          "Matilde Biagiola": 80,
+          "Online Registration": 17,
+          "Sconosciuto": 3,
+          "Camilla Stortoni": 5
+        },
+        "memberships": {
+          "MC All Lume - Mensile (Flex)": 6,
+          "MC Sala Pesi - Annuale (12 Rate) 25/26": 38,
+          "MC Sala Pesi - Annuale (12 Rate)": 35,
+          "MON Sala Pesi Entry Level - Annuale (12 Rate) 25/26": 13,
+          "MON Sala Pesi - Annuale (12 Rate) 25/26": 36,
+          "MON All Lume Nuoto Libero - Annuale (12 Rate)": 12,
+          "MON Sala Pesi - Annuale (Soluzione Unica) 25/26": 9,
+          "MC Crossfit OPEN - Annuale (12 Rate)": 24,
+          "Sconosciuto": 48,
+          "MON Sala Pesi - Annuale (12 Rate)": 12,
+          "MON All Lume Fitness - Mensile (Flex)": 9,
+          "MC Corsi Fitness - Annuale (12 Rate) 25/26": 24,
+          "MC All Lume - Annuale (12 Rate)": 12,
+          "Guest Pass GOLD 7gg - LUME": 6,
+          "MC All Lume (Over 65) - Annuale (12 Rate)": 12,
+          "MC Corsi Fitness - Annuale (12 Rate)": 14,
+          "MC Sala Pesi - Annuale (Soluzione Unica) 25/26": 1,
+          "MC Sala Pesi - Annuale (Soluzione Unica)": 6,
+          "MON Corsi Fitness - Annuale (Soluzione Unica)": 2,
+          "MC Crossfit OPEN - Annuale (Soluzione Unica)": 1,
+          "MC All Lume (Under 23) - Annuale (Soluzione Unica)": 2,
+          "MON All Lume Fitness - Annuale (12 Rate)": 12,
+          "MON Sala Pesi - Annuale (Soluzione Unica)": 8,
+          "MON All Lume Fitness + Acqua - Mensile (Flex)": 2,
+          "MC All Lume GOLD - Annuale (Soluzione Unica) 25/26": 2,
+          "MON All Lume AcquaFitness - Annuale (Soluzione Unica)": 3,
+          "MON Scuola Nuoto Adulti - Annuale (12 Rate)": 13,
+          "MON All Lume Fitness - Annuale (Soluzione Unica)": 2,
+          "MC Crossfit 2V - Annuale (12 Rate)": 13,
+          "MON All Lume AcquaFitness - Mensile (Flex)": 2,
+          "Guest Pass GOLD 7gg - LUME - Ref": 5,
+          "MC All Lume - Annuale (Soluzione Unica)": 2,
+          "MC Corsi Fitness - Annuale (Soluzione Unica)": 1,
+          "Certificato Medico": 1,
+          "MON All Lume Nuoto Libero - Annuale (Soluzione Unica)": 1,
+          "MC All Lume - Annuale (Soluzione Unica) 25/26": 1,
+          "MON Scuola Nuoto Adulti - Annuale (Soluzione Unica)": 1,
+          "MON All Lume Nuoto Libero - Mensile (Flex)": 1
+        },
+        "payments": {
+          "CreditCard": 84,
+          "CustomType1": 155,
+          "CustomType3": 110,
+          "Cash": 34,
+          "Sconosciuto": 3,
+          "MoneyTransfer": 6
+        },
+        "centri": {
+          "MC": 194,
+          "MON": 138,
+          "ALTRO": 60
+        }
+      },
+      "2026-W17": {
+        "count": 286,
+        "lordo": 26675.0,
+        "netto": 26401.63,
+        "employees": {
+          "Matilde Biagiola": 94,
+          "Leonardo Coppari": 50,
+          "Genny Di Sante": 106,
+          "System System": 1,
+          "GAIA GENTILI": 12,
+          "Online Registration": 11,
+          "Camilla Stortoni": 4,
+          "DANIELA DE ANGELIS": 2,
+          "Sconosciuto": 5,
+          "Chiara Messi": 1
+        },
+        "memberships": {
+          "MC Crossfit 3V - Annuale (12 Rate)": 12,
+          "MON Sala Pesi - Annuale (12 Rate) 25/26": 24,
+          "MC All Lume - Annuale (12 Rate) 25/26": 24,
+          "Sconosciuto": 31,
+          "MC Crossfit 2V - Annuale (12 Rate)": 12,
+          "MC All Lume (Under 23) - Mensile (Flex)": 2,
+          "MON All Lume Nuoto Libero - Annuale (Soluzione Unica)": 3,
+          "MC Sala Pesi - Annuale (12 Rate)": 49,
+          "MC All Lume (Under 23) - Annuale (12 Rate)": 25,
+          "MC All Lume - Annuale (12 Rate)": 12,
+          "MC All Lume - Mensile (Flex)": 3,
+          "Guest Pass GOLD 7gg - LUME - Ref": 7,
+          "MC All Lume (Over 65) - Annuale (Soluzione Unica)": 2,
+          "MON All Lume Fitness + Acqua - Annuale (12 Rate) 25/26": 5,
+          "MC Corsi Fitness - Annuale (Soluzione Unica)": 5,
+          "Guest Pass GOLD 7gg - LUME": 6,
+          "MC Sala Pesi - Annuale (12 Rate) 25/26": 37,
+          "MC Sala Pesi - Annuale (Soluzione Unica) 25/26": 1,
+          "MON All Lume Fitness + Acqua (Under 23) - Annuale (Soluzione Unica)": 2,
+          "MON Scuola Nuoto Adulti - Annuale (12 Rate)": 1,
+          "MC Sala Pesi - Annuale (Soluzione Unica)": 2,
+          "MON All Lume AcquaFitness - Annuale (Soluzione Unica)": 4,
+          "MC All Lume - Annuale (Soluzione Unica)": 1,
+          "MON Sala Pesi - Annuale (Soluzione Unica) 25/26": 1,
+          "MON Scuola Nuoto Adulti - Annuale (Soluzione Unica)": 1,
+          "MON All Lume Fitness - Mensile (Flex)": 1,
+          "MON All Lume Fitness + Acqua - Annuale (Soluzione Unica) 25/26": 1,
+          "MON Corsi Fitness - Annuale (Soluzione Unica)": 2,
+          "MC Crossfit 2V - Annuale (Soluzione Unica)": 1,
+          "Mensile Omaggio - back": 2,
+          "MON Sala Pesi - Annuale (Soluzione Unica)": 1,
+          "Certificato Medico": 2,
+          "MC Crossfit Special 2 (Mensile)": 1,
+          "MON All Lume Fitness + Acqua - Annuale (12 Rate)": 1,
+          "MON All Lume Fitness (Over 65) - Annuale (Soluzione Unica)": 2
+        },
+        "payments": {
+          "CustomType3": 134,
+          "CustomType1": 62,
+          "Cash": 25,
+          "Online": 1,
+          "CreditCard": 48,
+          "MoneyTransfer": 11,
+          "Sconosciuto": 5
+        },
+        "centri": {
+          "MC": 189,
+          "MON": 49,
+          "ALTRO": 48
+        }
+      },
+      "2026-W18": {
+        "count": 254,
+        "lordo": 26912,
+        "netto": 26692.9,
+        "employees": {
+          "Leonardo Coppari": 20,
+          "Matilde Biagiola": 84,
+          "Genny Di Sante": 94,
+          "GAIA GENTILI": 14,
+          "Sconosciuto": 8,
+          "Camilla Stortoni": 17,
+          "Online Registration": 15,
+          "DANIELA DE ANGELIS": 2
+        },
+        "memberships": {
+          "MON All Lume Fitness - Annuale (Soluzione Unica)": 1,
+          "MC Sala Pesi - Annuale (12 Rate) 25/26": 36,
+          "MC Sala Pesi - Annuale (12 Rate)": 48,
+          "MC All Lume (Under 23) - Annuale (12 Rate)": 13,
+          "MC All Lume - Annuale (12 Rate)": 36,
+          "On Ramp": 1,
+          "MON Sala Pesi - Annuale (12 Rate) 25/26": 12,
+          "MC Crossfit OPEN - Annuale (12 Rate)": 12,
+          "Guest Pass GOLD 7gg - LUME - Ref": 8,
+          "Sconosciuto": 29,
+          "MC All Lume - Mensile (Flex)": 4,
+          "MeseOmaggioLume": 1,
+          "MON Sala Pesi - Annuale (12 Rate)": 12,
+          "MC Sala Pesi - Annuale (Soluzione Unica) 25/26": 4,
+          "MC All Lume - Annuale (12 Rate) 25/26": 2,
+          "MC All Lume (Over 65) - Annuale (Soluzione Unica)": 2,
+          "MC Sala Pesi - Annuale (Soluzione Unica)": 2,
+          "MON All Lume Nuoto Libero - Mensile (Flex)": 2,
+          "MON Scuola Nuoto Adulti - Annuale (12 Rate)": 1,
+          "MC Corsi Fitness - Annuale (Soluzione Unica)": 3,
+          "Mensile Omaggio - back": 1,
+          "Guest Pass GOLD 7gg - LUME": 5,
+          "MON Sala Pesi - Annuale (Soluzione Unica)": 2,
+          "MC All Lume - Annuale (Soluzione Unica) 25/26": 7,
+          "MC All Lume - Annuale (Soluzione Unica)": 2,
+          "MON All Lume Fitness + Acqua - Mensile (Flex)": 1,
+          "MC All Lume (Under 23) - Annuale (Soluzione Unica)": 1,
+          "MON Sala Pesi - Annuale (Soluzione Unica) 25/26": 1,
+          "MON All Lume Fitness - Mensile (Flex)": 1,
+          "Certificato Medico": 1,
+          "MC All Lume (Under 23) - Mensile (Flex)": 1,
+          "MC Crossfit 2V - Annuale (Soluzione Unica)": 2
+        },
+        "payments": {
+          "CreditCard": 60,
+          "CustomType1": 120,
+          "CustomType3": 48,
+          "Sconosciuto": 8,
+          "Cash": 13,
+          "MoneyTransfer": 4,
+          "Online": 1
+        },
+        "centri": {
+          "MON": 33,
+          "MC": 175,
+          "ALTRO": 46
+        }
+      }
+    },
+    "MC": {
+      "2020-W09": {
+        "count": 1,
+        "lordo": 710,
+        "netto": 710,
+        "employees": {
+          "Sconosciuto": 1
+        },
+        "memberships": {
+          "MC All Lume - Annuale (Soluzione Unica) test": 1
+        },
+        "payments": {
+          "Sconosciuto": 1
+        },
+        "centri": {
+          "MC": 1
+        }
+      },
+      "2025-W01": {
+        "count": 1,
+        "lordo": 190,
+        "netto": 190,
+        "employees": {
+          "Genny Di Sante": 1
+        },
+        "memberships": {
+          "MC Sala Pesi - Annuale (Soluzione Unica)": 1
+        },
+        "payments": {
+          "Cash": 1
+        },
+        "centri": {
+          "MC": 1
+        }
+      },
+      "2025-W09": {
+        "count": 1,
+        "lordo": 564,
+        "netto": 564,
+        "employees": {
+          "Genny Di Sante": 1
+        },
+        "memberships": {
+          "MC Corsi Fitness - Annuale (Soluzione Unica)": 1
+        },
+        "payments": {
+          "CreditCard": 1
+        },
+        "centri": {
+          "MC": 1
+        }
+      },
+      "2025-W37": {
+        "count": 2,
+        "lordo": 594,
+        "netto": 594,
+        "employees": {
+          "Alex Pop": 2
+        },
+        "memberships": {
+          "MC All Lume - Annuale (Soluzione Unica)": 2
+        },
+        "payments": {
+          "CreditCard": 1,
+          "CustomType3": 1
+        },
+        "centri": {
+          "MC": 2
+        }
+      },
+      "2026-W01": {
+        "count": 104,
+        "lordo": 9448,
+        "netto": 9399.11,
+        "employees": {
+          "Genny Di Sante": 30,
+          "Matilde Biagiola": 41,
+          "Sconosciuto": 26,
+          "Leonardo Coppari": 1,
+          "Online Registration": 6
+        },
+        "memberships": {
+          "MC Sala Pesi - Annuale (Soluzione Unica) 25/26": 2,
+          "MC All Lume - Mensile (Flex)": 29,
+          "MC Sala Pesi - Annuale (12 Rate) 25/26": 26,
+          "MC All Lume - Annuale (12 Rate) 25/26": 37,
+          "MC Corsi Fitness - Annuale (Soluzione Unica)": 2,
+          "MC Sala Pesi - Annuale (12 Rate)": 1,
+          "MC All Lume (Under 23) - Mensile (Flex)": 1,
+          "MC All Lume - Annuale (Soluzione Unica)": 4,
+          "MC All Lume (Under 23) - Annuale (Soluzione Unica)": 1,
+          "MC Sala Pesi - Annuale (Soluzione Unica)": 1
+        },
+        "payments": {
+          "CreditCard": 17,
+          "CustomType1": 48,
+          "CustomType3": 12,
+          "Sconosciuto": 26,
+          "Cash": 1
+        },
+        "centri": {
+          "MC": 104
+        }
+      },
+      "2026-W02": {
+        "count": 210,
+        "lordo": 24140,
+        "netto": 24073.07,
+        "employees": {
+          "Matilde Biagiola": 126,
+          "Sconosciuto": 6,
+          "Genny Di Sante": 57,
+          "DANIELA DE ANGELIS": 3,
+          "Elena Marchegiani": 14,
+          "Leonardo Coppari": 2,
+          "GAIA GENTILI": 1,
+          "Alex Pop": 1
+        },
+        "memberships": {
+          "MC Corsi Fitness - Annuale (12 Rate)": 12,
+          "MC All Lume - Annuale (Soluzione Unica)": 2,
+          "MC Crossfit 2V - Annuale (12 Rate)": 24,
+          "MC Sala Pesi - Annuale (12 Rate) 25/26": 52,
+          "MC All Lume - Mensile (Flex)": 7,
+          "MC All Lume - Annuale (12 Rate) 25/26": 11,
+          "MC Sala Pesi - Annuale (12 Rate)": 24,
+          "MC Corsi Fitness - Annuale (12 Rate) 25/26": 24,
+          "MC Sala Pesi - Annuale (Soluzione Unica)": 8,
+          "MC Crossfit 3V - Annuale (12 Rate)": 12,
+          "MC Crossfit OPEN - Annuale (12 Rate)": 12,
+          "MC Corsi Fitness - Annuale (Soluzione Unica)": 2,
+          "MC Sala Pesi - Annuale (Soluzione Unica) 25/26": 8,
+          "MC Corsi Fitness - Annuale (Soluzione Unica) 25/26": 1,
+          "MC All Lume (Over 65) - Annuale (Soluzione Unica)": 2,
+          "MC Crossfit 3V - Annuale (Soluzione Unica)": 3,
+          "MC Crossfit 2V - Annuale (Soluzione Unica)": 1,
+          "MC All Lume - Annuale (Soluzione Unica) 25/26": 2,
+          "MC All Lume (Under 23) - Annuale (Soluzione Unica)": 1,
+          "MC All Lume GOLD - Annuale (Soluzione Unica)": 1,
+          "MC Crossfit OPEN - Annuale (Soluzione Unica)": 1
+        },
+        "payments": {
+          "CustomType1": 145,
+          "Sconosciuto": 6,
+          "CreditCard": 24,
+          "CustomType3": 25,
+          "Cash": 10
+        },
+        "centri": {
+          "MC": 210
+        }
+      },
+      "2026-W03": {
+        "count": 390,
+        "lordo": 32487,
+        "netto": 32356.02,
+        "employees": {
+          "Genny Di Sante": 99,
+          "Matilde Biagiola": 251,
+          "DANIELA DE ANGELIS": 26,
+          "Leonardo Coppari": 7,
+          "Sconosciuto": 5,
+          "GAIA GENTILI": 1,
+          "Online Registration": 1
+        },
+        "memberships": {
+          "MC Corsi Fitness - Annuale (12 Rate) 25/26": 24,
+          "MC Sala Pesi - Annuale (12 Rate) 25/26": 89,
+          "MC All Lume - Annuale (Soluzione Unica) 25/26": 7,
+          "MC Sala Pesi - Annuale (12 Rate)": 88,
+          "MC Corsi Fitness - Annuale (12 Rate)": 25,
+          "MC All Lume (Under 23) - Annuale (Soluzione Unica)": 5,
+          "MC Crossfit OPEN - Annuale (12 Rate)": 12,
+          "MC All Lume (Over 65) - Annuale (12 Rate)": 24,
+          "MC All Lume GOLD - Annuale (12 Rate) 25/26": 12,
+          "MC Crossfit 3V - Annuale (12 Rate)": 12,
+          "MC All Lume - Annuale (12 Rate) 25/26": 50,
+          "MC Corsi Fitness - Annuale (Soluzione Unica)": 8,
+          "MC Sala Pesi - Annuale (Soluzione Unica) 25/26": 2,
+          "MC Sala Pesi - Annuale (Soluzione Unica)": 6,
+          "MC Crossfit OPEN - Mensile (Flex)": 1,
+          "MC All Lume (Under 23) - Annuale (12 Rate)": 13,
+          "MC All Lume - Annuale (12 Rate)": 3,
+          "MC All Lume - Mensile (Flex)": 5,
+          "MC Crossfit 3V - Annuale (Soluzione Unica)": 2,
+          "MC All Lume - Annuale (Soluzione Unica)": 1,
+          "MC All Lume (Over 65) - Annuale (Soluzione Unica)": 1
+        },
+        "payments": {
+          "CustomType3": 170,
+          "CustomType1": 170,
+          "CreditCard": 38,
+          "Cash": 4,
+          "Sconosciuto": 5,
+          "MoneyTransfer": 3
+        },
+        "centri": {
+          "MC": 390
+        }
+      },
+      "2026-W04": {
+        "count": 299,
+        "lordo": 31812,
+        "netto": 31766.9,
+        "employees": {
+          "Genny Di Sante": 120,
+          "Matilde Biagiola": 172,
+          "Sconosciuto": 4,
+          "Alex Pop": 1,
+          "Leonardo Coppari": 1,
+          "DANIELA DE ANGELIS": 1
+        },
+        "memberships": {
+          "MC Sala Pesi - Annuale (12 Rate)": 37,
+          "MC Corsi Fitness - Annuale (12 Rate) 25/26": 24,
+          "MC Sala Pesi - Annuale (12 Rate) 25/26": 84,
+          "MC Corsi Fitness - Annuale (12 Rate)": 13,
+          "MC All Lume (Under 23) - Annuale (12 Rate)": 26,
+          "MC Sala Pesi - Annuale (Soluzione Unica) 25/26": 12,
+          "MC All Lume - Annuale (12 Rate) 25/26": 37,
+          "MC All Lume (Over 65) - Annuale (Soluzione Unica)": 4,
+          "MC Corsi Fitness - Annuale (Soluzione Unica)": 2,
+          "MC All Lume (Over 65) - Annuale (12 Rate)": 12,
+          "MC All Lume - Annuale (12 Rate)": 12,
+          "MC Sala Pesi - Annuale (Soluzione Unica)": 4,
+          "MC All Lume - Annuale (Soluzione Unica) 25/26": 3,
+          "MC Crossfit 3V - Annuale (Soluzione Unica)": 1,
+          "MC Crossfit OPEN - Annuale (Soluzione Unica)": 6,
+          "MC All Lume - Annuale (Soluzione Unica)": 3,
+          "MC Crossfit OPEN - Annuale (12 Rate)": 12,
+          "MC All Lume - Mensile (Flex)": 6,
+          "MC Crossfit OPEN - Mensile (Flex)": 1
+        },
+        "payments": {
+          "CustomType3": 120,
+          "CustomType1": 134,
+          "Sconosciuto": 4,
+          "MoneyTransfer": 7,
+          "CreditCard": 26,
+          "Cash": 8
+        },
+        "centri": {
+          "MC": 299
+        }
+      },
+      "2026-W05": {
+        "count": 245,
+        "lordo": 21849,
+        "netto": 21774.49,
+        "employees": {
+          "Sconosciuto": 31,
+          "Genny Di Sante": 124,
+          "Chiara Messi": 18,
+          "Matilde Biagiola": 70,
+          "DANIELA DE ANGELIS": 2
+        },
+        "memberships": {
+          "MC All Lume - Mensile (Flex)": 33,
+          "MC All Lume - Annuale (12 Rate) 25/26": 75,
+          "MC Sala Pesi - Annuale (12 Rate) 25/26": 49,
+          "MC All Lume (Under 23) - Annuale (12 Rate)": 16,
+          "MC All Lume (Over 65) - Annuale (12 Rate)": 25,
+          "MC Sala Pesi - Annuale (Soluzione Unica) 25/26": 7,
+          "MC Corsi Fitness - Annuale (12 Rate) 25/26": 12,
+          "MC Sala Pesi - Annuale (Soluzione Unica)": 4,
+          "MC Crossfit OPEN - Annuale (12 Rate)": 12,
+          "MC Crossfit OPEN - Annuale (Soluzione Unica)": 1,
+          "MC Corsi Fitness - Annuale (Soluzione Unica)": 2,
+          "MC All Lume - Annuale (Soluzione Unica)": 1,
+          "MC Crossfit OPEN - Mensile (Flex)": 1,
+          "MC Crossfit Special 2 (Mensile)": 1,
+          "MC All Lume (Over 65) - Annuale (Soluzione Unica)": 2,
+          "MC All Lume - Annuale (12 Rate)": 2,
+          "MC Crossfit 2V - Annuale (Soluzione Unica)": 1,
+          "MC All Lume (Under 23) - Annuale (Soluzione Unica)": 1
+        },
+        "payments": {
+          "Sconosciuto": 31,
+          "CreditCard": 25,
+          "CustomType3": 98,
+          "CustomType1": 85,
+          "Cash": 6
+        },
+        "centri": {
+          "MC": 245
+        }
+      },
+      "2026-W06": {
+        "count": 324,
+        "lordo": 24100,
+        "netto": 23996.99,
+        "employees": {
+          "Matilde Biagiola": 151,
+          "DANIELA DE ANGELIS": 53,
+          "Genny Di Sante": 111,
+          "Sconosciuto": 4,
+          "Online Registration": 3,
+          "GAIA GENTILI": 2
+        },
+        "memberships": {
+          "MC All Lume (Under 23) - Annuale (12 Rate)": 62,
+          "MC All Lume - Annuale (12 Rate) 25/26": 50,
+          "MC All Lume - Annuale (12 Rate)": 24,
+          "MC Sala Pesi - Annuale (12 Rate) 25/26": 125,
+          "MC All Lume - Mensile (Flex)": 5,
+          "MC Sala Pesi - Annuale (12 Rate)": 23,
+          "MC All Lume (Over 65) - Annuale (12 Rate)": 13,
+          "MC Sala Pesi - Annuale (Soluzione Unica) 25/26": 2,
+          "MC Crossfit 3V - Annuale (Soluzione Unica)": 5,
+          "MC All Lume (Under 23) - Mensile (Flex)": 2,
+          "MC All Lume - Annuale (Soluzione Unica) 25/26": 4,
+          "MC All Lume - Annuale (Soluzione Unica)": 3,
+          "MC Crossfit OPEN - Mensile (Flex)": 1,
+          "MC Corsi Fitness - Annuale (Soluzione Unica) 25/26": 2,
+          "MC Crossfit OPEN - Annuale (12 Rate)": 1,
+          "MC Sala Pesi - Annuale (Soluzione Unica)": 1,
+          "MC Crossfit OPEN - Annuale (Soluzione Unica)": 1
+        },
+        "payments": {
+          "CustomType1": 205,
+          "CustomType3": 84,
+          "Sconosciuto": 4,
+          "CreditCard": 26,
+          "Cash": 4,
+          "MoneyTransfer": 1
+        },
+        "centri": {
+          "MC": 324
+        }
+      },
+      "2026-W07": {
+        "count": 337,
+        "lordo": 23944,
+        "netto": 23868.05,
+        "employees": {
+          "Genny Di Sante": 252,
+          "Matilde Biagiola": 76,
+          "Sconosciuto": 4,
+          "Leonardo Coppari": 2,
+          "DANIELA DE ANGELIS": 2,
+          "GAIA GENTILI": 1
+        },
+        "memberships": {
+          "MC All Lume - Annuale (12 Rate) 25/26": 64,
+          "MC All Lume (Under 23) - Annuale (12 Rate)": 85,
+          "MC Sala Pesi - Annuale (12 Rate)": 37,
+          "MC Corsi Fitness - Annuale (12 Rate) 25/26": 13,
+          "MC Corsi Fitness - Annuale (Soluzione Unica)": 5,
+          "MC Sala Pesi - Annuale (12 Rate) 25/26": 75,
+          "MC All Lume - Annuale (12 Rate)": 12,
+          "MC Corsi Fitness - Annuale (Soluzione Unica) 25/26": 3,
+          "MC Corsi Fitness - Annuale (12 Rate)": 24,
+          "MC All Lume (Under 23) - Annuale (Soluzione Unica)": 4,
+          "MC All Lume - Mensile (Flex)": 6,
+          "MC Sala Pesi - Annuale (Soluzione Unica) 25/26": 2,
+          "MC All Lume - Annuale (Soluzione Unica)": 3,
+          "MC All Lume (Over 65) - Annuale (12 Rate)": 1,
+          "MC Sala Pesi - Annuale (Soluzione Unica)": 2,
+          "MC All Lume (Over 65) - Annuale (Soluzione Unica)": 1
+        },
+        "payments": {
+          "CustomType3": 179,
+          "CustomType1": 122,
+          "Sconosciuto": 4,
+          "CreditCard": 28,
+          "MoneyTransfer": 3,
+          "Cash": 1
+        },
+        "centri": {
+          "MC": 337
+        }
+      },
+      "2026-W08": {
+        "count": 203,
+        "lordo": 20146,
+        "netto": 20091.88,
+        "employees": {
+          "Genny Di Sante": 133,
+          "Matilde Biagiola": 63,
+          "Sconosciuto": 5,
+          "Online Registration": 1,
+          "Leonardo Coppari": 1
+        },
+        "memberships": {
+          "MC Sala Pesi - Annuale (12 Rate) 25/26": 12,
+          "MC Crossfit OPEN - Annuale (12 Rate)": 12,
+          "MC All Lume - Annuale (12 Rate) 25/26": 25,
+          "MC Corsi Fitness - Annuale (12 Rate) 25/26": 13,
+          "MC Corsi Fitness - Annuale (12 Rate)": 24,
+          "MC Corsi Fitness - Annuale (Soluzione Unica) 25/26": 4,
+          "MC Crossfit 2V - Annuale (12 Rate)": 13,
+          "MC Sala Pesi - Annuale (12 Rate)": 37,
+          "MC Sala Pesi - Annuale (Soluzione Unica) 25/26": 5,
+          "MC All Lume - Mensile (Flex)": 4,
+          "MC Crossfit 3V - Annuale (12 Rate)": 26,
+          "MC Sala Pesi - Annuale (Soluzione Unica)": 3,
+          "MC Corsi Fitness - Annuale (Soluzione Unica)": 6,
+          "MC All Lume (Under 23) - Annuale (12 Rate)": 12,
+          "MC All Lume - Annuale (Soluzione Unica)": 2,
+          "MC All Lume (Under 23) - Annuale (Soluzione Unica)": 1,
+          "MC Crossfit OPEN - Annuale (Soluzione Unica)": 3,
+          "MC All Lume Fitness + Crossfit - Annuale (Soluzione Unica)": 1
+        },
+        "payments": {
+          "CustomType3": 73,
+          "CustomType1": 98,
+          "CreditCard": 20,
+          "MoneyTransfer": 3,
+          "Sconosciuto": 5,
+          "Cash": 4
+        },
+        "centri": {
+          "MC": 203
+        }
+      },
+      "2026-W09": {
+        "count": 326,
+        "lordo": 28703.0,
+        "netto": 28639.86,
+        "employees": {
+          "Genny Di Sante": 86,
+          "Matilde Biagiola": 141,
+          "Camilla Stortoni": 25,
+          "Sconosciuto": 41,
+          "DANIELA DE ANGELIS": 4,
+          "Leonardo Coppari": 12,
+          "Chiara Messi": 13,
+          "GAIA GENTILI": 1,
+          "Online Registration": 3
+        },
+        "memberships": {
+          "MC Sala Pesi - Annuale (12 Rate)": 61,
+          "MC All Lume - Annuale (12 Rate)": 35,
+          "MC All Lume - Mensile (Flex)": 36,
+          "MC Sala Pesi - Annuale (Soluzione Unica)": 9,
+          "MC Crossfit OPEN - Annuale (12 Rate)": 36,
+          "MC All Lume - Annuale (Soluzione Unica)": 5,
+          "MC All Lume - Annuale (12 Rate) 25/26": 12,
+          "MC Corsi Fitness - Annuale (Soluzione Unica)": 3,
+          "MC Sala Pesi - Annuale (12 Rate) 25/26": 61,
+          "MC All Lume (Under 23) - Annuale (12 Rate)": 13,
+          "MC All Lume (Over 65) - Annuale (12 Rate)": 1,
+          "MC Corsi Fitness - Annuale (12 Rate) 25/26": 24,
+          "MC Crossfit OPEN - Mensile (Flex)": 3,
+          "MC Sala Pesi - Annuale (Soluzione Unica) 25/26": 8,
+          "MC Corsi Fitness - Annuale (12 Rate)": 12,
+          "MC All Lume (Under 23) - Mensile (Flex)": 1,
+          "MC Corsi Fitness - Annuale (Soluzione Unica) 25/26": 2,
+          "MC All Lume - Annuale (Soluzione Unica) 25/26": 2,
+          "MC Crossfit Special 2 (Mensile)": 1,
+          "MC All Lume (Under 23) - Annuale (Soluzione Unica)": 1
+        },
+        "payments": {
+          "CustomType1": 111,
+          "CustomType3": 141,
+          "Sconosciuto": 41,
+          "CreditCard": 27,
+          "MoneyTransfer": 1,
+          "Cash": 5
+        },
+        "centri": {
+          "MC": 326
+        }
+      },
+      "2026-W10": {
+        "count": 254,
+        "lordo": 26146,
+        "netto": 26091.88,
+        "employees": {
+          "Genny Di Sante": 157,
+          "DANIELA DE ANGELIS": 13,
+          "Chiara Messi": 13,
+          "Matilde Biagiola": 63,
+          "Sconosciuto": 8
+        },
+        "memberships": {
+          "MC Corsi Fitness - Annuale (12 Rate)": 25,
+          "MC All Lume - Annuale (12 Rate) 25/26": 72,
+          "MC Crossfit 3V - Annuale (12 Rate)": 25,
+          "MC Corsi Fitness - Annuale (12 Rate) 25/26": 12,
+          "MC All Lume - Annuale (Soluzione Unica)": 3,
+          "MC All Lume Fitness + Crossfit - Annuale (Soluzione Unica)": 2,
+          "MC Sala Pesi Entry Level (12 Rate)": 13,
+          "MC All Lume (Under 23) - Annuale (Soluzione Unica)": 3,
+          "MC Crossfit OPEN - Annuale (12 Rate)": 12,
+          "MC All Lume (Under 23) - Annuale (12 Rate)": 12,
+          "MC Sala Pesi - Annuale (12 Rate) 25/26": 25,
+          "MC Sala Pesi - Annuale (Soluzione Unica) 25/26": 4,
+          "MC All Lume (Over 65) - Annuale (Soluzione Unica)": 1,
+          "MC All Lume - Annuale (Soluzione Unica) 25/26": 2,
+          "MC Corsi Fitness - Annuale (Soluzione Unica)": 5,
+          "MC Sala Pesi - Annuale (12 Rate)": 12,
+          "MC All Lume - Mensile (Flex)": 14,
+          "MC Sala Pesi - Annuale (Soluzione Unica)": 5,
+          "MC Crossfit 3V - Annuale (Soluzione Unica)": 2,
+          "MC Crossfit OPEN - Annuale (Soluzione Unica)": 1,
+          "MC Crossfit 2V - Annuale (Soluzione Unica)": 2,
+          "MC All Lume - Annuale (12 Rate)": 1,
+          "MC Crossfit OPEN - Mensile (Flex)": 1
+        },
+        "payments": {
+          "CustomType1": 111,
+          "CustomType3": 98,
+          "MoneyTransfer": 6,
+          "CreditCard": 25,
+          "Sconosciuto": 8,
+          "Cash": 6
+        },
+        "centri": {
+          "MC": 254
+        }
+      },
+      "2026-W11": {
+        "count": 271,
+        "lordo": 23957,
+        "netto": 23908.11,
+        "employees": {
+          "Genny Di Sante": 228,
+          "Matilde Biagiola": 2,
+          "Chiara Messi": 12,
+          "Leonardo Coppari": 4,
+          "Online Registration": 2,
+          "GAIA GENTILI": 12,
+          "Sconosciuto": 10,
+          "Camilla Stortoni": 1
+        },
+        "memberships": {
+          "MC Sala Pesi - Annuale (12 Rate) 25/26": 39,
+          "MC Sala Pesi - Annuale (12 Rate)": 51,
+          "MC All Lume (Under 23) - Annuale (12 Rate)": 50,
+          "MC Corsi Fitness - Annuale (12 Rate)": 26,
+          "MC All Lume (Over 65) - Annuale (12 Rate)": 24,
+          "MC Corsi Fitness - Annuale (12 Rate) 25/26": 12,
+          "MC All Lume - Annuale (12 Rate)": 14,
+          "MC All Lume - Mensile (Flex)": 4,
+          "MC Crossfit OPEN - Mensile (Flex)": 2,
+          "MC All Lume - Annuale (12 Rate) 25/26": 27,
+          "MC Crossfit 3V - Annuale (Soluzione Unica)": 2,
+          "MC All Lume GOLD - Annuale (Soluzione Unica) 25/26": 2,
+          "MC All Lume - Annuale (Soluzione Unica)": 5,
+          "MC All Lume - Annuale (Soluzione Unica) 25/26": 1,
+          "MC Sala Pesi - Annuale (Soluzione Unica)": 5,
+          "MC Corsi Fitness - Annuale (Soluzione Unica)": 2,
+          "MC Crossfit OPEN - Annuale (12 Rate)": 1,
+          "MC Corsi Fitness - Annuale (Soluzione Unica) 25/26": 1,
+          "MC Crossfit OPEN - Annuale (Soluzione Unica)": 2,
+          "MC Sala Pesi - Annuale (Soluzione Unica) 25/26": 1
+        },
+        "payments": {
+          "CustomType1": 137,
+          "CustomType3": 98,
+          "CreditCard": 23,
+          "Sconosciuto": 10,
+          "MoneyTransfer": 1,
+          "Cash": 2
+        },
+        "centri": {
+          "MC": 271
+        }
+      },
+      "2026-W12": {
+        "count": 155,
+        "lordo": 15712,
+        "netto": 15684.94,
+        "employees": {
+          "Matilde Biagiola": 66,
+          "Genny Di Sante": 58,
+          "Chiara Messi": 24,
+          "Online Registration": 2,
+          "DANIELA DE ANGELIS": 2,
+          "Sconosciuto": 2,
+          "Leonardo Coppari": 1
+        },
+        "memberships": {
+          "MC Crossfit OPEN - Annuale (12 Rate)": 24,
+          "MC All Lume (Under 23) - Annuale (12 Rate)": 36,
+          "MC Sala Pesi - Annuale (12 Rate)": 12,
+          "MC All Lume - Annuale (12 Rate) 25/26": 12,
+          "MC All Lume (Over 65) - Annuale (Soluzione Unica)": 3,
+          "MC Sala Pesi - Annuale (12 Rate) 25/26": 38,
+          "MC Crossfit OPEN - Annuale (Soluzione Unica)": 2,
+          "MC All Lume - Annuale (12 Rate)": 12,
+          "MC Crossfit 3V - Annuale (Soluzione Unica)": 2,
+          "MC Sala Pesi - Annuale (Soluzione Unica)": 7,
+          "MC All Lume - Mensile (Flex)": 3,
+          "MC All Lume - Annuale (Soluzione Unica) 25/26": 1,
+          "MC Sala Pesi - Annuale (Soluzione Unica) 25/26": 1,
+          "MC Corsi Fitness - Annuale (Soluzione Unica) 25/26": 1,
+          "MC Corsi Fitness - Annuale (Soluzione Unica)": 1
+        },
+        "payments": {
+          "CustomType1": 60,
+          "CustomType3": 72,
+          "CreditCard": 20,
+          "Sconosciuto": 2,
+          "MoneyTransfer": 1
+        },
+        "centri": {
+          "MC": 155
+        }
+      },
+      "2026-W13": {
+        "count": 180,
+        "lordo": 13921,
+        "netto": 13863.09,
+        "employees": {
+          "Online Registration": 3,
+          "Matilde Biagiola": 116,
+          "Genny Di Sante": 54,
+          "GAIA GENTILI": 3,
+          "Sconosciuto": 2,
+          "Camilla Stortoni": 2
+        },
+        "memberships": {
+          "MC All Lume - Annuale (Soluzione Unica)": 2,
+          "MC Crossfit 3V - Annuale (12 Rate)": 12,
+          "MC All Lume - Annuale (12 Rate) 25/26": 13,
+          "MC All Lume - Annuale (12 Rate)": 24,
+          "MC Sala Pesi - Annuale (12 Rate)": 25,
+          "MC Crossfit OPEN - Annuale (12 Rate)": 24,
+          "MC Corsi Fitness - Annuale (12 Rate) 25/26": 24,
+          "MC Sala Pesi - Annuale (12 Rate) 25/26": 38,
+          "MC All Lume - Mensile (Flex)": 8,
+          "MC Sala Pesi - Annuale (Soluzione Unica)": 5,
+          "MC Crossfit Special 2 (Mensile)": 1,
+          "MC Corsi Fitness - Annuale (Soluzione Unica) 25/26": 1,
+          "MC Crossfit 2V - Annuale (12 Rate)": 1,
+          "MC Corsi Fitness - Annuale (Soluzione Unica)": 1,
+          "MC All Lume - Annuale (Soluzione Unica) 25/26": 1
+        },
+        "payments": {
+          "CreditCard": 15,
+          "CustomType1": 85,
+          "CustomType3": 72,
+          "MoneyTransfer": 1,
+          "Cash": 5,
+          "Sconosciuto": 2
+        },
+        "centri": {
+          "MC": 180
+        }
+      },
+      "2026-W14": {
+        "count": 186,
+        "lordo": 17135,
+        "netto": 17081.6,
+        "employees": {
+          "Genny Di Sante": 83,
+          "Matilde Biagiola": 58,
+          "Sconosciuto": 36,
+          "GAIA GENTILI": 3,
+          "Online Registration": 3,
+          "DANIELA DE ANGELIS": 3
+        },
+        "memberships": {
+          "MC Sala Pesi - Annuale (12 Rate)": 24,
+          "MC All Lume - Annuale (12 Rate) 25/26": 12,
+          "MC Sala Pesi - Annuale (12 Rate) 25/26": 25,
+          "MC All Lume - Mensile (Flex)": 41,
+          "MC All Lume (Over 65) - Annuale (12 Rate)": 24,
+          "MC All Lume - Annuale (12 Rate)": 23,
+          "MC All Lume (Under 23) - Annuale (12 Rate)": 13,
+          "MC Crossfit OPEN - Mensile (Flex)": 6,
+          "MC Crossfit OPEN - Annuale (Soluzione Unica)": 2,
+          "MC Sala Pesi - Annuale (Soluzione Unica) 25/26": 5,
+          "MC Sala Pesi - Annuale (Soluzione Unica)": 4,
+          "MC All Lume - Annuale (Soluzione Unica)": 1,
+          "MC Crossfit 3V - Annuale (Soluzione Unica)": 2,
+          "MC Corsi Fitness - Annuale (Soluzione Unica)": 2,
+          "MC All Lume (Under 23) - Mensile (Flex)": 1,
+          "MC Crossfit OPEN - Annuale (12 Rate)": 1
+        },
+        "payments": {
+          "CustomType3": 82,
+          "Sconosciuto": 36,
+          "CreditCard": 24,
+          "CustomType1": 38,
+          "Online": 3,
+          "MoneyTransfer": 2,
+          "Cash": 1
+        },
+        "centri": {
+          "MC": 186
+        }
+      },
+      "2026-W15": {
+        "count": 107,
+        "lordo": 10688,
+        "netto": 10636.76,
+        "employees": {
+          "Matilde Biagiola": 66,
+          "Genny Di Sante": 31,
+          "Sconosciuto": 8,
+          "DANIELA DE ANGELIS": 2
+        },
+        "memberships": {
+          "MC Corsi Fitness - Annuale (12 Rate)": 4,
+          "MC All Lume (Over 65) - Annuale (12 Rate)": 13,
+          "MC Corsi Fitness - Annuale (12 Rate) 25/26": 13,
+          "MC Sala Pesi - Annuale (12 Rate)": 24,
+          "MC Sala Pesi - Annuale (Soluzione Unica)": 5,
+          "MC All Lume (Under 23) - Annuale (12 Rate)": 24,
+          "MC All Lume (Under 23) - Annuale (Soluzione Unica)": 1,
+          "MC All Lume - Annuale (12 Rate)": 12,
+          "MC All Lume - Mensile (Flex)": 6,
+          "MC All Lume - Annuale (Soluzione Unica)": 2,
+          "MC Corsi Fitness - Annuale (Soluzione Unica)": 1,
+          "MC Crossfit 2V - Annuale (12 Rate)": 1,
+          "MC Crossfit 3V - Annuale (Soluzione Unica)": 1
+        },
+        "payments": {
+          "Cash": 6,
+          "CustomType1": 71,
+          "CustomType3": 12,
+          "CreditCard": 9,
+          "MoneyTransfer": 1,
+          "Sconosciuto": 8
+        },
+        "centri": {
+          "MC": 107
+        }
+      },
+      "2026-W16": {
+        "count": 194,
+        "lordo": 19769,
+        "netto": 19741.94,
+        "employees": {
+          "DANIELA DE ANGELIS": 3,
+          "Genny Di Sante": 120,
+          "Matilde Biagiola": 68,
+          "GAIA GENTILI": 2,
+          "Sconosciuto": 1
+        },
+        "memberships": {
+          "MC All Lume - Mensile (Flex)": 6,
+          "MC Sala Pesi - Annuale (12 Rate) 25/26": 38,
+          "MC Sala Pesi - Annuale (12 Rate)": 35,
+          "MC Crossfit OPEN - Annuale (12 Rate)": 24,
+          "MC Corsi Fitness - Annuale (12 Rate) 25/26": 24,
+          "MC All Lume - Annuale (12 Rate)": 12,
+          "MC All Lume (Over 65) - Annuale (12 Rate)": 12,
+          "MC Corsi Fitness - Annuale (12 Rate)": 14,
+          "MC Sala Pesi - Annuale (Soluzione Unica) 25/26": 1,
+          "MC Sala Pesi - Annuale (Soluzione Unica)": 6,
+          "MC Crossfit OPEN - Annuale (Soluzione Unica)": 1,
+          "MC All Lume (Under 23) - Annuale (Soluzione Unica)": 2,
+          "MC All Lume GOLD - Annuale (Soluzione Unica) 25/26": 2,
+          "MC Crossfit 2V - Annuale (12 Rate)": 13,
+          "MC All Lume - Annuale (Soluzione Unica)": 2,
+          "MC Corsi Fitness - Annuale (Soluzione Unica)": 1,
+          "MC All Lume - Annuale (Soluzione Unica) 25/26": 1
+        },
+        "payments": {
+          "CreditCard": 20,
+          "CustomType1": 83,
+          "CustomType3": 85,
+          "Cash": 4,
+          "MoneyTransfer": 1,
+          "Sconosciuto": 1
+        },
+        "centri": {
+          "MC": 194
+        }
+      },
+      "2026-W17": {
+        "count": 189,
+        "lordo": 14926,
+        "netto": 14898.94,
+        "employees": {
+          "Matilde Biagiola": 88,
+          "System System": 1,
+          "Genny Di Sante": 97,
+          "Sconosciuto": 1,
+          "GAIA GENTILI": 1,
+          "Chiara Messi": 1
+        },
+        "memberships": {
+          "MC Crossfit 3V - Annuale (12 Rate)": 12,
+          "MC All Lume - Annuale (12 Rate) 25/26": 24,
+          "MC Crossfit 2V - Annuale (12 Rate)": 12,
+          "MC All Lume (Under 23) - Mensile (Flex)": 2,
+          "MC Sala Pesi - Annuale (12 Rate)": 49,
+          "MC All Lume (Under 23) - Annuale (12 Rate)": 25,
+          "MC All Lume - Annuale (12 Rate)": 12,
+          "MC All Lume - Mensile (Flex)": 3,
+          "MC All Lume (Over 65) - Annuale (Soluzione Unica)": 2,
+          "MC Corsi Fitness - Annuale (Soluzione Unica)": 5,
+          "MC Sala Pesi - Annuale (12 Rate) 25/26": 37,
+          "MC Sala Pesi - Annuale (Soluzione Unica) 25/26": 1,
+          "MC Sala Pesi - Annuale (Soluzione Unica)": 2,
+          "MC All Lume - Annuale (Soluzione Unica)": 1,
+          "MC Crossfit 2V - Annuale (Soluzione Unica)": 1,
+          "MC Crossfit Special 2 (Mensile)": 1
+        },
+        "payments": {
+          "CustomType3": 121,
+          "CustomType1": 48,
+          "Online": 1,
+          "CreditCard": 12,
+          "Cash": 1,
+          "MoneyTransfer": 5,
+          "Sconosciuto": 1
+        },
+        "centri": {
+          "MC": 189
+        }
+      },
+      "2026-W18": {
+        "count": 175,
+        "lordo": 21432,
+        "netto": 21404.94,
+        "employees": {
+          "Matilde Biagiola": 80,
+          "Genny Di Sante": 87,
+          "Sconosciuto": 5,
+          "DANIELA DE ANGELIS": 1,
+          "Camilla Stortoni": 1,
+          "Online Registration": 1
+        },
+        "memberships": {
+          "MC Sala Pesi - Annuale (12 Rate) 25/26": 36,
+          "MC Sala Pesi - Annuale (12 Rate)": 48,
+          "MC All Lume (Under 23) - Annuale (12 Rate)": 13,
+          "MC All Lume - Annuale (12 Rate)": 36,
+          "MC Crossfit OPEN - Annuale (12 Rate)": 12,
+          "MC All Lume - Mensile (Flex)": 4,
+          "MC Sala Pesi - Annuale (Soluzione Unica) 25/26": 4,
+          "MC All Lume - Annuale (12 Rate) 25/26": 2,
+          "MC All Lume (Over 65) - Annuale (Soluzione Unica)": 2,
+          "MC Sala Pesi - Annuale (Soluzione Unica)": 2,
+          "MC Corsi Fitness - Annuale (Soluzione Unica)": 3,
+          "MC All Lume - Annuale (Soluzione Unica) 25/26": 7,
+          "MC All Lume - Annuale (Soluzione Unica)": 2,
+          "MC All Lume (Under 23) - Annuale (Soluzione Unica)": 1,
+          "MC All Lume (Under 23) - Mensile (Flex)": 1,
+          "MC Crossfit 2V - Annuale (Soluzione Unica)": 2
+        },
+        "payments": {
+          "CustomType1": 96,
+          "CustomType3": 48,
+          "Sconosciuto": 5,
+          "Cash": 6,
+          "CreditCard": 16,
+          "MoneyTransfer": 3,
+          "Online": 1
+        },
+        "centri": {
+          "MC": 175
+        }
+      }
+    },
+    "MON": {
+      "2025-W23": {
+        "count": 1,
+        "lordo": 228,
+        "netto": 228,
+        "employees": {
+          "Leonardo Coppari": 1
+        },
+        "memberships": {
+          "MON Scuola Nuoto Bambini Monosettimanle - Stagionale 25/26(PREVENDITA)": 1
+        },
+        "payments": {
+          "CreditCard": 1
+        },
+        "centri": {
+          "MON": 1
+        }
+      },
+      "2025-W46": {
+        "count": 1,
+        "lordo": 621,
+        "netto": 621,
+        "employees": {
+          "Leonardo Coppari": 1
+        },
+        "memberships": {
+          "MON All Lume Fitness + Acqua - Annuale (Soluzione Unica) 25/26": 1
+        },
+        "payments": {
+          "CustomType3": 1
+        },
+        "centri": {
+          "MON": 1
+        }
+      },
+      "2025-W48": {
+        "count": 1,
+        "lordo": 550,
+        "netto": 550,
+        "employees": {
+          "Leonardo Coppari": 1
+        },
+        "memberships": {
+          "MON All Lume Nuoto Libero - Annuale (Soluzione Unica)": 1
+        },
+        "payments": {
+          "Cash": 1
+        },
+        "centri": {
+          "MON": 1
+        }
+      },
+      "2025-W51": {
+        "count": 1,
+        "lordo": 180,
+        "netto": 180,
+        "employees": {
+          "GAIA GENTILI": 1
+        },
+        "memberships": {
+          "MON All Lume Nuoto Libero - Annuale (Soluzione Unica)": 1
+        },
+        "payments": {
+          "CreditCard": 1
+        },
+        "centri": {
+          "MON": 1
+        }
+      },
+      "2026-W01": {
+        "count": 57,
+        "lordo": 6366.0,
+        "netto": 6333.53,
+        "employees": {
+          "Leonardo Coppari": 25,
+          "Sconosciuto": 18,
+          "GAIA GENTILI": 13,
+          "Online Registration": 1
+        },
+        "memberships": {
+          "MON Scuola Nuoto Adulti - Annuale (12 Rate)": 12,
+          "MON Scuola Nuoto Bambini Monosettimanale - Stagionale": 10,
+          "MON All Lume Nuoto Libero - Mensile (Flex)": 2,
+          "MON Scuola Nuoto Bambini Monosettimanale - Mensile Flex": 6,
+          "MON All Lume Fitness + Acqua - Annuale (Soluzione Unica) 25/26": 2,
+          "MON All Lume Fitness - Mensile (Flex)": 11,
+          "MON All Lume Fitness + Acqua - Mensile (Flex)": 2,
+          "MON All Lume Nuoto Libero - Annuale (Soluzione Unica)": 2,
+          "MON Scuola Nuoto Bambini Bisettimanale - Mensile Flex": 3,
+          "MON All Lume AcquaFitness - Mensile (Flex)": 3,
+          "MON Sala Pesi - Annuale (Soluzione Unica)": 1,
+          "MON All Lume Fitness - Annuale (Soluzione Unica) 25/26": 1,
+          "MON All Lume Fitness (Over 65) - Annuale (Soluzione Unica)": 1,
+          "MON All Lume AcquaFitness - Annuale (Soluzione Unica)": 1
+        },
+        "payments": {
+          "CustomType3": 12,
+          "Sconosciuto": 18,
+          "CreditCard": 24,
+          "Cash": 2,
+          "MoneyTransfer": 1
+        },
+        "centri": {
+          "MON": 57
+        }
+      },
+      "2026-W02": {
+        "count": 111,
+        "lordo": 12550,
+        "netto": 12481.45,
+        "employees": {
+          "GAIA GENTILI": 52,
+          "Leonardo Coppari": 53,
+          "Sconosciuto": 5,
+          "Online Registration": 1
+        },
+        "memberships": {
+          "MON Sala Pesi - Annuale (12 Rate) 25/26": 12,
+          "MON All Lume Fitness + Acqua - Annuale (12 Rate) 25/26": 24,
+          "MON All Lume Fitness + Acqua (Under 23) - Mensile (Flex)": 2,
+          "MON All Lume Fitness - Mensile (Flex)": 3,
+          "MON All Lume Nuoto Libero - Annuale (12 Rate)": 25,
+          "MON All Lume Fitness - Annuale (12 Rate)": 12,
+          "MON All Lume Nuoto Libero - Annuale (Soluzione Unica)": 4,
+          "MON Sala Pesi - Annuale (Soluzione Unica) 25/26": 2,
+          "MON Scuola Nuoto Bambini Monosettimanale - Stagionale": 7,
+          "MON All Lume Fitness - Annuale (Soluzione Unica) 25/26": 3,
+          "MON Sala Pesi Entry Level - Annuale (Soluzione Unica) 25/26": 2,
+          "MON All Lume Fitness + Acqua - Annuale (Soluzione Unica) 25/26": 3,
+          "MON All Lume Fitness (Over 65) - Annuale (Soluzione Unica)": 1,
+          "MON All Lume AcquaFitness - Annuale (Soluzione Unica)": 3,
+          "MON Sala Pesi - Annuale (Soluzione Unica)": 3,
+          "MON All Lume Fitness - Annuale (Soluzione Unica)": 1,
+          "MON Scuola Nuoto Bambini Monosettimanale - Mensile Flex": 3,
+          "MON Corsi Fitness - Annuale (Soluzione Unica)": 1
+        },
+        "payments": {
+          "CustomType3": 24,
+          "CustomType1": 49,
+          "CreditCard": 30,
+          "Sconosciuto": 5,
+          "MoneyTransfer": 2,
+          "Online": 1
+        },
+        "centri": {
+          "MON": 111
+        }
+      },
+      "2026-W03": {
+        "count": 165,
+        "lordo": 14494.0,
+        "netto": 14420.94,
+        "employees": {
+          "GAIA GENTILI": 29,
+          "Leonardo Coppari": 132,
+          "Online Registration": 3,
+          "Sconosciuto": 1
+        },
+        "memberships": {
+          "MON All Lume Fitness + Acqua (Under 23) - Annuale (12 Rate)": 36,
+          "MON Sala Pesi - Annuale (12 Rate) 25/26": 25,
+          "MON Sala Pesi - Annuale (12 Rate)": 24,
+          "MON All Lume Fitness - Annuale (12 Rate) 25/26": 13,
+          "MON Scuola Nuoto Bambini Monosettimanale - Stagionale": 7,
+          "MON All Lume Fitness - Mensile (Flex)": 6,
+          "MON Scuola Nuoto Bambini Bisettimanale - Stagionale": 6,
+          "MON All Lume AcquaFitness - Annuale (Soluzione Unica)": 3,
+          "MON All Lume Fitness + Acqua - Annuale (12 Rate) 25/26": 12,
+          "MON All Lume Fitness - Annuale (12 Rate)": 12,
+          "MON Sala Pesi - Annuale (Soluzione Unica) 25/26": 5,
+          "MON Sala Pesi - Annuale (Soluzione Unica)": 3,
+          "MON All Lume Fitness (Over 65) - Annuale (Soluzione Unica)": 1,
+          "MON All Lume AcquaFitness - Mensile (Flex)": 1,
+          "MON All Lume Fitness - Annuale (Soluzione Unica) 25/26": 2,
+          "MON All Lume Nuoto Libero - Annuale (Soluzione Unica)": 2,
+          "MON All Lume Fitness + Acqua - Mensile (Flex)": 2,
+          "MON All Lume Fitness - Annuale (Soluzione Unica)": 2,
+          "MON All Lume Nuoto Libero - Mensile (Flex)": 1,
+          "MON All Lume Fitness + Acqua - Annuale (Soluzione Unica) 25/26": 1,
+          "MON Scuola Nuoto Bambini Bisettimanale - Stagionale 25/26 (PREVENDITA)": 1
+        },
+        "payments": {
+          "CustomType1": 84,
+          "CreditCard": 32,
+          "Cash": 5,
+          "MoneyTransfer": 7,
+          "CustomType3": 36,
+          "Sconosciuto": 1
+        },
+        "centri": {
+          "MON": 165
+        }
+      },
+      "2026-W04": {
+        "count": 213,
+        "lordo": 14971.0,
+        "netto": 14845.45,
+        "employees": {
+          "Leonardo Coppari": 192,
+          "Sconosciuto": 8,
+          "GAIA GENTILI": 9,
+          "Online Registration": 2,
+          "Matilde Biagiola": 2
+        },
+        "memberships": {
+          "MON Sala Pesi - Annuale (12 Rate) 25/26": 78,
+          "MON All Lume Fitness - Annuale (12 Rate)": 15,
+          "MON All Lume Fitness - Annuale (12 Rate) 25/26": 40,
+          "MON Scuola Nuoto Bambini Monosettimanale - Stagionale": 28,
+          "MON Sala Pesi Entry Level - Annuale (Soluzione Unica) 25/26": 1,
+          "MON All Lume Fitness + Acqua - Annuale (Soluzione Unica)": 1,
+          "MON Sala Pesi - Annuale (Soluzione Unica) 25/26": 4,
+          "MON All Lume Nuoto Libero - Annuale (Soluzione Unica)": 3,
+          "MON All Lume Nuoto Libero - Mensile (Flex)": 2,
+          "MON All Lume AcquaFitness - Annuale (Soluzione Unica)": 7,
+          "MON All Lume Nuoto Libero - Annuale (12 Rate)": 12,
+          "MON All Lume Fitness - Annuale (Soluzione Unica)": 2,
+          "MON Sala Pesi - Annuale (Soluzione Unica)": 3,
+          "MON All Lume Fitness - Mensile (Flex)": 5,
+          "MON Scuola Nuoto Bambini Bisettimanale - Mensile Flex": 1,
+          "MON Scuola Nuoto Bambini Bisettimanale - Stagionale": 6,
+          "MON All Lume Fitness + Acqua - Annuale (12 Rate) 25/26": 1,
+          "MON Scuola Nuoto Bambini Monosettimanale - Mensile Flex": 1,
+          "MON All Lume Fitness - Annuale (Soluzione Unica) 25/26": 1,
+          "MON All Lume Fitness + Acqua - Annuale (Soluzione Unica) 25/26": 1,
+          "MON All Lume AcquaFitness - Annuale (12 Rate)": 1
+        },
+        "payments": {
+          "CustomType1": 91,
+          "CustomType3": 48,
+          "CreditCard": 56,
+          "Sconosciuto": 8,
+          "Cash": 10
+        },
+        "centri": {
+          "MON": 213
+        }
+      },
+      "2026-W05": {
+        "count": 473,
+        "lordo": 31926.3,
+        "netto": 31764.67,
+        "employees": {
+          "GAIA GENTILI": 196,
+          "Matilde Biagiola": 67,
+          "Leonardo Coppari": 182,
+          "Sconosciuto": 24,
+          "Online Registration": 2,
+          "Genny Di Sante": 2
+        },
+        "memberships": {
+          "MON Sala Pesi - Annuale (12 Rate) 25/26": 135,
+          "MON Scuola Nuoto Bambini Monosettimanale - Stagionale": 34,
+          "MON Sala Pesi Entry Level - Annuale (12 Rate) 25/26": 24,
+          "MON All Lume Fitness - Annuale (12 Rate) 25/26": 87,
+          "MON All Lume AcquaFitness - Annuale (12 Rate)": 61,
+          "MON All Lume AcquaFitness - Annuale (Soluzione Unica)": 7,
+          "MON All Lume Fitness - Mensile (Flex)": 12,
+          "MON All Lume Fitness + Acqua - Annuale (12 Rate) 25/26": 26,
+          "MON All Lume Nuoto Libero - Mensile (Flex)": 3,
+          "MON All Lume Fitness - Annuale (12 Rate)": 24,
+          "MON All Lume Nuoto Libero - Annuale (12 Rate)": 12,
+          "MON All Lume Fitness + Acqua (Under 23) - Annuale (12 Rate)": 12,
+          "MON All Lume Fitness + Acqua - Annuale (Soluzione Unica) 25/26": 12,
+          "MON Sala Pesi - Annuale (Soluzione Unica)": 4,
+          "MON Scuola Nuoto Adulti - Mensile (Flex)": 3,
+          "MON All Lume Fitness - Annuale (Soluzione Unica) 25/26": 4,
+          "MON All Lume Nuoto Libero - Annuale (Soluzione Unica)": 3,
+          "MON Corsi Fitness - Annuale (Soluzione Unica)": 1,
+          "MON All Lume AcquaFitness - Mensile (Flex)": 3,
+          "MON All Lume Fitness + Acqua - Mensile (Flex)": 2,
+          "MON Corsi Fitness - Annuale (12 Rate)": 1,
+          "MON All Lume Fitness + Acqua (Under 23) - Mensile (Flex)": 1,
+          "MON All Lume Fitness - Annuale (Soluzione Unica)": 1,
+          "MON Scuola Nuoto Adulti - Annuale (Soluzione Unica)": 1
+        },
+        "payments": {
+          "CustomType1": 193,
+          "MoneyTransfer": 22,
+          "CustomType3": 180,
+          "CreditCard": 43,
+          "Sconosciuto": 24,
+          "Online": 2,
+          "Cash": 9
+        },
+        "centri": {
+          "MON": 473
+        }
+      },
+      "2026-W06": {
+        "count": 155,
+        "lordo": 14845.65,
+        "netto": 14773.31,
+        "employees": {
+          "Leonardo Coppari": 122,
+          "GAIA GENTILI": 22,
+          "Sconosciuto": 9,
+          "Online Registration": 2
+        },
+        "memberships": {
+          "MON Sala Pesi - Annuale (Soluzione Unica)": 6,
+          "MON All Lume Nuoto Libero - Annuale (12 Rate)": 3,
+          "MON Sala Pesi - Annuale (12 Rate) 25/26": 16,
+          "MON Scuola Nuoto Bambini Monosettimanale - Stagionale": 13,
+          "MON Sala Pesi Entry Level - Annuale (12 Rate) 25/26": 12,
+          "MON All Lume Fitness - Annuale (12 Rate)": 12,
+          "MON All Lume AcquaFitness - Mensile (Flex)": 2,
+          "MON All Lume Fitness - Annuale (12 Rate) 25/26": 26,
+          "MON All Lume Fitness - Mensile (Flex)": 4,
+          "MON All Lume Fitness + Acqua (Under 23) - Annuale (Soluzione Unica)": 1,
+          "MON All Lume AcquaFitness - Annuale (12 Rate)": 13,
+          "MON Scuola Nuoto Bambini Monosettimanale - Mensile Flex": 6,
+          "MON All Lume Fitness (Over 65) - Annuale (12 Rate)": 12,
+          "MON All Lume Fitness + Acqua (Under 23) - Annuale (12 Rate)": 12,
+          "MON All Lume Fitness + Acqua - Annuale (Soluzione Unica) 25/26": 4,
+          "MON All Lume Nuoto Libero - Annuale (Soluzione Unica)": 4,
+          "MON All Lume Nuoto Libero - Mensile (Flex)": 2,
+          "MON Sala Pesi - Annuale (Soluzione Unica) 25/26": 2,
+          "MON Scuola Nuoto Bambini Bisettimanale - Mensile Flex": 1,
+          "MON All Lume Fitness + Acqua - Annuale (Soluzione Unica)": 1,
+          "MON All Lume Fitness + Acqua - Annuale (12 Rate)": 1,
+          "MON Corsi Fitness - Annuale (Soluzione Unica)": 1,
+          "MON Sala Pesi Entry Level - Annuale (Soluzione Unica) 25/26": 1
+        },
+        "payments": {
+          "CreditCard": 37,
+          "Cash": 3,
+          "CustomType3": 36,
+          "MoneyTransfer": 7,
+          "CustomType1": 62,
+          "Sconosciuto": 9,
+          "Online": 1
+        },
+        "centri": {
+          "MON": 155
+        }
+      },
+      "2026-W07": {
+        "count": 192,
+        "lordo": 15993.0,
+        "netto": 15950.61,
+        "employees": {
+          "GAIA GENTILI": 62,
+          "Leonardo Coppari": 123,
+          "Online Registration": 1,
+          "Sconosciuto": 6
+        },
+        "memberships": {
+          "MON Sala Pesi - Annuale (12 Rate) 25/26": 74,
+          "MON All Lume AcquaFitness - Annuale (12 Rate)": 37,
+          "MON All Lume Fitness - Annuale (12 Rate) 25/26": 12,
+          "MON Scuola Nuoto Bambini Monosettimanale - Mensile Flex": 3,
+          "MON All Lume Fitness - Annuale (12 Rate)": 12,
+          "MON All Lume AcquaFitness - Annuale (Soluzione Unica)": 6,
+          "MON All Lume Fitness - Annuale (Soluzione Unica)": 3,
+          "MON Scuola Nuoto Bambini Monosettimanale - Stagionale": 17,
+          "MON Sala Pesi - Annuale (Soluzione Unica) 25/26": 1,
+          "MON Sala Pesi - Annuale (Soluzione Unica)": 6,
+          "MON Scuola Nuoto Bambini Monosettimanle - Stagionale 25/26(PREVENDITA)": 1,
+          "MON All Lume AcquaFitness - Mensile (Flex)": 2,
+          "MON All Lume Fitness + Acqua (Under 23) - Annuale (Soluzione Unica)": 2,
+          "MON All Lume Fitness + Acqua - Annuale (Soluzione Unica) 25/26": 2,
+          "MON All Lume Fitness + Acqua - Annuale (12 Rate) 25/26": 9,
+          "MON All Lume Nuoto Libero - Annuale (Soluzione Unica)": 2,
+          "MON All Lume Fitness - Mensile (Flex)": 2,
+          "MON Scuola Nuoto Bambini Bisettimanale - Stagionale 25/26 (PREVENDITA)": 1
+        },
+        "payments": {
+          "CustomType1": 100,
+          "CustomType3": 47,
+          "Online": 1,
+          "Sconosciuto": 6,
+          "CreditCard": 35,
+          "Cash": 3
+        },
+        "centri": {
+          "MON": 192
+        }
+      },
+      "2026-W08": {
+        "count": 133,
+        "lordo": 12236,
+        "netto": 12187.11,
+        "employees": {
+          "Leonardo Coppari": 74,
+          "Sconosciuto": 11,
+          "GAIA GENTILI": 35,
+          "Genny Di Sante": 12,
+          "Online Registration": 1
+        },
+        "memberships": {
+          "MON All Lume Nuoto Libero - Annuale (12 Rate)": 38,
+          "MON All Lume Fitness - Annuale (12 Rate)": 2,
+          "MON All Lume Fitness + Acqua (Under 23) - Annuale (12 Rate)": 13,
+          "MON All Lume AcquaFitness - Annuale (12 Rate)": 24,
+          "MON All Lume Fitness + Acqua - Annuale (12 Rate) 25/26": 6,
+          "MON Sala Pesi - Annuale (12 Rate) 25/26": 13,
+          "MON All Lume Fitness - Annuale (12 Rate) 25/26": 14,
+          "MON All Lume AcquaFitness - Annuale (Soluzione Unica)": 1,
+          "MON Corsi Fitness - Annuale (Soluzione Unica)": 1,
+          "MON All Lume Fitness - Annuale (Soluzione Unica) 25/26": 2,
+          "MON All Lume Fitness - Annuale (Soluzione Unica)": 5,
+          "MON Corsi Fitness - Annuale (12 Rate)": 2,
+          "MON All Lume Fitness + Acqua - Annuale (Soluzione Unica) 25/26": 2,
+          "MON All Lume Fitness - Mensile (Flex)": 2,
+          "MON All Lume Nuoto Libero - Annuale (Soluzione Unica)": 2,
+          "MON Sala Pesi - Annuale (Soluzione Unica) 25/26": 2,
+          "MON Sala Pesi - Annuale (Soluzione Unica)": 3,
+          "MON Scuola Nuoto Bambini Monosettimanale - Mensile Flex": 1
+        },
+        "payments": {
+          "CustomType1": 60,
+          "Sconosciuto": 11,
+          "CustomType3": 36,
+          "CreditCard": 23,
+          "Cash": 2,
+          "MoneyTransfer": 1
+        },
+        "centri": {
+          "MON": 133
+        }
+      },
+      "2026-W09": {
+        "count": 88,
+        "lordo": 9969,
+        "netto": 9969,
+        "employees": {
+          "GAIA GENTILI": 27,
+          "Sconosciuto": 13,
+          "Genny Di Sante": 12,
+          "Camilla Stortoni": 29,
+          "Leonardo Coppari": 6,
+          "Online Registration": 1
+        },
+        "memberships": {
+          "MON All Lume Fitness + Acqua (Under 23) - Annuale (12 Rate)": 12,
+          "MON All Lume Fitness + Acqua - Mensile (Flex)": 2,
+          "MON All Lume AcquaFitness - Annuale (12 Rate)": 12,
+          "MON All Lume Fitness - Annuale (12 Rate) 25/26": 12,
+          "MON Sala Pesi - Annuale (12 Rate) 25/26": 13,
+          "MON Corsi Fitness - Annuale (12 Rate)": 12,
+          "MON Sala Pesi - Annuale (Soluzione Unica) 25/26": 3,
+          "MON All Lume Nuoto Libero - Mensile (Flex)": 2,
+          "MON All Lume Nuoto Libero - Annuale (Soluzione Unica)": 5,
+          "MON All Lume AcquaFitness - Annuale (Soluzione Unica)": 1,
+          "MON Sala Pesi - Annuale (Soluzione Unica)": 3,
+          "MON All Lume AcquaFitness - Mensile (Flex)": 3,
+          "MON All Lume Fitness - Annuale (Soluzione Unica) 25/26": 1,
+          "MON Sala Pesi - Annuale (12 Rate)": 1,
+          "MON All Lume Fitness - Mensile (Flex)": 4,
+          "MON Scuola Nuoto Adulti - Annuale (Soluzione Unica)": 1,
+          "MON All Lume Fitness + Acqua - Annuale (12 Rate)": 1
+        },
+        "payments": {
+          "CustomType1": 36,
+          "Sconosciuto": 13,
+          "CustomType3": 25,
+          "Cash": 5,
+          "CreditCard": 8,
+          "MoneyTransfer": 1
+        },
+        "centri": {
+          "MON": 88
+        }
+      },
+      "2026-W10": {
+        "count": 108,
+        "lordo": 14280,
+        "netto": 14236.71,
+        "employees": {
+          "GAIA GENTILI": 62,
+          "Leonardo Coppari": 21,
+          "Camilla Stortoni": 9,
+          "Sconosciuto": 9,
+          "Matilde Biagiola": 2,
+          "Online Registration": 3,
+          "Genny Di Sante": 2
+        },
+        "memberships": {
+          "MON All Lume Fitness - Annuale (Soluzione Unica)": 2,
+          "MON Sala Pesi - Annuale (12 Rate) 25/26": 12,
+          "MON All Lume Fitness - Mensile (Flex)": 9,
+          "MON Scuola Nuoto Bambini Bisettimanale - Stagionale": 17,
+          "MON Scuola Nuoto Adulti - Annuale (12 Rate)": 24,
+          "MON Scuola Nuoto Bambini Monosettimanale - Mensile Flex": 9,
+          "MON All Lume Nuoto Libero - Annuale (Soluzione Unica)": 1,
+          "MON All Lume Nuoto Libero - Mensile (Flex)": 2,
+          "MON All Lume Fitness + Acqua - Annuale (Soluzione Unica) 25/26": 2,
+          "MON All Lume Nuoto Libero - Annuale (12 Rate)": 4,
+          "MON All Lume Fitness + Acqua (Under 23) - Annuale (12 Rate)": 2,
+          "MON All Lume AcquaFitness - Mensile (Flex)": 4,
+          "MON Sala Pesi - Annuale (Soluzione Unica) 25/26": 6,
+          "MON All Lume AcquaFitness - Annuale (Soluzione Unica)": 3,
+          "MON All Lume Fitness + Acqua (Under 23) - Annuale (Soluzione Unica)": 2,
+          "MON All Lume Fitness + Acqua - Annuale (12 Rate) 25/26": 1,
+          "MON All Lume Fitness (Over 65) - Annuale (Soluzione Unica)": 3,
+          "MON All Lume Fitness - Annuale (Soluzione Unica) 25/26": 1,
+          "MON All Lume Fitness - Annuale (12 Rate) 25/26": 1,
+          "MON Scuola Nuoto Bambini Bisettimanale - Mensile Flex": 1,
+          "MON All Lume Fitness + Acqua (Under 23) - Mensile (Flex)": 1,
+          "MON Scuola Nuoto Adulti - Annuale (Soluzione Unica)": 1
+        },
+        "payments": {
+          "CreditCard": 46,
+          "CustomType1": 38,
+          "Sconosciuto": 9,
+          "Cash": 12,
+          "Online": 2,
+          "MoneyTransfer": 1
+        },
+        "centri": {
+          "MON": 108
+        }
+      },
+      "2026-W11": {
+        "count": 160,
+        "lordo": 17341.0,
+        "netto": 17243.59,
+        "employees": {
+          "Leonardo Coppari": 130,
+          "GAIA GENTILI": 23,
+          "Sconosciuto": 6,
+          "Matilde Biagiola": 1
+        },
+        "memberships": {
+          "MON Sala Pesi - Annuale (12 Rate)": 26,
+          "MON Sala Pesi - Annuale (12 Rate) 25/26": 51,
+          "MON All Lume AcquaFitness - Annuale (Soluzione Unica)": 7,
+          "MON All Lume Fitness + Acqua (Under 23) - Annuale (Soluzione Unica)": 5,
+          "MON Sala Pesi - Annuale (Soluzione Unica)": 7,
+          "MON Scuola Nuoto Bambini Monosettimanale - Stagionale": 10,
+          "MON All Lume Fitness - Annuale (Soluzione Unica) 25/26": 2,
+          "MON All Lume Fitness + Acqua (Under 23) - Annuale (12 Rate)": 13,
+          "MON All Lume Fitness + Acqua - Annuale (12 Rate) 25/26": 3,
+          "MON All Lume Fitness - Annuale (12 Rate) 25/26": 14,
+          "MON Scuola Nuoto Bambini Bisettimanale - Stagionale": 6,
+          "MON All Lume Nuoto Libero - Mensile (Flex)": 3,
+          "MON Corsi Fitness - Annuale (12 Rate)": 1,
+          "MON Sala Pesi Entry Level - Annuale (Soluzione Unica) 25/26": 1,
+          "MON Sala Pesi - Annuale (Soluzione Unica) 25/26": 5,
+          "MON All Lume Fitness + Acqua - Annuale (Soluzione Unica) 25/26": 2,
+          "MON All Lume Nuoto Libero - Annuale (Soluzione Unica)": 2,
+          "MON Corsi Fitness - Annuale (Soluzione Unica)": 1,
+          "MON Scuola Nuoto Adulti - Annuale (Soluzione Unica)": 1
+        },
+        "payments": {
+          "CustomType3": 37,
+          "CustomType1": 63,
+          "Cash": 5,
+          "CreditCard": 44,
+          "MoneyTransfer": 5,
+          "Sconosciuto": 6
+        },
+        "centri": {
+          "MON": 160
+        }
+      },
+      "2026-W12": {
+        "count": 126,
+        "lordo": 10796.99,
+        "netto": 10759.11,
+        "employees": {
+          "Camilla Stortoni": 18,
+          "Leonardo Coppari": 87,
+          "Sconosciuto": 5,
+          "GAIA GENTILI": 14,
+          "DANIELA DE ANGELIS": 2
+        },
+        "memberships": {
+          "MON All Lume Nuoto Libero - Annuale (Soluzione Unica)": 2,
+          "MON Sala Pesi - Annuale (12 Rate) 25/26": 37,
+          "MON Sala Pesi - Annuale (Soluzione Unica)": 6,
+          "MON All Lume Fitness + Acqua - Annuale (12 Rate) 25/26": 26,
+          "MON All Lume Fitness - Annuale (12 Rate) 25/26": 13,
+          "MON All Lume AcquaFitness - Annuale (12 Rate)": 12,
+          "MON All Lume Fitness + Acqua (Under 23) - Annuale (12 Rate)": 14,
+          "MON Scuola Nuoto Bambini Bisettimanale - Stagionale": 3,
+          "MON Corsi Fitness - Annuale (12 Rate) 25/26": 1,
+          "MON All Lume Fitness - Annuale (Soluzione Unica) 25/26": 2,
+          "MON Scuola Nuoto Bambini Monosettimanale - Stagionale": 5,
+          "MON Scuola Nuoto Bambini Bisettimanale - Stagionale 25/26 (PREVENDITA)": 1,
+          "MON All Lume AcquaFitness - Mensile (Flex)": 2,
+          "MON Sala Pesi - Annuale (Soluzione Unica) 25/26": 2
+        },
+        "payments": {
+          "CreditCard": 16,
+          "CustomType1": 62,
+          "Cash": 4,
+          "Sconosciuto": 5,
+          "CustomType3": 37,
+          "MoneyTransfer": 2
+        },
+        "centri": {
+          "MON": 126
+        }
+      },
+      "2026-W13": {
+        "count": 108,
+        "lordo": 10594.99,
+        "netto": 10534.56,
+        "employees": {
+          "Sconosciuto": 6,
+          "Camilla Stortoni": 6,
+          "Leonardo Coppari": 38,
+          "GAIA GENTILI": 57,
+          "Genny Di Sante": 1
+        },
+        "memberships": {
+          "MON Sala Pesi - Annuale (Soluzione Unica)": 5,
+          "MON Scuola Nuoto Bambini Monosettimanale - Stagionale": 10,
+          "MON Scuola Nuoto Adulti - Annuale (12 Rate)": 24,
+          "MON Sala Pesi - Annuale (12 Rate) 25/26": 14,
+          "MON All Lume AcquaFitness - Annuale (12 Rate)": 24,
+          "MON All Lume Fitness (Over 65) - Annuale (Soluzione Unica)": 3,
+          "MON All Lume AcquaFitness - Annuale (Soluzione Unica)": 2,
+          "MON Sala Pesi - Annuale (Soluzione Unica) 25/26": 2,
+          "MON Sala Pesi - Annuale (12 Rate)": 12,
+          "MON All Lume Fitness + Acqua (Under 23) - Annuale (12 Rate)": 3,
+          "MON All Lume Nuoto Libero - Mensile (Flex)": 2,
+          "MON All Lume Fitness - Annuale (Soluzione Unica) 25/26": 2,
+          "MON All Lume Fitness + Acqua (Under 23) - Annuale (Soluzione Unica)": 2,
+          "MON All Lume Fitness - Mensile (Flex)": 2,
+          "MON Corsi Fitness - Annuale (Soluzione Unica)": 1
+        },
+        "payments": {
+          "Sconosciuto": 6,
+          "MoneyTransfer": 5,
+          "CustomType3": 24,
+          "CustomType1": 50,
+          "CreditCard": 14,
+          "Cash": 9
+        },
+        "centri": {
+          "MON": 108
+        }
+      },
+      "2026-W14": {
+        "count": 133,
+        "lordo": 13034,
+        "netto": 13034,
+        "employees": {
+          "GAIA GENTILI": 51,
+          "Leonardo Coppari": 57,
+          "Camilla Stortoni": 4,
+          "Sconosciuto": 20,
+          "Online Registration": 1
+        },
+        "memberships": {
+          "MON Corsi Fitness - Annuale (12 Rate)": 12,
+          "MON All Lume Fitness - Annuale (12 Rate) 25/26": 12,
+          "MON All Lume AcquaFitness - Mensile (Flex)": 6,
+          "MON All Lume Fitness + Acqua - Annuale (Soluzione Unica) 25/26": 2,
+          "MON All Lume AcquaFitness - Annuale (12 Rate)": 13,
+          "MON Scuola Nuoto Bambini Monosettimanale - Mensile Flex": 8,
+          "MON All Lume AcquaFitness - Annuale (Soluzione Unica)": 3,
+          "MON Sala Pesi - Annuale (12 Rate) 25/26": 24,
+          "MON All Lume Fitness + Acqua - Mensile (Flex)": 2,
+          "MON All Lume Nuoto Libero - Mensile (Flex)": 5,
+          "MON All Lume Fitness + Acqua - Annuale (12 Rate) 25/26": 12,
+          "MON All Lume Nuoto Libero - Annuale (Soluzione Unica)": 4,
+          "MON Sala Pesi - Annuale (12 Rate)": 12,
+          "MON All Lume Fitness + Acqua (Under 23) - Annuale (12 Rate)": 2,
+          "MON All Lume Fitness - Mensile (Flex)": 10,
+          "MON Sala Pesi - Annuale (Soluzione Unica) 25/26": 2,
+          "MON All Lume Fitness - Annuale (Soluzione Unica)": 2,
+          "MON Scuola Nuoto Bambini Bisettimanale - Mensile Flex": 1,
+          "MON All Lume Fitness + Acqua (Under 23) - Mensile (Flex)": 1
+        },
+        "payments": {
+          "CustomType1": 49,
+          "CustomType3": 37,
+          "CreditCard": 22,
+          "Sconosciuto": 20,
+          "Cash": 2,
+          "Online": 1,
+          "MoneyTransfer": 2
+        },
+        "centri": {
+          "MON": 133
+        }
+      },
+      "2026-W15": {
+        "count": 129,
+        "lordo": 12408,
+        "netto": 12384.55,
+        "employees": {
+          "Leonardo Coppari": 35,
+          "GAIA GENTILI": 70,
+          "Camilla Stortoni": 15,
+          "Sconosciuto": 9
+        },
+        "memberships": {
+          "MON Sala Pesi - Annuale (12 Rate) 25/26": 17,
+          "MON Corsi Fitness - Annuale (12 Rate) 25/26": 12,
+          "MON All Lume Fitness + Acqua - Annuale (12 Rate) 25/26": 23,
+          "MON All Lume Fitness - Annuale (Soluzione Unica)": 2,
+          "MON Sala Pesi Entry Level - Annuale (12 Rate) 25/26": 12,
+          "MON Scuola Nuoto Bambini Monosettimanale - Mensile Flex": 1,
+          "MON Sala Pesi - Annuale (12 Rate)": 11,
+          "MON All Lume Fitness + Acqua (Under 23) - Annuale (12 Rate)": 12,
+          "MON All Lume AcquaFitness - Mensile (Flex)": 3,
+          "MON All Lume Fitness + Acqua - Annuale (Soluzione Unica) 25/26": 5,
+          "MON Scuola Nuoto Adulti - Annuale (Soluzione Unica)": 1,
+          "MON All Lume AcquaFitness - Annuale (12 Rate)": 14,
+          "MON Sala Pesi - Annuale (Soluzione Unica)": 1,
+          "MON Sala Pesi - Annuale (Soluzione Unica) 25/26": 2,
+          "MON All Lume Fitness - Mensile (Flex)": 2,
+          "MON Scuola Nuoto Bambini Bisettimanale - Stagionale": 4,
+          "MON All Lume Fitness + Acqua - Annuale (Soluzione Unica)": 1,
+          "MON All Lume Fitness + Acqua - Mensile (Flex)": 2,
+          "MON All Lume AcquaFitness - Annuale (Soluzione Unica)": 3,
+          "MON All Lume Nuoto Libero - Annuale (Soluzione Unica)": 1
+        },
+        "payments": {
+          "CreditCard": 11,
+          "CustomType3": 49,
+          "CustomType1": 47,
+          "Online": 1,
+          "Sconosciuto": 9,
+          "MoneyTransfer": 2,
+          "Cash": 10
+        },
+        "centri": {
+          "MON": 129
+        }
+      },
+      "2026-W16": {
+        "count": 138,
+        "lordo": 14312,
+        "netto": 14213.5,
+        "employees": {
+          "GAIA GENTILI": 83,
+          "Leonardo Coppari": 44,
+          "Online Registration": 5,
+          "Sconosciuto": 1,
+          "Camilla Stortoni": 5
+        },
+        "memberships": {
+          "MON Sala Pesi Entry Level - Annuale (12 Rate) 25/26": 13,
+          "MON Sala Pesi - Annuale (12 Rate) 25/26": 36,
+          "MON All Lume Nuoto Libero - Annuale (12 Rate)": 12,
+          "MON Sala Pesi - Annuale (Soluzione Unica) 25/26": 9,
+          "MON Sala Pesi - Annuale (12 Rate)": 12,
+          "MON All Lume Fitness - Mensile (Flex)": 9,
+          "MON Corsi Fitness - Annuale (Soluzione Unica)": 2,
+          "MON All Lume Fitness - Annuale (12 Rate)": 12,
+          "MON Sala Pesi - Annuale (Soluzione Unica)": 8,
+          "MON All Lume Fitness + Acqua - Mensile (Flex)": 2,
+          "MON All Lume AcquaFitness - Annuale (Soluzione Unica)": 3,
+          "MON Scuola Nuoto Adulti - Annuale (12 Rate)": 13,
+          "MON All Lume Fitness - Annuale (Soluzione Unica)": 2,
+          "MON All Lume AcquaFitness - Mensile (Flex)": 2,
+          "MON All Lume Nuoto Libero - Annuale (Soluzione Unica)": 1,
+          "MON Scuola Nuoto Adulti - Annuale (Soluzione Unica)": 1,
+          "MON All Lume Nuoto Libero - Mensile (Flex)": 1
+        },
+        "payments": {
+          "CustomType3": 25,
+          "CustomType1": 72,
+          "CreditCard": 32,
+          "Sconosciuto": 1,
+          "MoneyTransfer": 4,
+          "Cash": 4
+        },
+        "centri": {
+          "MON": 138
+        }
+      },
+      "2026-W17": {
+        "count": 49,
+        "lordo": 7595.0,
+        "netto": 7582.19,
+        "employees": {
+          "Leonardo Coppari": 35,
+          "GAIA GENTILI": 6,
+          "Camilla Stortoni": 3,
+          "Sconosciuto": 3,
+          "Online Registration": 2
+        },
+        "memberships": {
+          "MON Sala Pesi - Annuale (12 Rate) 25/26": 24,
+          "MON All Lume Nuoto Libero - Annuale (Soluzione Unica)": 3,
+          "MON All Lume Fitness + Acqua - Annuale (12 Rate) 25/26": 5,
+          "MON All Lume Fitness + Acqua (Under 23) - Annuale (Soluzione Unica)": 2,
+          "MON Scuola Nuoto Adulti - Annuale (12 Rate)": 1,
+          "MON All Lume AcquaFitness - Annuale (Soluzione Unica)": 4,
+          "MON Sala Pesi - Annuale (Soluzione Unica) 25/26": 1,
+          "MON Scuola Nuoto Adulti - Annuale (Soluzione Unica)": 1,
+          "MON All Lume Fitness - Mensile (Flex)": 1,
+          "MON All Lume Fitness + Acqua - Annuale (Soluzione Unica) 25/26": 1,
+          "MON Corsi Fitness - Annuale (Soluzione Unica)": 2,
+          "MON Sala Pesi - Annuale (Soluzione Unica)": 1,
+          "MON All Lume Fitness + Acqua - Annuale (12 Rate)": 1,
+          "MON All Lume Fitness (Over 65) - Annuale (Soluzione Unica)": 2
+        },
+        "payments": {
+          "CustomType1": 14,
+          "CustomType3": 12,
+          "CreditCard": 12,
+          "MoneyTransfer": 4,
+          "Cash": 4,
+          "Sconosciuto": 3
+        },
+        "centri": {
+          "MON": 49
+        }
+      },
+      "2026-W18": {
+        "count": 33,
+        "lordo": 2550,
+        "netto": 2531.96,
+        "employees": {
+          "Leonardo Coppari": 5,
+          "GAIA GENTILI": 12,
+          "Camilla Stortoni": 12,
+          "Sconosciuto": 3,
+          "Online Registration": 1
+        },
+        "memberships": {
+          "MON All Lume Fitness - Annuale (Soluzione Unica)": 1,
+          "MON Sala Pesi - Annuale (12 Rate) 25/26": 12,
+          "MON Sala Pesi - Annuale (12 Rate)": 12,
+          "MON All Lume Nuoto Libero - Mensile (Flex)": 2,
+          "MON Scuola Nuoto Adulti - Annuale (12 Rate)": 1,
+          "MON Sala Pesi - Annuale (Soluzione Unica)": 2,
+          "MON All Lume Fitness + Acqua - Mensile (Flex)": 1,
+          "MON Sala Pesi - Annuale (Soluzione Unica) 25/26": 1,
+          "MON All Lume Fitness - Mensile (Flex)": 1
+        },
+        "payments": {
+          "CreditCard": 6,
+          "CustomType1": 24,
+          "Sconosciuto": 3
+        },
+        "centri": {
+          "MON": 33
+        }
+      }
+    }
+  },
+  "monthly": {
+    "ALL": {
+      "2020-02": {
+        "count": 1,
+        "lordo": 710,
+        "netto": 710
+      },
+      "2025-02": {
+        "count": 1,
+        "lordo": 564,
+        "netto": 564
+      },
+      "2025-06": {
+        "count": 2,
+        "lordo": 478,
+        "netto": 478
+      },
+      "2025-09": {
+        "count": 2,
+        "lordo": 594,
+        "netto": 594
+      },
+      "2025-11": {
+        "count": 2,
+        "lordo": 1171,
+        "netto": 1171
+      },
+      "2025-12": {
+        "count": 5,
+        "lordo": 855,
+        "netto": 826.15
+      },
+      "2026-01": {
+        "count": 2444,
+        "lordo": 213277.65,
+        "netto": 211286.19
+      },
+      "2026-02": {
+        "count": 2002,
+        "lordo": 170591.65,
+        "netto": 168725.55
+      },
+      "2026-03": {
+        "count": 1709,
+        "lordo": 159200.99,
+        "netto": 157185.52
+      },
+      "2026-04": {
+        "count": 1539,
+        "lordo": 148317.0,
+        "netto": 146578.29
+      }
+    },
+    "MC": {
+      "2020-02": {
+        "count": 1,
+        "lordo": 710,
+        "netto": 710
+      },
+      "2025-02": {
+        "count": 1,
+        "lordo": 564,
+        "netto": 564
+      },
+      "2025-09": {
+        "count": 2,
+        "lordo": 594,
+        "netto": 594
+      },
+      "2025-12": {
+        "count": 1,
+        "lordo": 190,
+        "netto": 190
+      },
+      "2026-01": {
+        "count": 1223,
+        "lordo": 117471,
+        "netto": 117104.59
+      },
+      "2026-02": {
+        "count": 1184,
+        "lordo": 96353.0,
+        "netto": 96056.78
+      },
+      "2026-03": {
+        "count": 919,
+        "lordo": 84355,
+        "netto": 84158.0
+      },
+      "2026-04": {
+        "count": 823,
+        "lordo": 82136,
+        "netto": 81959.2
+      }
+    },
+    "MON": {
+      "2025-06": {
+        "count": 1,
+        "lordo": 228,
+        "netto": 228
+      },
+      "2025-11": {
+        "count": 2,
+        "lordo": 1171,
+        "netto": 1171
+      },
+      "2025-12": {
+        "count": 1,
+        "lordo": 180,
+        "netto": 180
+      },
+      "2026-01": {
+        "count": 1001,
+        "lordo": 78196.04,
+        "netto": 78196.04
+      },
+      "2026-02": {
+        "count": 575,
+        "lordo": 53560.03,
+        "netto": 53560.03
+      },
+      "2026-03": {
+        "count": 529,
+        "lordo": 55538.97,
+        "netto": 55538.97
+      },
+      "2026-04": {
+        "count": 466,
+        "lordo": 47951.2,
+        "netto": 47951.2
+      }
+    }
+  },
+  "yearly": {
+    "ALL": {
+      "2020": {
+        "count": 1,
+        "lordo": 710,
+        "netto": 710
+      },
+      "2025": {
+        "count": 12,
+        "lordo": 3662,
+        "netto": 3633.15
+      },
+      "2026": {
+        "count": 7694,
+        "lordo": 691387.29,
+        "netto": 683775.55
+      }
+    },
+    "MC": {
+      "2020": {
+        "count": 1,
+        "lordo": 710,
+        "netto": 710
+      },
+      "2025": {
+        "count": 4,
+        "lordo": 1348,
+        "netto": 1348
+      },
+      "2026": {
+        "count": 4149,
+        "lordo": 380315.0,
+        "netto": 379278.57
+      }
+    },
+    "MON": {
+      "2025": {
+        "count": 4,
+        "lordo": 1579,
+        "netto": 1579
+      },
+      "2026": {
+        "count": 2571,
+        "lordo": 236262.93,
+        "netto": 235246.24
+      }
+    }
+  },
+  "employees": [
+    "Alex Pop",
+    "Camilla Stortoni",
+    "Chiara Messi",
+    "DANIELA DE ANGELIS",
+    "Elena Marchegiani",
+    "GAIA GENTILI",
+    "Genny Di Sante",
+    "Leonardo Coppari",
+    "Matilde Biagiola",
+    "Online Registration",
+    "Sconosciuto",
+    "System System"
+  ],
+  "memberships": [
+    "Certificato Medico",
+    "Certificato Temporaneo",
+    "Guest Pass GOLD 7gg - LUME",
+    "Guest Pass GOLD 7gg - LUME - Ref",
+    "GuestPass GOLD 1gg - LUME",
+    "MC All Lume (Over 65) - Annuale (12 Rate)",
+    "MC All Lume (Over 65) - Annuale (Soluzione Unica)",
+    "MC All Lume (Under 23) - Annuale (12 Rate)",
+    "MC All Lume (Under 23) - Annuale (Soluzione Unica)",
+    "MC All Lume (Under 23) - Mensile (Flex)",
+    "MC All Lume - Annuale (12 Rate)",
+    "MC All Lume - Annuale (12 Rate) 25/26",
+    "MC All Lume - Annuale (Soluzione Unica)",
+    "MC All Lume - Annuale (Soluzione Unica) 25/26",
+    "MC All Lume - Annuale (Soluzione Unica) test",
+    "MC All Lume - Mensile (Flex)",
+    "MC All Lume Fitness + Crossfit - Annuale (Soluzione Unica)",
+    "MC All Lume GOLD - Annuale (12 Rate) 25/26",
+    "MC All Lume GOLD - Annuale (Soluzione Unica)",
+    "MC All Lume GOLD - Annuale (Soluzione Unica) 25/26",
+    "MC Corsi Fitness - Annuale (12 Rate)",
+    "MC Corsi Fitness - Annuale (12 Rate) 25/26",
+    "MC Corsi Fitness - Annuale (Soluzione Unica)",
+    "MC Corsi Fitness - Annuale (Soluzione Unica) 25/26",
+    "MC Crossfit 2V - Annuale (12 Rate)",
+    "MC Crossfit 2V - Annuale (Soluzione Unica)",
+    "MC Crossfit 3V - Annuale (12 Rate)",
+    "MC Crossfit 3V - Annuale (Soluzione Unica)",
+    "MC Crossfit OPEN - Annuale (12 Rate)",
+    "MC Crossfit OPEN - Annuale (Soluzione Unica)",
+    "MC Crossfit OPEN - Mensile (Flex)",
+    "MC Crossfit Special 2 (Mensile)",
+    "MC Sala Pesi - Annuale (12 Rate)",
+    "MC Sala Pesi - Annuale (12 Rate) 25/26",
+    "MC Sala Pesi - Annuale (Soluzione Unica)",
+    "MC Sala Pesi - Annuale (Soluzione Unica) 25/26",
+    "MC Sala Pesi Entry Level (12 Rate)",
+    "MON All Lume AcquaFitness - Annuale (12 Rate)",
+    "MON All Lume AcquaFitness - Annuale (Soluzione Unica)",
+    "MON All Lume AcquaFitness - Mensile (Flex)",
+    "MON All Lume Fitness (Over 65) - Annuale (12 Rate)",
+    "MON All Lume Fitness (Over 65) - Annuale (Soluzione Unica)",
+    "MON All Lume Fitness + Acqua (Under 23) - Annuale (12 Rate)",
+    "MON All Lume Fitness + Acqua (Under 23) - Annuale (Soluzione Unica)",
+    "MON All Lume Fitness + Acqua (Under 23) - Mensile (Flex)",
+    "MON All Lume Fitness + Acqua - Annuale (12 Rate)",
+    "MON All Lume Fitness + Acqua - Annuale (12 Rate) 25/26",
+    "MON All Lume Fitness + Acqua - Annuale (Soluzione Unica)",
+    "MON All Lume Fitness + Acqua - Annuale (Soluzione Unica) 25/26",
+    "MON All Lume Fitness + Acqua - Mensile (Flex)",
+    "MON All Lume Fitness - Annuale (12 Rate)",
+    "MON All Lume Fitness - Annuale (12 Rate) 25/26",
+    "MON All Lume Fitness - Annuale (Soluzione Unica)",
+    "MON All Lume Fitness - Annuale (Soluzione Unica) 25/26",
+    "MON All Lume Fitness - Mensile (Flex)",
+    "MON All Lume Nuoto Libero - Annuale (12 Rate)",
+    "MON All Lume Nuoto Libero - Annuale (Soluzione Unica)",
+    "MON All Lume Nuoto Libero - Mensile (Flex)",
+    "MON Corsi Fitness - Annuale (12 Rate)",
+    "MON Corsi Fitness - Annuale (12 Rate) 25/26",
+    "MON Corsi Fitness - Annuale (Soluzione Unica)",
+    "MON Sala Pesi - Annuale (12 Rate)",
+    "MON Sala Pesi - Annuale (12 Rate) 25/26",
+    "MON Sala Pesi - Annuale (Soluzione Unica)",
+    "MON Sala Pesi - Annuale (Soluzione Unica) 25/26",
+    "MON Sala Pesi Entry Level - Annuale (12 Rate) 25/26",
+    "MON Sala Pesi Entry Level - Annuale (Soluzione Unica) 25/26",
+    "MON Scuola Nuoto Adulti - Annuale (12 Rate)",
+    "MON Scuola Nuoto Adulti - Annuale (Soluzione Unica)",
+    "MON Scuola Nuoto Adulti - Mensile (Flex)",
+    "MON Scuola Nuoto Bambini Bisettimanale - Mensile Flex",
+    "MON Scuola Nuoto Bambini Bisettimanale - Stagionale",
+    "MON Scuola Nuoto Bambini Bisettimanale - Stagionale 25/26 (PREVENDITA)",
+    "MON Scuola Nuoto Bambini Monosettimanale - Mensile Flex",
+    "MON Scuola Nuoto Bambini Monosettimanale - Stagionale",
+    "MON Scuola Nuoto Bambini Monosettimanle - Stagionale 25/26(PREVENDITA)",
+    "Mensile Omaggio - back",
+    "MeseOmaggioLume",
+    "OLD Acqua",
+    "OLD Acqua fitness",
+    "OLD Corsi Fitness Macerata",
+    "OLD Sala Pesi Macerata",
+    "On Ramp",
+    "Reformer - LUME",
+    "Sconosciuto"
+  ],
+  "payments": [
+    "Cash",
+    "CreditCard",
+    "CustomType1",
+    "CustomType3",
+    "MoneyTransfer",
+    "Online",
+    "Sconosciuto"
+  ]
+}
