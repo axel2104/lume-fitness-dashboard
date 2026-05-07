@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lume Fitness - Ingresso</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-card: #111111;
+            --bg-card-hover: #1a1a2e;
+            --text-primary: #ffffff;
+            --text-secondary: #888888;
+            --accent-pink: #e91e63;
+            --accent-cyan: #00bcd4;
+            --accent-green: #4caf50;
+            --accent-orange: #ff9800;
+            --accent-purple: #9c27b0;
+            --border-color: #222222;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* ===== SLIDES CONTAINER ===== */
+        .slides-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            z-index: 1;
+        }
+
+        .slide.active {
+            opacity: 1;
+            z-index: 2;
+        }
+
+        /* ===== VIDEO SLIDE ===== */
+        .video-slide {
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-slide video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* ===== VIDEO OVERLAY — ereditata dal player ===== */
+        .video-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px 30px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.85));
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .video-slide:hover .video-overlay,
+        .video-overlay.visible {
+            opacity: 1;
+        }
+
+        .video-lesson-badge {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .video-lesson-badge .badge-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--accent-pink);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .video-lesson-badge .badge-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .video-lesson-badge .badge-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-pink);
+            font-weight: 700;
+        }
+
+        .video-lesson-badge .badge-name {
+            font-size: 20px;
+            font-weight: 800;
+            color: #fff;
+        }
+
+        /* Video controls — minimali */
+        .video-controls {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .video-btn {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #fff;
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.2s;
+        }
+
+        .video-btn:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .video-btn:focus-visible {
+            outline: 2px solid var(--accent-cyan);
+            outline-offset: 2px;
+        }
+
+        /* ===== ERROR OVERLAY ===== */
+        .video-error-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(10,10,10,0.92);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px;
+            z-index: 10;
+        }
+
+        .video-error-overlay.hidden {
+            display: none;
+        }
+
+        .error-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+            opacity: 0.7;
+        }
+
+        .error-title {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--accent-pink);
+            margin-bottom: 12px;
+        }
+
+        .error-message {
+            font-size: 16px;
+            color: var(--text-secondary);
+            max-width: 480px;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .error-action {
+            padding: 12px 28px;
+            background: var(--accent-pink);
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .error-action:hover {
+            background: #c2185b;
+        }
+
+        .error-action:focus-visible {
+            outline: 2px solid var(--accent-cyan);
+            outline-offset: 2px;
+        }
+
+        /* ===== VIDEO LOADING ===== */
+        .video-loading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: var(--text-secondary);
+        }
+
+        .video-loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid var(--border-color);
+            border-top-color: var(--accent-pink);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        .video-loading-text {
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        /* ===== YOUTUBE FALLBACK EMBED ===== */
+        .video-youtube-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-youtube-container iframe {
+            width: 100%;
+            height: 100%;
+            max-width: 1280px;
+            max-height: 720px;
+            border: none;
+            border-radius: 4px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* ===== PLANNING SLIDE ===== */
+        .planning-slide {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
+            display: flex;
+            flex-direction: column;
+            padding: 40px 60px;
+        }
+
+        /* Header */
+        .planning-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .planning-logo {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .planning-logo-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--accent-pink), var(--accent-cyan));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 24px;
+        }
+
+        .planning-logo-text {
+            font-size: 42px;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+
+        .planning-location {
+            font-size: 24px;
+            color: var(--accent-pink);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .planning-clock {
+            font-size: 36px;
+            font-weight: 700;
+            font-variant-numeric: tabular-nums;
+            color: var(--text-secondary);
+        }
+
+        /* Main Content */
+        .planning-main {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            overflow: hidden;
+        }
+
+        /* Current Class Section */
+        .current-section {
+            background: var(--bg-card);
+            border-radius: 24px;
+            padding: 40px;
+            border: 3px solid var(--accent-green);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .current-section::before {
+            content: 'IN CORSO';
+            position: absolute;
+            top: 20px;
+            right: -60px;
+            background: var(--accent-green);
+            padding: 8px 80px;
+            transform: rotate(45deg);
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .current-label {
+            font-size: 20px;
+            color: var(--accent-green);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        .current-name {
+            font-size: 56px;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .current-time {
+            font-size: 32px;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+        }
+
+        .current-instructor {
+            font-size: 24px;
+            color: var(--text-secondary);
+        }
+
+        .current-availability {
+            margin-top: 30px;
+            padding: 20px 30px;
+            background: rgba(76, 175, 80, 0.1);
+            border-radius: 16px;
+            border: 2px solid var(--accent-green);
+            display: inline-block;
+        }
+
+        .current-availability-text {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--accent-green);
+        }
+
+        /* Sala Libera State */
+        .sala-libera-big {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            text-align: center;
+        }
+
+        .sala-libera-icon {
+            font-size: 120px;
+            margin-bottom: 30px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .sala-libera-title {
+            font-size: 56px;
+            font-weight: 900;
+            color: var(--accent-green);
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            margin-bottom: 15px;
+        }
+
+        .sala-libera-subtitle {
+            font-size: 28px;
+            color: var(--text-secondary);
+        }
+
+        /* ===== ROOMS GRID ===== */
+        .rooms-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .room-card {
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 25px;
+            border: 2px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+        }
+
+        .room-card.active {
+            border-color: var(--accent-green);
+            background: linear-gradient(135deg, rgba(76,175,80,0.1), var(--bg-card));
+        }
+
+        .room-card.empty {
+            border-color: var(--accent-orange);
+            background: linear-gradient(135deg, rgba(255,152,0,0.05), var(--bg-card));
+        }
+
+        .room-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .room-name {
+            font-size: 22px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .room-status {
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .room-status.live {
+            background: rgba(76, 175, 80, 0.2);
+            color: var(--accent-green);
+            animation: pulse 2s infinite;
+        }
+
+        .room-status.free {
+            background: rgba(255, 152, 0, 0.2);
+            color: var(--accent-orange);
+        }
+
+        .room-status.next {
+            background: rgba(0, 188, 212, 0.2);
+            color: var(--accent-cyan);
+        }
+
+        .room-current {
+            margin-bottom: 15px;
+        }
+
+        .room-current-label {
+            font-size: 12px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        .room-current-class {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .room-current-time {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+
+        .room-current-instructor {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .room-availability {
+            margin-top: auto;
+            padding: 10px 16px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .room-availability.available {
+            background: rgba(76, 175, 80, 0.15);
+            color: var(--accent-green);
+        }
+
+        .room-availability.full {
+            background: rgba(233, 30, 99, 0.15);
+            color: var(--accent-pink);
+        }
+
+        .room-availability.waiting {
+            background: rgba(255, 152, 0, 0.15);
+            color: var(--accent-orange);
+        }
+
+        .room-next {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .room-next-label {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+
+        .room-next-class {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .room-next-time {
+            font-size: 14px;
+            color: var(--accent-cyan);
+            font-weight: 700;
+        }
+
+        /* Room Badge */
+        .room-badge {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-top: 10px;
+        }
+
+        .room-badge.sala1 { background: rgba(233, 30, 99, 0.2); color: var(--accent-pink); }
+        .room-badge.sala2 { background: rgba(0, 188, 212, 0.2); color: var(--accent-cyan); }
+        .room-badge.sala3 { background: rgba(156, 39, 176, 0.2); color: var(--accent-purple); }
+        .room-badge.piscina { background: rgba(255, 152, 0, 0.2); color: var(--accent-orange); }
+
+        /* Progress Bar */
+        .progress-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--accent-pink), var(--accent-cyan));
+            transition: width 0.1s linear;
+        }
+
+        /* Connection Status */
+        .conn-status {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            z-index: 1000;
+            background: rgba(76, 175, 80, 0.2);
+            color: var(--accent-green);
+        }
+
+        .conn-status.offline {
+            background: rgba(233, 30, 99, 0.2);
+            color: var(--accent-pink);
+        }
+
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: currentColor;
+            animation: pulse 2s infinite;
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="slides-container" id="slidesContainer">
+
+        <!-- Slide 1: Video -->
+        <div class="slide video-slide active" id="videoSlide">
+
+            <!-- Loading state -->
+            <div class="video-loading" id="videoLoading" aria-live="polite">
+                <div class="video-loading-spinner" aria-hidden="true"></div>
+                <div class="video-loading-text" id="videoLoadingText">Caricamento video...</div>
+            </div>
+
+            <!-- Video element (mostrato quando il source è un file) -->
+            <video id="promoVideo"
+                   muted
+                   loop
+                   playsinline
+                   style="display:none;"
+                   aria-label="Video lezione"
+                   controls>
+                <source src="" type="video/mp4">
+                <p>Il tuo browser non supporta la riproduzione video.
+                   <a href="">Aggiorna il browser</a>.</p>
+            </video>
+
+            <!-- YouTube fallback container (nascosto di default) -->
+            <div class="video-youtube-container" id="youtubeContainer" style="display:none;" aria-hidden="true">
+                <!-- iframe injectato dinamicamente -->
+            </div>
+
+            <!-- Error overlay -->
+            <div class="video-error-overlay hidden" id="videoErrorOverlay" role="alert" aria-live="assertive">
+                <div class="error-icon" aria-hidden="true">&#9888;</div>
+                <div class="error-title" id="videoErrorTitle">Video non disponibile</div>
+                <div class="error-message" id="videoErrorMessage">
+                    Impossibile caricare il video richiesto. Riprova tra qualche istante.
+                </div>
+                <button class="error-action" id="videoRetryBtn" aria-label="Riprova a caricare il video">
+                    &#8635; Riprova
+                </button>
+            </div>
+
+            <!-- Lesson badge overlay -->
+            <div class="video-overlay" id="videoOverlay" aria-hidden="true">
+                <div class="video-lesson-badge">
+                    <div class="badge-icon" aria-hidden="true">&#9654;</div>
+                    <div class="badge-text">
+                        <span class="badge-label">Lezione in corso</span>
+                        <span class="badge-name" id="videoLessonName">—</span>
+                    </div>
+                </div>
+                <div class="video-controls">
+                    <!-- Mute toggle -->
+                    <button class="video-btn"
+                            id="muteBtn"
+                            aria-label="Attiva/disattiva audio"
+                            title="Toggle audio">
+                        &#9835;
+                    </button>
+                    <!-- Pause/Play -->
+                    <button class="video-btn"
+                            id="playPauseBtn"
+                            aria-label="Riproduci/metti in pausa"
+                            title="Play/Pause">
+                        &#10074;&#10074;
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Slide 2: Planning -->
+        <div class="slide planning-slide" id="planningSlide">
+            <div class="planning-header">
+                <div class="planning-logo">
+                    <div class="planning-logo-icon">LF</div>
+                    <div class="planning-logo-text">LUME FITNESS</div>
+                </div>
+                <div class="planning-location">Macerata</div>
+                <div class="planning-clock" id="planningClock">--:--</div>
+            </div>
+
+            <div class="rooms-grid" id="roomsGrid">
+                <!-- Le sale vengono generate dinamicamente -->
+            </div>
+
+            <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+        </div>
+    </div>
+
+    <div class="conn-status" id="connStatus" role="status" aria-live="polite">
+        <div class="status-dot" aria-hidden="true"></div>
+        <span id="connStatusText">Live</span>
+    </div>
+
+    <script>
+    // ============================================================
+    // CONFIG
+    // ============================================================
+    const CONFIG = {
+        // File di mappatura lezione → video
+        mappingUrl: '/planning/lezioni-mapping.json',
+
+        // Fallback: URL presigned del video promo principale (12h)
+        promoVideoUrl: [
+            'https://mybrand-media-moon.s3.eu-central-1.amazonaws.com/SITO%20ASSET/Progetti/1.600K%20TIKTOK.mp4?response-content-disposition=inline&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDGV1LWNlbnRyYWwtMSJHMEUCIQDUvx%2B6A8sznxEWW4xlkeJZZicOzGtRJfLRd7aZfC5ZUwIgaw5ZUUESOU72WggR2uxY%2FTqLAcRLmV0BUCit4bgjThUqwgMIkv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgw0MTUyOTQ5NzU4OTYiDEBI%2BysXwXC19HlLVCqWA59kyGj8ZgHR9YtFnhJaBFcwL2j3c%2Bn291WsQ1anZFL9W6KYrHSWL4zzB7xEMrwOmm85X2C10fGZ6L40oxWJozoDnj%2B4CYZiFNchi7PGkhiIu%2Fw914vlYH%2BKpE8XiDeM2LKKs7KWKxgHnF4Y6xzkwou1J%2BGZyv39cm1wne9%2FsVXT%2FYfnUSoMkSGe4WfJ6hdiy12INpKh5h59s6ITUHBSNMnFU%2FAIYhefeCDeoUIOt4EGS6lsW186aiE0nTXfI1qtb2KKrEAYBmrOOlnCC%2BeFjou17oW5asMVhRyVCj%2BqFzOWx0LU%2FfN5nA1tELUw1qZxgAK%2FA39NobzNg0mAsHyAIOYuB5xY8hAUXx9%2FW%2B7uZ8cixk6aRETAmYm22uo9LGuhW%2BoJ4iU04mhd%2B8DZ914S83VCQwwLRcgZXwvKF%2BErtIsKWYV45ktvtpAEdPk6BUVR3%2BVc2GBfI7OnvSIfIb4DRP8BMGe0kFkc9Aejgl3P5IQZEthn5m9vDHMz5PVlwPBjzovWmEQZcl9mP5cvezeYs2qNsdSlmH0wpqLqzwY63gK2u5Wc6m9JzThkRD9e2RDX%2BX%2FODkxMzVhHHYWHx2nKL%2Fiup2C8htwVseHjAUdy8a%2Bs0cvpAjy0eeisHdg8zTYOEGk2FvsyHXUi%2BjqpXN6%2BFU0jZSo4vaYKL3qR1cFyTyJ3KXXeAxz8iH%2BGyJZZTqUZHegZ0nF2i5PZEdgGzOnougavMJL3ane1WOwZ7%2BK5b%2FWhpVr3gNdHX3BDSNHH1mIEhTvHw%2FXbCfzMV3fpcFSpE1mPvgo4Rh9bdO0FPg6qzAwf0cxXi73HtLuNkB3mNhQ5sehx%2FVAPC%2FcpTEgOiULbrV%2Fwbiy59BE17oGe2ijVpYB%2Bcmanf%2Bd8mYZdq3vFF29K1AxLtHODDItV4yDd6LIMp2b43XMlDKu95ztEOqWvGlGDQsVaOgNllWN5gCHX%2B1ahjNcM6xU%2BC4QqZmtNICKTFby6xlIQrM8vACspiIdSawj4GhYLGWiG3%2FHiRdXcug%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAWBMMCN6MCQLG5OFZ%2F20260506%2Feu-central-1%2Fs3%2Faws4_request&X-Amz-Date=20260506T005849Z&X-Amz-Expires=43200&X-Amz-SignedHeaders=host&X-Amz-Signature=99b4470360b07ecee61d19efc84018de59d1394597033db07445ede52b58fe5e',
+        ],
+
+        apiUrl: '/api/all-classes',
+        location: 'Macerata',
+        videoDuration: 30000,
+        planningDuration: 30000,
+        refreshInterval: 60000,
+    };
+
+    // ============================================================
+    // STATE
+    // ============================================================
+    let currentVideoIndex = 0;
+    let currentSlide = 0;           // 0 = video, 1 = planning
+    let lastDataHash = '';
+    let classesData = null;
+    let slideTimer = null;
+    let progressTimer = null;
+
+    // Video player state
+    let mappingData = null;         // contenuto di lezioni-mapping.json
+    let currentLessonSlug = null;   // slug lezione corrente (da URL o da schedule)
+    let isMuted = true;             // autoplay → muted di default
+    let videoLoadAttempts = 0;      // contatore retry
+
+    // ============================================================
+    // CLOCK
+    // ============================================================
+    function updateClock() {
+        const now = new Date();
+        document.getElementById('planningClock').textContent =
+            now.toLocaleTimeString('it-IT', { hour: '2-digit', minute: '2-digit' });
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    // ============================================================
+    // MAPPING — fetch + lookup
+    // ============================================================
+
+    /**
+     * Recupera il file di mappatura lezione → video.
+     * Fallisce silenziosamente: in tal caso si usa solo promo/pipeline.
+     */
+    async function fetchMapping() {
+        try {
+            const resp = await fetch(`${CONFIG.mappingUrl}?t=${Date.now()}`, {
+                method: 'GET',
+                headers: { 'Accept': 'application/json' }
+            });
+            if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+            mappingData = await resp.json();
+            console.debug('[VideoPlayer] Mapping caricato:', mappingData);
+        } catch (err) {
+            console.warn('[VideoPlayer] Mapping non disponibile, uso fallback:', err.message);
+            mappingData = null;
+        }
+    }
+
+    /**
+     * Estrae il parametro ?lezione= dall'URL.
+     * @returns {string|null} nome normalizzato della lezione o null
+     */
+    function getLessonFromUrl() {
+        const params = new URLSearchParams(window.location.search);
+        const raw = params.get('lezione');
+        if (!raw) return null;
+        // Normalizza: lowercase, trim, hyphenate spaces
+        return raw.trim().toLowerCase().replace(/\s+/g, '-');
+    }
+
+    /**
+     * Dato un nome lezione normalizzato, cerca nel mapping.
+     * @param {string} slug — nome lezione normalizzato
+     * @returns {{ slug, url, tipo } | null}
+     */
+    function getVideoForLesson(slug) {
+        if (!mappingData || !mappingData.lezioni) return null;
+        const entry = mappingData.lezioni[slug];
+        if (!entry) return null;
+
+        const s3Base = mappingData.s3_base_url || '';
+        const videoUrl = `${s3Base}/${encodeURIComponent(entry.slug)}.mp4`;
+
+        return {
+            slug: entry.slug,
+            url: videoUrl,
+            tipo: 's3',
+            descrizione: entry.descrizione || entry.slug,
+        };
+    }
+
+    /**
+     * Costruisce URL S3 diretto da slug (mapping automatico).
+     * @param {string} slug
+     * @returns {string}
+     */
+    function buildS3Url(slug) {
+        const base = mappingData?.s3_base_url
+            || 'https://mybrand-media-moon.s3.eu-central-1.amazonaws.com/SITO%20ASSET/Progetti';
+        return `${base}/${encodeURIComponent(slug)}.mp4`;
+    }
+
+    /**
+     * Restituisce il video promo/fallback.
+     * @returns {{ url, tipo, slug }}
+     */
+    function getPromoVideo() {
+        const promo = mappingData?.promo;
+        if (promo?.url_completo) {
+            return { url: promo.url_completo, tipo: 's3', slug: 'promo' };
+        }
+        return {
+            url: CONFIG.promoVideoUrl[0],
+            tipo: 's3',
+            slug: 'promo',
+        };
+    }
+
+    /**
+     * Restituisce il video fallback YouTube (quando S3 non ha nulla).
+     * @returns {{ url, tipo, slug }}
+     */
+    function getYoutubeFallback() {
+        const fb = mappingData?._fallback;
+        if (fb?.video_id) {
+            return {
+                url: `https://www.youtube.com/embed/${fb.video_id}?autoplay=1&mute=1&loop=1&playlist=${fb.video_id}`,
+                tipo: 'youtube',
+                slug: 'fallback-youtube',
+            };
+        }
+        return null;
+    }
+
+    // ============================================================
+    // VIDEO UI — stati e aggiornamento DOM
+    // ============================================================
+
+    function showLoading(text) {
+        const el = document.getElementById('videoLoading');
+        const txt = document.getElementById('videoLoadingText');
+        el.style.display = 'flex';
+        if (txt) txt.textContent = text || 'Caricamento video...';
+        document.getElementById('promoVideo').style.display = 'none';
+        document.getElementById('youtubeContainer').style.display = 'none';
+        document.getElementById('videoErrorOverlay').classList.add('hidden');
+        document.getElementById('videoOverlay').classList.remove('visible');
+    }
+
+    function showVideoElement() {
+        document.getElementById('videoLoading').style.display = 'none';
+        document.getElementById('videoErrorOverlay').classList.add('hidden');
+        const v = document.getElementById('promoVideo');
+        v.style.display = 'block';
+        document.getElementById('youtubeContainer').style.display = 'none';
+        document.getElementById('videoOverlay').classList.add('visible');
+    }
+
+    function showYoutube(url) {
+        document.getElementById('videoLoading').style.display = 'none';
+        document.getElementById('promoVideo').style.display = 'none';
+        document.getElementById('videoErrorOverlay').classList.add('hidden');
+        const container = document.getElementById('youtubeContainer');
+        container.style.display = 'flex';
+        container.innerHTML = `<iframe
+            src="${url}"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+            title="Video lezione — fallback"
+            loading="lazy">
+        </iframe>`;
+        document.getElementById('videoOverlay').classList.remove('visible');
+    }
+
+    function showError(title, message) {
+        document.getElementById('videoLoading').style.display = 'none';
+        document.getElementById('promoVideo').style.display = 'none';
+        document.getElementById('youtubeContainer').style.display = 'none';
+        document.getElementById('videoErrorOverlay').classList.remove('hidden');
+        document.getElementById('videoErrorTitle').textContent = title || 'Video non disponibile';
+        document.getElementById('videoErrorMessage').textContent =
+            message || 'Impossibile caricare il video richiesto. Riprova più tardi.';
+        document.getElementById('videoOverlay').classList.remove('visible');
+    }
+
+    function updateLessonBadge(name) {
+        const el = document.getElementById('videoLessonName');
+        if (el) el.textContent = name || '—';
+    }
+
+    // ============================================================
+    // VIDEO LOADING — logica principale
+    // ============================================================
+
+    /**
+     * Carica e riproduce il video per la lezione corrente.
+     * Strategia:
+     *  1. Se ?lezione= è presente → lookup nel mapping → URL S3
+     *  2. Altrimenti → lezione corrente dallo schedule (se in corso)
+     *  3. Fallback promo video S3
+     *  4. Fallback YouTube (nessun video S3 disponibile)
+     */
+    function loadVideoForCurrentLesson() {
+        showLoading('Selezione video...');
+        videoLoadAttempts = 0;
+
+        const urlLesson = getLessonFromUrl();
+        let videoInfo = null;
+        let lessonName = null;
+
+        if (urlLesson) {
+            // Caso 1: parametro querystring esplicito
+            videoInfo = getVideoForLesson(urlLesson);
+            lessonName = urlLesson;
+            console.info('[VideoPlayer] Querystring lezione:', urlLesson);
+        } else {
+            // Caso 2: lezione in corso dallo schedule
+            const now = getCurrentLessonFromSchedule();
+            if (now) {
+                videoInfo = getVideoForLesson(now.slug);
+                lessonName = now.name;
+                console.info('[VideoPlayer] Lezione in corso:', now.name, '→', videoInfo?.url || 'no mapping');
+            }
+        }
+
+        if (!videoInfo) {
+            // Caso 3: promo/fallback S3
+            videoInfo = getPromoVideo();
+            lessonName = null;
+            console.info('[VideoPlayer] Uso promo/fallback:', videoInfo.url);
+        }
+
+        updateLessonBadge(lessonName || (videoInfo.slug === 'promo' ? 'Lume Fitness' : videoInfo.descrizione));
+
+        if (videoInfo.tipo === 'youtube') {
+            showYoutube(videoInfo.url);
+            return;
+        }
+
+        // S3 — prova direttamente (potrebbe servire presigned URL)
+        tryLoadS3Video(videoInfo.url, videoInfo.url, 0);
+    }
+
+    /**
+     * Prova a caricare un video S3. Se fallisce (CORS, 403, 404, timeout),
+     * riprova con fallback o mostra errore.
+     *
+     * @param {string} primary   — URL primario (S3)
+     * @param {string} fallback  — URL fallback (promo o youtube)
+     * @param {number} attempt   — numero tentativo (0 = primo)
+     */
+    function tryLoadS3Video(primary, fallback, attempt) {
+        videoLoadAttempts = attempt;
+        const video = document.getElementById('promoVideo');
+        showLoading('Caricamento video...');
+
+        // Costruisci URL con timestamp anti-cache
+        const ts = `&_t=${Date.now()}`;
+        const src = primary + (primary.includes('?') ? ts : `?${ts.slice(1)}`);
+
+        video.src = src;
+        video.load();
+
+        video.oncanplay = () => {
+            showVideoElement();
+            video.muted = isMuted;
+            video.play().catch(err => {
+                console.warn('[VideoPlayer] Autoplay bloccato:', err.message);
+            });
+        };
+
+        video.onerror = () => {
+            console.warn(`[VideoPlayer] S3 errore tentativo ${attempt + 1}:`, primary);
+            if (attempt === 0) {
+                // Primo fallimento: prova URL promo
+                const promo = getPromoVideo();
+                console.info('[VideoPlayer] Riprovo con promo:', promo.url);
+                tryLoadS3Video(promo.url, null, 1);
+            } else {
+                // Secondo fallimento: YouTube fallback
+                const yt = getYoutubeFallback();
+                if (yt) {
+                    console.info('[VideoPlayer] YouTube fallback');
+                    showYoutube(yt.url);
+                } else {
+                    showError(
+                        'Video non trovato',
+                        'Il video per questa lezione non è ancora disponibile sul sistema. ' +
+                        'Problemi di connessione o video mancante.'
+                    );
+                }
+            }
+        };
+    }
+
+    // ============================================================
+    // SCHEDULE — determinare quale lezione è in corso
+    // ============================================================
+
+    function getCurrentLessonFromSchedule() {
+        if (!classesData) return null;
+        const today = new Date();
+        const dayName = ['Domenica','Lunedì','Martedì','Mercoledì','Giovedì','Venerdì','Sabato'][today.getDay()];
+        const classes = classesData?.classes?.[CONFIG.location]?.[dayName];
+        if (!classes || classes.length === 0) return null;
+
+        const now = today.getHours() * 60 + today.getMinutes();
+        for (const c of classes) {
+            const [h, m] = (c.time || '00:00').split(':').map(Number);
+            const start = h * 60 + m;
+            const duration = parseInt(c.duration) || 60;
+            if (now >= start && now < start + duration) {
+                return {
+                    name: c.name,
+                    slug: (c.name || '').trim().toLowerCase().replace(/\s+/g, '-'),
+                };
+            }
+        }
+        return null;
+    }
+
+    // ============================================================
+    // LEGACY VIDEO LOADING (dalla versione precedente — rotate promo)
+    // ============================================================
+
+    /**
+     * loadVideo originale — riproduce lista CONFIG.videos rotante.
+     * Ora è deprecata ma mantiene compatibilità con lo slide show esistente.
+     * @deprecated — usa loadVideoForCurrentLesson()
+     */
+    const _legacyVideos = [
+        'https://mybrand-media-moon.s3.eu-central-1.amazonaws.com/SITO%20ASSET/Progetti/1.600K%20TIKTOK.mp4?response-content-disposition=inline&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDGV1LWNlbnRyYWwtMSJHMEUCIQDUvx%2B6A8sznxEWW4xlkeJZZicOzGtRJfLRd7aZfC5ZUwIgaw5ZUUESOU72WggR2uxY%2FTqLAcRLmV0BUCit4bgjThUqwgMIkv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgw0MTUyOTQ5NzU4OTYiDEBI%2BysXwXC19HlLVCqWA59kyGj8ZgHR9YtFnhJaBFcwL2j3c%2Bn291WsQ1anZFL9W6KYrHSWL4zzB7xEMrwOmm85X2C10fGZ6L40oxWJozoDnj%2B4CYZiFNchi7PGkhiIu%2Fw914vlYH%2BKpE8XiDeM2LKKs7KWKxgHnF4Y6xzkwou1J%2BGZyv39cm1wne9%2FsVXT%2FYfnUSoMkSGe4WfJ6hdiy12INpKh5h59s6ITUHBSNMnFU%2FAIYhefeCDeoUIOt4EGS6lsW186aiE0nTXfI1qtb2KKrEAYBmrOOlnCC%2BeFjou17oW5asMVhRyVCj%2BqFzOWx0LU%2FfN5nA1tELUw1qZxgAK%2FA39NobzNg0mAsHyAIOYuB5xY8hAUXx9%2FW%2B7uZ8cixk6aRETAmYm22uo9LGuhW%2BoJ4iU04mhd%2B8DZ914S83VCQwwLRcgZXwvKF%2BErtIsKWYV45ktvtpAEdPk6BUVR3%2BVc2GBfI7OnvSIfIb4DRP8BMGe0kFkc9Aejgl3P5IQZEthn5m9vDHMz5PVlwPBjzovWmEQZcl9mP5cvezeYs2qNsdSlmH0wpqLqzwY63gK2u5Wc6m9JzThkRD9e2RDX%2BX%2FODkxMzVhHHYWHx2nKL%2Fiup2C8htwVseHjAUdy8a%2Bs0cvpAjy0eeisHdg8zTYOEGk2FvsyHXUi%2BjqpXN6%2BFU0jZSo4vaYKL3qR1cFyTyJ3KXXeAxz8iH%2BGyJZZTqUZHegZ0nF2i5PZEdgGzOnougavMJL3ane1WOwZ7%2BK5b%2FWhpVr3gNdHX3BDSNHH1mIEhTvHw%2FXbCfzMV3fpcFSpE1mPvgo4Rh9bdO0FPg6qzAwf0cxXi73HtLuNkB3mNhQ5sehx%2FVAPC%2FcpTEgOiULbrV%2Fwbiy59BE17oGe2ijVpYB%2Bcmanf%2Bd8mYZdq3vFF29K1AxLtHODDItV4yDd6LIMp2b43XMlDKu95ztEOqWvGlGDQsVaOgNllWN5gCHX%2B1ahjNcM6xU%2BC4QqZmtNICKTFby6xlIQrM8vACspiIdSawj4GhYLGWiG3%2FHiRdXcug%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAWBMMCN6MCQLG5OFZ%2F20260506%2Feu-central-1%2Fs3%2Faws4_request&X-Amz-Date=20260506T005849Z&X-Amz-Expires=43200&X-Amz-SignedHeaders=host&X-Amz-Signature=99b4470360b07ecee61d19efc84018de59d1394597033db07445ede52b58fe5e',
+    ];
+
+    function loadLegacyVideo(index) {
+        const video = document.getElementById('promoVideo');
+        const loading = document.getElementById('videoLoading');
+        showLoading('Caricamento video...');
+        video.src = _legacyVideos[index % _legacyVideos.length];
+        video.load();
+        video.oncanplay = () => {
+            loading.style.display = 'none';
+            video.style.display = 'block';
+            video.muted = isMuted;
+            video.play().catch(e => console.log('Autoplay blocked:', e));
+        };
+        video.onerror = () => {
+            showError('Errore caricamento', 'Impossibile riprodurre il video. Controlla la connessione.');
+        };
+    }
+
+    // ============================================================
+    // SLIDE MANAGEMENT
+    // ============================================================
+
+    function showSlide(index) {
+        const slides = document.querySelectorAll('.slide');
+        slides.forEach((s, i) => s.classList.toggle('active', i === index));
+        currentSlide = index;
+
+        if (index === 0) {
+            // Slide video
+            loadVideoForCurrentLesson();
+            startProgress(CONFIG.videoDuration);
+        } else {
+            // Slide planning
+            document.getElementById('promoVideo').pause();
+            document.getElementById('youtubeContainer').innerHTML = '';
+            updatePlanning();
+            startProgress(CONFIG.planningDuration);
+        }
+    }
+
+    function nextSlide() {
+        const slides = document.querySelectorAll('.slide');
+        const next = (currentSlide + 1) % slides.length;
+
+        if (next === 0) {
+            currentVideoIndex = (currentVideoIndex + 1) % _legacyVideos.length;
+        }
+
+        showSlide(next);
+    }
+
+    // ============================================================
+    // PROGRESS BAR
+    // ============================================================
+
+    function startProgress(duration) {
+        const bar = document.getElementById('progressBar');
+        let progress = 0;
+        const step = 100 / (duration / 100);
+
+        clearInterval(progressTimer);
+        progressTimer = setInterval(() => {
+            progress += step;
+            bar.style.width = Math.min(progress, 100) + '%';
+
+            if (progress >= 100) {
+                clearInterval(progressTimer);
+                nextSlide();
+            }
+        }, 100);
+    }
+
+    // ============================================================
+    // PLANNING (invariato dalla versione precedente)
+    // ============================================================
+
+    function hashData(data) {
+        return JSON.stringify(data).split('').reduce((a, b) => {
+            a = ((a << 5) - a) + b.charCodeAt(0);
+            return a & a;
+        }, 0);
+    }
+
+    async function fetchClasses() {
+        try {
+            const resp = await fetch(`${CONFIG.apiUrl}?t=${Date.now()}`, {
+                method: 'GET',
+                headers: { 'Accept': 'application/json' }
+            });
+            if (!resp.ok) throw new Error('API Error');
+            return await resp.json();
+        } catch (err) {
+            console.error('[VideoPlayer] Fetch error:', err);
+            updateConnectionStatus(false);
+            return null;
+        }
+    }
+
+    function getTodayClasses(allData) {
+        if (!allData?.classes?.[CONFIG.location]) return [];
+        const dayName = ['Domenica','Lunedì','Martedì','Mercoledì','Giovedì','Venerdì','Sabato'][new Date().getDay()];
+        return allData.classes[CONFIG.location][dayName] || [];
+    }
+
+    const ROOMS = [
+        {
+            id: 'sala1', name: 'SALA 1',
+            filter: c => c.room?.toLowerCase().includes('sala 1') || (!c.room && c.category === 'fitness')
+        },
+        {
+            id: 'sala2', name: 'SALA 2',
+            filter: c => c.room?.toLowerCase().includes('sala 2') || (!c.room && c.category === 'acqua')
+        },
+        {
+            id: 'sala3', name: 'SALA 3 - REFORMER',
+            filter: c => c.room?.toLowerCase().includes('sala 3') || c.category === 'reformer'
+                      || c.name?.toLowerCase().includes('reformer') || c.name?.toLowerCase().includes('wbs')
+        },
+    ];
+
+    function getCurrentAndNext(classes) {
+        const now = new Date();
+        const currentTime = now.getHours() * 60 + now.getMinutes();
+
+        const sorted = [...classes].sort((a, b) => {
+            const [ah, am] = (a.time || '00:00').split(':').map(Number);
+            const [bh, bm] = (b.time || '00:00').split(':').map(Number);
+            return (ah * 60 + am) - (bh * 60 + bm);
+        });
+
+        let current = null;
+        let next = [];
+
+        for (const c of sorted) {
+            const [h, m] = (c.time || '00:00').split(':').map(Number);
+            const startTime = h * 60 + m;
+            const duration = parseInt(c.duration) || 60;
+            const endTime = startTime + duration;
+
+            if (currentTime >= startTime && currentTime < endTime) {
+                current = c;
+            } else if (startTime > currentTime && next.length < 2) {
+                next.push(c);
+            }
+        }
+
+        return { current, next };
+    }
+
+    function getRoomStatus(room, allClasses) {
+        const roomClasses = allClasses.filter(room.filter);
+        const { current, next } = getCurrentAndNext(roomClasses);
+        return {
+            room,
+            current,
+            next: next[0] || null,
+            status: current ? 'live' : (next[0] ? 'next' : 'free')
+        };
+    }
+
+    function getRoomColor(roomId) {
+        const colors = {
+            'sala1': 'var(--accent-pink)',
+            'sala2': 'var(--accent-cyan)',
+            'sala3': 'var(--accent-purple)',
+        };
+        return colors[roomId] || 'var(--text-primary)';
+    }
+
+    function renderRooms(allClasses) {
+        const container = document.getElementById('roomsGrid');
+        const roomStatuses = ROOMS.map(room => getRoomStatus(room, allClasses));
+
+        let html = '';
+        roomStatuses.forEach((status, i) => {
+            const { room, current, next, status: roomStatus } = status;
+            const cardClass = roomStatus === 'live' ? 'active' : (roomStatus === 'free' ? 'empty' : '');
+            const statusText = roomStatus === 'live' ? 'IN CORSO' : (roomStatus === 'next' ? 'PROSSIMO' : 'LIBERA');
+            const statusClass = roomStatus === 'live' ? 'live' : (roomStatus === 'next' ? 'next' : 'free');
+
+            html += `
+                <div class="room-card ${cardClass}" style="animation: fadeIn 0.5s ease ${i * 0.1}s forwards; opacity: 0;">
+                    <div class="room-header">
+                        <div class="room-name" style="color: ${getRoomColor(room.id)}">${room.name}</div>
+                        <div class="room-status ${statusClass}">${statusText}</div>
+                    </div>
+
+                    ${current ? `
+                        <div class="room-current">
+                            <div class="room-current-label">In corso</div>
+                            <div class="room-current-class">${current.name}</div>
+                            <div class="room-current-time">${current.time} &bull; ${current.duration}</div>
+                            <div class="room-current-instructor">&#128100; ${current.instructor}</div>
+                        </div>
+                        <div class="room-availability ${current.is_full ? 'full' : 'available'}">
+                            ${current.is_full ? 'SALA PIENA' : `${current.available_places} posti disponibili`}
+                        </div>
+                    ` : next ? `
+                        <div class="room-current">
+                            <div class="room-current-label">Prossimo corso</div>
+                            <div class="room-current-class" style="font-size: 20px; color: var(--text-secondary);">Sala libera</div>
+                        </div>
+                        <div class="room-next">
+                            <div class="room-next-label">A seguire</div>
+                            <div class="room-next-class">${next.name}</div>
+                            <div class="room-next-time">${next.time} &bull; ${next.duration}</div>
+                        </div>
+                        <div class="room-availability waiting">
+                            Prossimo alle ${next.time}
+                        </div>
+                    ` : `
+                        <div class="room-current">
+                            <div class="room-current-label">Stato</div>
+                            <div class="room-current-class" style="font-size: 20px; color: var(--accent-orange);">
+                                &#10024; Sala Libera
+                            </div>
+                            <div class="room-current-time" style="margin-top: 10px;">Nessun corso previsto</div>
+                        </div>
+                        <div class="room-availability waiting">
+                            A disposizione
+                        </div>
+                    `}
+                </div>
+            `;
+        });
+
+        container.innerHTML = html;
+    }
+
+    async function updatePlanning() {
+        const data = await fetchClasses();
+        if (!data) return;
+
+        const newHash = hashData(data);
+        if (newHash === lastDataHash) {
+            updateConnectionStatus(true);
+            return;
+        }
+
+        lastDataHash = newHash;
+        classesData = data;  // <<< aggiorna state per loadVideoForCurrentLesson
+        const todayClasses = getTodayClasses(data);
+
+        renderRooms(todayClasses);
+        updateConnectionStatus(true);
+    }
+
+    // ============================================================
+    // CONNECTION STATUS
+    // ============================================================
+
+    function updateConnectionStatus(online) {
+        const status = document.getElementById('connStatus');
+        const text = document.getElementById('connStatusText');
+        if (!status) return;
+        status.className = 'conn-status ' + (online ? '' : 'offline');
+        if (text) text.textContent = online ? 'Live' : 'Offline';
+    }
+
+    // ============================================================
+    // VIDEO CONTROLS — mute / play-pause
+    // ============================================================
+
+    function initVideoControls() {
+        const video = document.getElementById('promoVideo');
+        const muteBtn = document.getElementById('muteBtn');
+        const playPauseBtn = document.getElementById('playPauseBtn');
+
+        if (muteBtn) {
+            muteBtn.addEventListener('click', () => {
+                isMuted = !isMuted;
+                video.muted = isMuted;
+                muteBtn.innerHTML = isMuted ? '&#9835;' : '&#9834;';
+                muteBtn.setAttribute('aria-label', isMuted ? 'Attiva audio' : 'Disattiva audio');
+            });
+        }
+
+        if (playPauseBtn) {
+            playPauseBtn.addEventListener('click', () => {
+                if (video.paused) {
+                    video.play();
+                    playPauseBtn.innerHTML = '&#10074;&#10074;';
+                    playPauseBtn.setAttribute('aria-label', 'Metti in pausa');
+                } else {
+                    video.pause();
+                    playPauseBtn.innerHTML = '&#9654;';
+                    playPauseBtn.setAttribute('aria-label', 'Riproduci');
+                }
+            });
+        }
+
+        // Retry button
+        const retryBtn = document.getElementById('videoRetryBtn');
+        if (retryBtn) {
+            retryBtn.addEventListener('click', () => {
+                loadVideoForCurrentLesson();
+            });
+        }
+
+        // Keyboard: Space = toggle play/pause, M = toggle mute
+        document.addEventListener('keydown', (e) => {
+            if (currentSlide !== 0) return;
+            if (e.code === 'Space') {
+                e.preventDefault();
+                if (video.paused) video.play(); else video.pause();
+            }
+            if (e.code === 'KeyM') {
+                isMuted = !isMuted;
+                video.muted = isMuted;
+            }
+        });
+    }
+
+    // ============================================================
+    // INIT
+    // ============================================================
+
+    async function init() {
+        // 1. Carica subito il mapping (parallelo)
+        await fetchMapping();
+
+        // 2. Carica dati schedule
+        await updatePlanning();
+
+        // 3. Avvia slide show
+        showSlide(0);
+
+        // 4. Inizializza controlli video
+        initVideoControls();
+
+        // 5. Refresh periodico planning
+        setInterval(async () => {
+            if (currentSlide === 1) {
+                await updatePlanning();
+            }
+            // Ricarica mapping ogni 5 minuti
+            await fetchMapping();
+        }, CONFIG.refreshInterval);
+    }
+
+    // Avvia
+    init();
+    </script>
+</body>
+</html>
