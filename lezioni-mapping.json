@@ -1,0 +1,74 @@
+{
+  "_comment": "Mappatura lezione → video S3 per axelpop.it/planning/ingresso.html",
+  "_version": "1.0.0",
+  "_updated": "2026-05-07",
+
+  "s3_base_url": "https://mybrand-media-moon.s3.eu-central-1.amazonaws.com/SITO%20ASSET/Progetti",
+
+  "_note": "Formato URL S3: {s3_base_url}/{slug}.mp4",
+  "_note_2": "Nomi lezioni da PerfectGym API — verificare slug esatti con team Lume",
+
+  "lezioni": {
+    "reformer": {
+      "slug": "REWORK",
+      "descrizione": "Lezioni Reformer su Sala 3"
+    },
+    "reformer Basic": {
+      "slug": "REWORK",
+      "descrizione": "Reformer Basic"
+    },
+    "reformer Flow": {
+      "slug": "REWORK",
+      "descrizione": "Reformer Flow"
+    },
+    "reformer Advanced": {
+      "slug": "REWORK",
+      "descrizione": "Reformer Advanced"
+    },
+    "wbs": {
+      "slug": "WBS",
+      "descrizione": "Whole Body Strong"
+    },
+    "wbs hiit": {
+      "slug": "WBS_HIIT",
+      "descrizione": "WBS HIIT"
+    },
+    "pilates mat": {
+      "slug": "PILATES_MAT",
+      "descrizione": "Pilates a terra"
+    },
+    "functional": {
+      "slug": "FUNCTIONAL",
+      "descrizione": "Functional Training"
+    },
+    "total body": {
+      "slug": "TOTAL_BODY",
+      "descrizione": "Total Body"
+    },
+    "cycling": {
+      "slug": "CYCLING",
+      "descrizione": "Cycling / Spinning"
+    },
+    "acquagym": {
+      "slug": "ACQUA",
+      "descrizione": "Lezioni in acqua"
+    },
+    "acqua": {
+      "slug": "ACQUA",
+      "descrizione": "Lezioni in acqua"
+    }
+  },
+
+  "_fallback": {
+    "tipo": "youtube_embed",
+    "video_id": "jNQXAC9IVRw",
+    "titolo": "Axel Pop — Video Ufficiale",
+    "_nota": "Video placeholder YouTube (MrBeast fitness). Sostituire con video ufficiale Axel Pop quando disponibile su S3"
+  },
+
+  "promo": {
+    "slug": "600K%20TIKTOK",
+    "url_completo": "https://mybrand-media-moon.s3.eu-central-1.amazonaws.com/SITO%20ASSET/Progetti/1.600K%20TIKTOK.mp4",
+    "note": "Video promo principale — mostrato quando nessuna lezione è in corso"
+  }
+}
