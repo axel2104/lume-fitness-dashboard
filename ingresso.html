@@ -710,7 +710,6 @@
         // ================================================================
         // STATE
         // ================================================================
-        let currentVideoIndex = 0;
         let currentSlide = 0;          // 0 = video, 1 = planning
         let lastDataHash = '';
         let classesData = null;        // dati lezioni dalla API
@@ -759,6 +758,8 @@
             return name
                 .toLowerCase()
                 .trim()
+                .normalize('NFD')
+                .replace(/[\u0300-\u036f]/g, '')   // rimuove accenti (à→a, è→e, etc.)
                 .replace(/\s+/g, ' ')   // multiple spaces → single
                 .replace(/[''']/g, "'"); // normalizza apostrofi
         }
@@ -777,6 +778,28 @@
 
         /**
          * Normalizza il nome lezione per ricerca nel mapping.
+         * Alias di normalizeLessonName per compatibilita.
+         */
+        function normalizeLessonNameForSearch(name) {
+            return normalizeLessonName(name);
+        }
+
+        /**
+         * Esegue escape HTML base per prevenire XSS.
+         * @param {string} str
+         * @returns {string}
+         */
+        function escapeHtml(str) {
+            if (str == null) return '';
+            return String(str)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
+        }
+
+        /**
          * Supporta corrispondenza parziale (contains).
          */
         function findMappingEntry(lessonName, mapping) {
@@ -944,7 +967,7 @@
                     };
                 }
                 // Se forzato ma senza mapping, prova almeno lo slug come video
-                const forcedSlug = encodeURIComponent(forcedName.replace(/\s+/g, '_'));
+                const forcedSlug = forcedName.replace(/\s+/g, '_');
                 return {
                     url: buildS3Url(forcedSlug),
                     source: 'lesson',
@@ -1235,15 +1258,15 @@
                 html += `
                     <div class="room-card ${cardClass}" style="animation: fadeIn 0.5s ease ${i * 0.1}s forwards; opacity: 0;" role="listitem">
                         <div class="room-header">
-                            <div class="room-name" style="color: ${getRoomColor(room.id)}">${room.name}</div>
+                            <div class="room-name" style="color: ${getRoomColor(room.id)}">${escapeHtml(room.name)}</div>
                             <div class="room-status ${statusClass}">${statusText}</div>
                         </div>
                         ${current ? `
                             <div class="room-current">
                                 <div class="room-current-label">In corso</div>
-                                <div class="room-current-class">${current.name || '—'}</div>
+                                <div class="room-current-class">${escapeHtml(current.name) || '—'}</div>
                                 <div class="room-current-time">${current.time || ''} &bull; ${current.duration || ''}</div>
-                                <div class="room-current-instructor">&#128100; ${current.instructor || '—'}</div>
+                                <div class="room-current-instructor">&#128100; ${escapeHtml(current.instructor) || '—'}</div>
                             </div>
                             <div class="room-availability ${current.is_full ? 'full' : 'available'}">
                                 ${current.is_full ? 'SALA PIENA' : `${current.available_places ?? '—'} posti disponibili`}
@@ -1255,7 +1278,7 @@
                             </div>
                             <div class="room-next">
                                 <div class="room-next-label">A seguire</div>
-                                <div class="room-next-class">${next.name || '—'}</div>
+                                <div class="room-next-class">${escapeHtml(next.name) || '—'}</div>
                                 <div class="room-next-time">${next.time || ''} &bull; ${next.duration || ''}</div>
                             </div>
                             <div class="room-availability waiting">
@@ -1331,13 +1354,6 @@
         function nextSlide() {
             const slides = document.querySelectorAll('.slide');
             const next = (currentSlide + 1) % slides.length;
-
-            if (next === 0) {
-                currentVideoIndex = (currentVideoIndex + 1) % Math.max(
-                    CONFIG.videos?.length || 1,
-                    CONFIG.localVideos?.length || 1
-                );
-            }
             showSlide(next);
         }
 
