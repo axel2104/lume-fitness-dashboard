@@ -62,6 +62,7 @@
         .video-slide {
             background: #000;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
         }
@@ -72,154 +73,43 @@
             object-fit: cover;
         }
 
-        /* ===== VIDEO OVERLAY — ereditata dal player ===== */
-        .video-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 20px 30px;
-            background: linear-gradient(transparent, rgba(0,0,0,0.85));
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-
-        .video-slide:hover .video-overlay,
-        .video-overlay.visible {
-            opacity: 1;
-        }
-
-        .video-lesson-badge {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .video-lesson-badge .badge-icon {
-            width: 44px;
-            height: 44px;
-            background: var(--accent-pink);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-        }
-
-        .video-lesson-badge .badge-text {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .video-lesson-badge .badge-label {
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--accent-pink);
-            font-weight: 700;
-        }
-
-        .video-lesson-badge .badge-name {
-            font-size: 20px;
-            font-weight: 800;
-            color: #fff;
-        }
-
-        /* Video controls — minimali */
-        .video-controls {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .video-btn {
-            background: rgba(255,255,255,0.1);
-            border: 1px solid rgba(255,255,255,0.2);
-            color: #fff;
-            width: 44px;
-            height: 44px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background 0.2s;
-        }
-
-        .video-btn:hover {
-            background: rgba(255,255,255,0.2);
-        }
-
-        .video-btn:focus-visible {
-            outline: 2px solid var(--accent-cyan);
-            outline-offset: 2px;
-        }
-
-        /* ===== ERROR OVERLAY ===== */
+        /* Video error / fallback overlay */
         .video-error-overlay {
-            position: absolute;
-            inset: 0;
-            background: rgba(10,10,10,0.92);
-            display: flex;
+            display: none;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            height: 100%;
+            width: 100%;
+            background: #000;
+            color: var(--text-secondary);
             text-align: center;
             padding: 40px;
-            z-index: 10;
         }
 
-        .video-error-overlay.hidden {
-            display: none;
+        .video-error-overlay.visible {
+            display: flex;
         }
 
-        .error-icon {
+        .video-error-icon {
             font-size: 64px;
             margin-bottom: 20px;
-            opacity: 0.7;
         }
 
-        .error-title {
+        .video-error-title {
             font-size: 28px;
-            font-weight: 800;
-            color: var(--accent-pink);
+            font-weight: 700;
+            color: var(--text-primary);
             margin-bottom: 12px;
         }
 
-        .error-message {
-            font-size: 16px;
-            color: var(--text-secondary);
-            max-width: 480px;
-            line-height: 1.6;
-            margin-bottom: 24px;
+        .video-error-desc {
+            font-size: 18px;
+            max-width: 500px;
+            line-height: 1.5;
         }
 
-        .error-action {
-            padding: 12px 28px;
-            background: var(--accent-pink);
-            color: #fff;
-            border: none;
-            border-radius: 12px;
-            font-size: 15px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-
-        .error-action:hover {
-            background: #c2185b;
-        }
-
-        .error-action:focus-visible {
-            outline: 2px solid var(--accent-cyan);
-            outline-offset: 2px;
-        }
-
-        /* ===== VIDEO LOADING ===== */
+        /* Loading state */
         .video-loading {
             display: flex;
             flex-direction: column;
@@ -239,31 +129,55 @@
             margin-bottom: 20px;
         }
 
-        .video-loading-text {
-            font-size: 16px;
-            font-weight: 500;
-        }
-
-        /* ===== YOUTUBE FALLBACK EMBED ===== */
-        .video-youtube-container {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .video-youtube-container iframe {
-            width: 100%;
-            height: 100%;
-            max-width: 1280px;
-            max-height: 720px;
-            border: none;
-            border-radius: 4px;
-        }
-
         @keyframes spin {
             to { transform: rotate(360deg); }
+        }
+
+        /* Video info bar */
+        .video-info-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px 30px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.85));
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 10;
+        }
+
+        .video-info-bar.visible {
+            display: flex;
+        }
+
+        .video-lesson-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(233, 30, 99, 0.25);
+            border: 2px solid var(--accent-pink);
+            border-radius: 50px;
+            padding: 8px 20px;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .video-lesson-badge .badge-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--accent-pink);
+            animation: pulse 2s infinite;
+        }
+
+        .video-controls-hint {
+            font-size: 14px;
+            color: rgba(255,255,255,0.6);
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         /* ===== PLANNING SLIDE ===== */
@@ -578,7 +492,6 @@
             font-weight: 700;
         }
 
-        /* Room Badge */
         .room-badge {
             display: inline-block;
             padding: 6px 16px;
@@ -660,790 +573,839 @@
             from { opacity: 0; transform: scale(0.95); }
             to { opacity: 1; transform: scale(1); }
         }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .planning-main {
+                grid-template-columns: 1fr;
+            }
+            .rooms-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .current-name {
+                font-size: 36px;
+            }
+            .planning-slide {
+                padding: 20px 30px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .rooms-grid {
+                grid-template-columns: 1fr;
+            }
+            .planning-header {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="slides-container" id="slidesContainer">
-
-        <!-- Slide 1: Video -->
-        <div class="slide video-slide active" id="videoSlide">
-
-            <!-- Loading state -->
-            <div class="video-loading" id="videoLoading" aria-live="polite">
-                <div class="video-loading-spinner" aria-hidden="true"></div>
-                <div class="video-loading-text" id="videoLoadingText">Caricamento video...</div>
-            </div>
-
-            <!-- Video element (mostrato quando il source è un file) -->
-            <video id="promoVideo"
-                   muted
-                   loop
-                   playsinline
-                   style="display:none;"
-                   aria-label="Video lezione"
-                   controls>
-                <source src="" type="video/mp4">
-                <p>Il tuo browser non supporta la riproduzione video.
-                   <a href="">Aggiorna il browser</a>.</p>
-            </video>
-
-            <!-- YouTube fallback container (nascosto di default) -->
-            <div class="video-youtube-container" id="youtubeContainer" style="display:none;" aria-hidden="true">
-                <!-- iframe injectato dinamicamente -->
-            </div>
-
-            <!-- Error overlay -->
-            <div class="video-error-overlay hidden" id="videoErrorOverlay" role="alert" aria-live="assertive">
-                <div class="error-icon" aria-hidden="true">&#9888;</div>
-                <div class="error-title" id="videoErrorTitle">Video non disponibile</div>
-                <div class="error-message" id="videoErrorMessage">
-                    Impossibile caricare il video richiesto. Riprova tra qualche istante.
-                </div>
-                <button class="error-action" id="videoRetryBtn" aria-label="Riprova a caricare il video">
-                    &#8635; Riprova
-                </button>
-            </div>
-
-            <!-- Lesson badge overlay -->
-            <div class="video-overlay" id="videoOverlay" aria-hidden="true">
-                <div class="video-lesson-badge">
-                    <div class="badge-icon" aria-hidden="true">&#9654;</div>
-                    <div class="badge-text">
-                        <span class="badge-label">Lezione in corso</span>
-                        <span class="badge-name" id="videoLessonName">—</span>
-                    </div>
-                </div>
-                <div class="video-controls">
-                    <!-- Mute toggle -->
-                    <button class="video-btn"
-                            id="muteBtn"
-                            aria-label="Attiva/disattiva audio"
-                            title="Toggle audio">
-                        &#9835;
-                    </button>
-                    <!-- Pause/Play -->
-                    <button class="video-btn"
-                            id="playPauseBtn"
-                            aria-label="Riproduci/metti in pausa"
-                            title="Play/Pause">
-                        &#10074;&#10074;
-                    </button>
-                </div>
-            </div>
-
+    <!-- ===== SLIDE 1: VIDEO (dinamico per lezione) ===== -->
+    <div class="slide video-slide active" id="videoSlide">
+        <!-- Loading -->
+        <div class="video-loading" id="videoLoading" aria-live="polite" aria-label="Caricamento video in corso">
+            <div class="video-loading-spinner" aria-hidden="true"></div>
+            <div id="videoLoadingText">Caricamento video...</div>
         </div>
 
-        <!-- Slide 2: Planning -->
-        <div class="slide planning-slide" id="planningSlide">
-            <div class="planning-header">
-                <div class="planning-logo">
-                    <div class="planning-logo-icon">LF</div>
-                    <div class="planning-logo-text">LUME FITNESS</div>
-                </div>
-                <div class="planning-location">Macerata</div>
-                <div class="planning-clock" id="planningClock">--:--</div>
-            </div>
+        <!-- Errore video -->
+        <div class="video-error-overlay" id="videoError" role="alert" aria-live="assertive">
+            <div class="video-error-icon" aria-hidden="true">&#9888;</div>
+            <div class="video-error-title" id="videoErrorTitle">Video non disponibile</div>
+            <div class="video-error-desc" id="videoErrorDesc"></div>
+        </div>
 
-            <div class="rooms-grid" id="roomsGrid">
-                <!-- Le sale vengono generate dinamicamente -->
-            </div>
+        <!-- Video HTML5 -->
+        <video
+            id="promoVideo"
+            aria-label="Video lezione"
+            controls
+            playsinline
+            muted
+            style="display: none;">
+            <source src="" type="video/mp4">
+            <p>Il tuo browser non supporta la riproduzione video.
+               <a href="#" id="videoDownloadLink">Scarica il video</a>.
+            </p>
+        </video>
 
-            <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+        <!-- Info bar (mostrata quando video è in play) -->
+        <div class="video-info-bar" id="videoInfoBar" aria-live="polite">
+            <div class="video-lesson-badge" id="videoLessonBadge">
+                <span class="badge-dot" aria-hidden="true"></span>
+                <span id="videoLessonName">—</span>
+            </div>
+            <div class="video-controls-hint" aria-hidden="true">
+                &#9654; Riproduzione in corso &nbsp;|&nbsp; Usa i controlli per play/pausa
+            </div>
         </div>
     </div>
 
+    <!-- ===== SLIDE 2: PLANNING ===== -->
+    <div class="slide planning-slide" id="planningSlide">
+        <div class="planning-header">
+            <div class="planning-logo">
+                <div class="planning-logo-icon" aria-hidden="true">LF</div>
+                <div class="planning-logo-text">LUME FITNESS</div>
+            </div>
+            <div class="planning-location" id="planningLocation">Macerata</div>
+            <div class="planning-clock" id="planningClock" aria-live="polite" aria-label="Orologio">--:--</div>
+        </div>
+
+        <div class="rooms-grid" id="roomsGrid" role="list" aria-label="Sale fitness">
+            <!-- Le sale vengono generate dinamicamente -->
+        </div>
+
+        <div class="progress-bar" id="progressBar" style="width: 0%" aria-hidden="true"></div>
+    </div>
+
+    <!-- Connection status -->
     <div class="conn-status" id="connStatus" role="status" aria-live="polite">
         <div class="status-dot" aria-hidden="true"></div>
         <span id="connStatusText">Live</span>
     </div>
 
     <script>
-    // ============================================================
-    // CONFIG
-    // ============================================================
-    const CONFIG = {
-        // File di mappatura lezione → video
-        mappingUrl: '/planning/lezioni-mapping.json',
+        // ================================================================
+        // CONFIGURAZIONE
+        // ================================================================
+        const CONFIG = {
+            // File di mappatura lezione → video S3
+            // Può essere un percorso locale o un URL remoto
+            mappingUrl: 'lezioni-mapping.json',
 
-        // Fallback: URL presigned del video promo principale (12h)
-        promoVideoUrl: [
-            'https://mybrand-media-moon.s3.eu-central-1.amazonaws.com/SITO%20ASSET/Progetti/1.600K%20TIKTOK.mp4?response-content-disposition=inline&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDGV1LWNlbnRyYWwtMSJHMEUCIQDUvx%2B6A8sznxEWW4xlkeJZZicOzGtRJfLRd7aZfC5ZUwIgaw5ZUUESOU72WggR2uxY%2FTqLAcRLmV0BUCit4bgjThUqwgMIkv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgw0MTUyOTQ5NzU4OTYiDEBI%2BysXwXC19HlLVCqWA59kyGj8ZgHR9YtFnhJaBFcwL2j3c%2Bn291WsQ1anZFL9W6KYrHSWL4zzB7xEMrwOmm85X2C10fGZ6L40oxWJozoDnj%2B4CYZiFNchi7PGkhiIu%2Fw914vlYH%2BKpE8XiDeM2LKKs7KWKxgHnF4Y6xzkwou1J%2BGZyv39cm1wne9%2FsVXT%2FYfnUSoMkSGe4WfJ6hdiy12INpKh5h59s6ITUHBSNMnFU%2FAIYhefeCDeoUIOt4EGS6lsW186aiE0nTXfI1qtb2KKrEAYBmrOOlnCC%2BeFjou17oW5asMVhRyVCj%2BqFzOWx0LU%2FfN5nA1tELUw1qZxgAK%2FA39NobzNg0mAsHyAIOYuB5xY8hAUXx9%2FW%2B7uZ8cixk6aRETAmYm22uo9LGuhW%2BoJ4iU04mhd%2B8DZ914S83VCQwwLRcgZXwvKF%2BErtIsKWYV45ktvtpAEdPk6BUVR3%2BVc2GBfI7OnvSIfIb4DRP8BMGe0kFkc9Aejgl3P5IQZEthn5m9vDHMz5PVlwPBjzovWmEQZcl9mP5cvezeYs2qNsdSlmH0wpqLqzwY63gK2u5Wc6m9JzThkRD9e2RDX%2BX%2FODkxMzVhHHYWHx2nKL%2Fiup2C8htwVseHjAUdy8a%2Bs0cvpAjy0eeisHdg8zTYOEGk2FvsyHXUi%2BjqpXN6%2BFU0jZSo4vaYKL3qR1cFyTyJ3KXXeAxz8iH%2BGyJZZTqUZHegZ0nF2i5PZEdgGzOnougavMJL3ane1WOwZ7%2BK5b%2FWhpVr3gNdHX3BDSNHH1mIEhTvHw%2FXbCfzMV3fpcFSpE1mPvgo4Rh9bdO0FPg6qzAwf0cxXi73HtLuNkB3mNhQ5sehx%2FVAPC%2FcpTEgOiULbrV%2Fwbiy59BE17oGe2ijVpYB%2Bcmanf%2Bd8mYZdq3vFF29K1AxLtHODDItV4yDd6LIMp2b43XMlDKu95ztEOqWvGlGDQsVaOgNllWN5gCHX%2B1ahjNcM6xU%2BC4QqZmtNICKTFby6xlIQrM8vACspiIdSawj4GhYLGWiG3%2FHiRdXcug%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAWBMMCN6MCQLG5OFZ%2F20260506%2Feu-central-1%2Fs3%2Faws4_request&X-Amz-Date=20260506T005849Z&X-Amz-Expires=43200&X-Amz-SignedHeaders=host&X-Amz-Signature=99b4470360b07ecee61d19efc84018de59d1394597033db07445ede52b58fe5e',
-        ],
+            // URL base S3 per i video delle lezioni
+            // Formato: {s3_base_url}/{slug}.mp4
+            s3_base_url: 'https://mybrand-media-moon.s3.eu-central-1.amazonaws.com/SITO%20ASSET/Progetti',
 
-        apiUrl: '/api/all-classes',
-        location: 'Macerata',
-        videoDuration: 30000,
-        planningDuration: 30000,
-        refreshInterval: 60000,
-    };
+            // URL video promo (fallback quando nessuna lezione è in corso)
+            promo_video_url: null,  // compilato da mappingUrl
 
-    // ============================================================
-    // STATE
-    // ============================================================
-    let currentVideoIndex = 0;
-    let currentSlide = 0;           // 0 = video, 1 = planning
-    let lastDataHash = '';
-    let classesData = null;
-    let slideTimer = null;
-    let progressTimer = null;
+            // Fallback YouTube (quando S3 non ha il video)
+            fallback_youtube_id: 'jNQXAC9IVRw',  // placeholder — sostituire con video Axel Pop ufficiale
 
-    // Video player state
-    let mappingData = null;         // contenuto di lezioni-mapping.json
-    let currentLessonSlug = null;   // slug lezione corrente (da URL o da schedule)
-    let isMuted = true;             // autoplay → muted di default
-    let videoLoadAttempts = 0;      // contatore retry
+            // API per dati lezioni
+            apiUrl: '/api/all-classes',
 
-    // ============================================================
-    // CLOCK
-    // ============================================================
-    function updateClock() {
-        const now = new Date();
-        document.getElementById('planningClock').textContent =
-            now.toLocaleTimeString('it-IT', { hour: '2-digit', minute: '2-digit' });
-    }
-    setInterval(updateClock, 1000);
-    updateClock();
+            // Location (club)
+            location: 'Macerata',
 
-    // ============================================================
-    // MAPPING — fetch + lookup
-    // ============================================================
+            // Durata slide (millisecondi)
+            videoDuration: 30000,
+            planningDuration: 30000,
 
-    /**
-     * Recupera il file di mappatura lezione → video.
-     * Fallisce silenziosamente: in tal caso si usa solo promo/pipeline.
-     */
-    async function fetchMapping() {
-        try {
-            const resp = await fetch(`${CONFIG.mappingUrl}?t=${Date.now()}`, {
-                method: 'GET',
-                headers: { 'Accept': 'application/json' }
-            });
-            if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-            mappingData = await resp.json();
-            console.debug('[VideoPlayer] Mapping caricato:', mappingData);
-        } catch (err) {
-            console.warn('[VideoPlayer] Mapping non disponibile, uso fallback:', err.message);
-            mappingData = null;
-        }
-    }
+            // Intervallo refresh dati (ms)
+            refreshInterval: 60000,
 
-    /**
-     * Estrae il parametro ?lezione= dall'URL.
-     * @returns {string|null} nome normalizzato della lezione o null
-     */
-    function getLessonFromUrl() {
-        const params = new URLSearchParams(window.location.search);
-        const raw = params.get('lezione');
-        if (!raw) return null;
-        // Normalizza: lowercase, trim, hyphenate spaces
-        return raw.trim().toLowerCase().replace(/\s+/g, '-');
-    }
+            // Chiave querystring per forzare una lezione
+            lessonParam: 'lezione',
 
-    /**
-     * Dato un nome lezione normalizzato, cerca nel mapping.
-     * @param {string} slug — nome lezione normalizzato
-     * @returns {{ slug, url, tipo } | null}
-     */
-    function getVideoForLesson(slug) {
-        if (!mappingData || !mappingData.lezioni) return null;
-        const entry = mappingData.lezioni[slug];
-        if (!entry) return null;
-
-        const s3Base = mappingData.s3_base_url || '';
-        const videoUrl = `${s3Base}/${encodeURIComponent(entry.slug)}.mp4`;
-
-        return {
-            slug: entry.slug,
-            url: videoUrl,
-            tipo: 's3',
-            descrizione: entry.descrizione || entry.slug,
+            // Durata slide video per lezione singola (ms)
+            // Dopo di che torna alla rotazione normale
+            singleLessonDuration: 60000,
         };
-    }
 
-    /**
-     * Costruisce URL S3 diretto da slug (mapping automatico).
-     * @param {string} slug
-     * @returns {string}
-     */
-    function buildS3Url(slug) {
-        const base = mappingData?.s3_base_url
-            || 'https://mybrand-media-moon.s3.eu-central-1.amazonaws.com/SITO%20ASSET/Progetti';
-        return `${base}/${encodeURIComponent(slug)}.mp4`;
-    }
+        // ================================================================
+        // STATE
+        // ================================================================
+        let currentVideoIndex = 0;
+        let currentSlide = 0;          // 0 = video, 1 = planning
+        let lastDataHash = '';
+        let classesData = null;        // dati lezioni dalla API
+        let mappingData = null;        // dati mappatura lezione → video
+        let lessonMapping = {};        // { "yoga vinyasa": { slug: "YOGA", ... }, ... }
+        let slideTimer = null;
+        let progressTimer = null;
 
-    /**
-     * Restituisce il video promo/fallback.
-     * @returns {{ url, tipo, slug }}
-     */
-    function getPromoVideo() {
-        const promo = mappingData?.promo;
-        if (promo?.url_completo) {
-            return { url: promo.url_completo, tipo: 's3', slug: 'promo' };
-        }
-        return {
-            url: CONFIG.promoVideoUrl[0],
-            tipo: 's3',
-            slug: 'promo',
-        };
-    }
+        // Stato video corrente
+        let currentVideoSource = null;   // 'lesson' | 'promo' | 'fallback'
+        let currentLessonSlug = null;    // slug della lezione corrente
 
-    /**
-     * Restituisce il video fallback YouTube (quando S3 non ha nulla).
-     * @returns {{ url, tipo, slug }}
-     */
-    function getYoutubeFallback() {
-        const fb = mappingData?._fallback;
-        if (fb?.video_id) {
-            return {
-                url: `https://www.youtube.com/embed/${fb.video_id}?autoplay=1&mute=1&loop=1&playlist=${fb.video_id}`,
-                tipo: 'youtube',
-                slug: 'fallback-youtube',
-            };
-        }
-        return null;
-    }
+        // Modalità override da querystring
+        let forcedLesson = null;         // lezione forzata da ?lezione=
 
-    // ============================================================
-    // VIDEO UI — stati e aggiornamento DOM
-    // ============================================================
+        // ================================================================
+        // UTILITY
+        // ================================================================
 
-    function showLoading(text) {
-        const el = document.getElementById('videoLoading');
-        const txt = document.getElementById('videoLoadingText');
-        el.style.display = 'flex';
-        if (txt) txt.textContent = text || 'Caricamento video...';
-        document.getElementById('promoVideo').style.display = 'none';
-        document.getElementById('youtubeContainer').style.display = 'none';
-        document.getElementById('videoErrorOverlay').classList.add('hidden');
-        document.getElementById('videoOverlay').classList.remove('visible');
-    }
-
-    function showVideoElement() {
-        document.getElementById('videoLoading').style.display = 'none';
-        document.getElementById('videoErrorOverlay').classList.add('hidden');
-        const v = document.getElementById('promoVideo');
-        v.style.display = 'block';
-        document.getElementById('youtubeContainer').style.display = 'none';
-        document.getElementById('videoOverlay').classList.add('visible');
-    }
-
-    function showYoutube(url) {
-        document.getElementById('videoLoading').style.display = 'none';
-        document.getElementById('promoVideo').style.display = 'none';
-        document.getElementById('videoErrorOverlay').classList.add('hidden');
-        const container = document.getElementById('youtubeContainer');
-        container.style.display = 'flex';
-        container.innerHTML = `<iframe
-            src="${url}"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowfullscreen
-            title="Video lezione — fallback"
-            loading="lazy">
-        </iframe>`;
-        document.getElementById('videoOverlay').classList.remove('visible');
-    }
-
-    function showError(title, message) {
-        document.getElementById('videoLoading').style.display = 'none';
-        document.getElementById('promoVideo').style.display = 'none';
-        document.getElementById('youtubeContainer').style.display = 'none';
-        document.getElementById('videoErrorOverlay').classList.remove('hidden');
-        document.getElementById('videoErrorTitle').textContent = title || 'Video non disponibile';
-        document.getElementById('videoErrorMessage').textContent =
-            message || 'Impossibile caricare il video richiesto. Riprova più tardi.';
-        document.getElementById('videoOverlay').classList.remove('visible');
-    }
-
-    function updateLessonBadge(name) {
-        const el = document.getElementById('videoLessonName');
-        if (el) el.textContent = name || '—';
-    }
-
-    // ============================================================
-    // VIDEO LOADING — logica principale
-    // ============================================================
-
-    /**
-     * Carica e riproduce il video per la lezione corrente.
-     * Strategia:
-     *  1. Se ?lezione= è presente → lookup nel mapping → URL S3
-     *  2. Altrimenti → lezione corrente dallo schedule (se in corso)
-     *  3. Fallback promo video S3
-     *  4. Fallback YouTube (nessun video S3 disponibile)
-     */
-    function loadVideoForCurrentLesson() {
-        showLoading('Selezione video...');
-        videoLoadAttempts = 0;
-
-        const urlLesson = getLessonFromUrl();
-        let videoInfo = null;
-        let lessonName = null;
-
-        if (urlLesson) {
-            // Caso 1: parametro querystring esplicito
-            videoInfo = getVideoForLesson(urlLesson);
-            lessonName = urlLesson;
-            console.info('[VideoPlayer] Querystring lezione:', urlLesson);
-        } else {
-            // Caso 2: lezione in corso dallo schedule
-            const now = getCurrentLessonFromSchedule();
-            if (now) {
-                videoInfo = getVideoForLesson(now.slug);
-                lessonName = now.name;
-                console.info('[VideoPlayer] Lezione in corso:', now.name, '→', videoInfo?.url || 'no mapping');
+        /**
+         * Estrae i parametri querystring dalla URL corrente.
+         * @returns {Object} mappa chiave → valore
+         */
+        function getQueryParams() {
+            const params = {};
+            try {
+                const search = window.location.search.substring(1);
+                search.split('&').forEach(pair => {
+                    const [k, v] = pair.split('=').map(decodeURIComponent);
+                    if (k) params[k] = v || '';
+                });
+            } catch (e) {
+                console.warn('Errore parsing querystring:', e);
             }
+            return params;
         }
 
-        if (!videoInfo) {
-            // Caso 3: promo/fallback S3
-            videoInfo = getPromoVideo();
-            lessonName = null;
-            console.info('[VideoPlayer] Uso promo/fallback:', videoInfo.url);
+        /**
+         * Normalizza un nome lezione per matching.
+         * Converte in minuscolo, rimuove spazi extra e accenti comuni.
+         * @param {string} name
+         * @returns {string}
+         */
+        function normalizeLessonName(name) {
+            if (!name) return '';
+            return name
+                .toLowerCase()
+                .trim()
+                .replace(/\s+/g, ' ')   // multiple spaces → single
+                .replace(/[''']/g, "'"); // normalizza apostrofi
         }
 
-        updateLessonBadge(lessonName || (videoInfo.slug === 'promo' ? 'Lume Fitness' : videoInfo.descrizione));
-
-        if (videoInfo.tipo === 'youtube') {
-            showYoutube(videoInfo.url);
-            return;
+        /**
+         * Calcola un hash semplice per confrontare i dati.
+         * @param {*} data
+         * @returns {number}
+         */
+        function hashData(data) {
+            return JSON.stringify(data).split('').reduce((a, b) => {
+                a = ((a << 5) - a) + b.charCodeAt(0);
+                return a & a;
+            }, 0);
         }
 
-        // S3 — prova direttamente (potrebbe servire presigned URL)
-        tryLoadS3Video(videoInfo.url, videoInfo.url, 0);
-    }
+        /**
+         * Normalizza il nome lezione per ricerca nel mapping.
+         * Supporta corrispondenza parziale (contains).
+         */
+        function findMappingEntry(lessonName, mapping) {
+            if (!lessonName || !mapping) return null;
+            const normalized = normalizeLessonName(lessonName);
 
-    /**
-     * Prova a caricare un video S3. Se fallisce (CORS, 403, 404, timeout),
-     * riprova con fallback o mostra errore.
-     *
-     * @param {string} primary   — URL primario (S3)
-     * @param {string} fallback  — URL fallback (promo o youtube)
-     * @param {number} attempt   — numero tentativo (0 = primo)
-     */
-    function tryLoadS3Video(primary, fallback, attempt) {
-        videoLoadAttempts = attempt;
-        const video = document.getElementById('promoVideo');
-        showLoading('Caricamento video...');
+            // 1. Ricerca esatta normalizzata
+            if (mapping[normalized]) return mapping[normalized];
 
-        // Costruisci URL con timestamp anti-cache
-        const ts = `&_t=${Date.now()}`;
-        const src = primary + (primary.includes('?') ? ts : `?${ts.slice(1)}`);
-
-        video.src = src;
-        video.load();
-
-        video.oncanplay = () => {
-            showVideoElement();
-            video.muted = isMuted;
-            video.play().catch(err => {
-                console.warn('[VideoPlayer] Autoplay bloccato:', err.message);
-            });
-        };
-
-        video.onerror = () => {
-            console.warn(`[VideoPlayer] S3 errore tentativo ${attempt + 1}:`, primary);
-            if (attempt === 0) {
-                // Primo fallimento: prova URL promo
-                const promo = getPromoVideo();
-                console.info('[VideoPlayer] Riprovo con promo:', promo.url);
-                tryLoadS3Video(promo.url, null, 1);
-            } else {
-                // Secondo fallimento: YouTube fallback
-                const yt = getYoutubeFallback();
-                if (yt) {
-                    console.info('[VideoPlayer] YouTube fallback');
-                    showYoutube(yt.url);
-                } else {
-                    showError(
-                        'Video non trovato',
-                        'Il video per questa lezione non è ancora disponibile sul sistema. ' +
-                        'Problemi di connessione o video mancante.'
-                    );
+            // 2. Ricerca per chiave del mapping (anche parziale)
+            for (const key of Object.keys(mapping)) {
+                if (normalized.includes(key) || key.includes(normalized)) {
+                    return mapping[key];
                 }
             }
-        };
-    }
 
-    // ============================================================
-    // SCHEDULE — determinare quale lezione è in corso
-    // ============================================================
+            return null;
+        }
 
-    function getCurrentLessonFromSchedule() {
-        if (!classesData) return null;
-        const today = new Date();
-        const dayName = ['Domenica','Lunedì','Martedì','Mercoledì','Giovedì','Venerdì','Sabato'][today.getDay()];
-        const classes = classesData?.classes?.[CONFIG.location]?.[dayName];
-        if (!classes || classes.length === 0) return null;
+        /**
+         * Costruisce l'URL S3 per uno slug.
+         * @param {string} slug
+         * @returns {string}
+         */
+        function buildS3Url(slug) {
+            if (!slug) return null;
+            return `${CONFIG.s3_base_url}/${encodeURIComponent(slug)}.mp4`;
+        }
 
-        const now = today.getHours() * 60 + today.getMinutes();
-        for (const c of classes) {
-            const [h, m] = (c.time || '00:00').split(':').map(Number);
-            const start = h * 60 + m;
-            const duration = parseInt(c.duration) || 60;
-            if (now >= start && now < start + duration) {
-                return {
-                    name: c.name,
-                    slug: (c.name || '').trim().toLowerCase().replace(/\s+/g, '-'),
+        /**
+         * Trova la lezione attualmente in corso.
+         * @returns {Object|null} la classe corrente
+         */
+        function getCurrentClass() {
+            if (!classesData) return null;
+            const now = new Date();
+            const currentMinutes = now.getHours() * 60 + now.getMinutes();
+            const dayName = ['Domenica','Lunedì','Martedì','Mercoledì','Giovedì','Venerdì','Sabato'][now.getDay()];
+            const todayClasses = classesData.classes?.[CONFIG.location]?.[dayName] || [];
+
+            for (const cls of todayClasses) {
+                const [h, m] = (cls.time || '').split(':').map(Number);
+                if (isNaN(h) || isNaN(m)) continue;
+                const startMinutes = h * 60 + m;
+                const duration = parseInt(cls.duration) || 60;
+                const endMinutes = startMinutes + duration;
+                if (currentMinutes >= startMinutes && currentMinutes < endMinutes) {
+                    return cls;
+                }
+            }
+            return null;
+        }
+
+        // ================================================================
+        // CLOCK
+        // ================================================================
+        function updateClock() {
+            const el = document.getElementById('planningClock');
+            if (el) {
+                el.textContent = new Date().toLocaleTimeString('it-IT', {
+                    hour: '2-digit',
+                    minute: '2-digit'
+                });
+            }
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // ================================================================
+        // CONNECTION STATUS
+        // ================================================================
+        function updateConnectionStatus(online) {
+            const status = document.getElementById('connStatus');
+            const text = document.getElementById('connStatusText');
+            if (!status || !text) return;
+            status.classList.toggle('offline', !online);
+            text.textContent = online ? 'Live' : 'Offline';
+        }
+
+        // ================================================================
+        // FETCH — MAPPING
+        // ================================================================
+        async function fetchMapping() {
+            try {
+                const response = await fetch(`${CONFIG.mappingUrl}?t=${Date.now()}`, {
+                    method: 'GET',
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.warn('[VideoPlayer] Impossibile caricare lezioni-mapping.json:', error.message);
+                return null;
+            }
+        }
+
+        /**
+         * Processa il mapping e costruisce la lookup table normalizzata.
+         * @param {Object} data  il JSON caricato da lezioni-mapping.json
+         */
+        function processMapping(data) {
+            if (!data || !data.lezioni) return;
+            mappingData = data;
+            lessonMapping = {};
+
+            // Compila URL promo se presente
+            if (data.promo?.url_completo) {
+                CONFIG.promo_video_url = data.promo.url_completo;
+            }
+
+            // Costruisci lookup normalizzata
+            for (const [key, value] of Object.entries(data.lezioni)) {
+                const normalized = normalizeLessonName(key);
+                lessonMapping[normalized] = {
+                    slug: value.slug || key,
+                    descrizione: value.descrizione || '',
+                    s3_url: buildS3Url(value.slug)
                 };
             }
         }
-        return null;
-    }
 
-    // ============================================================
-    // LEGACY VIDEO LOADING (dalla versione precedente — rotate promo)
-    // ============================================================
-
-    /**
-     * loadVideo originale — riproduce lista CONFIG.videos rotante.
-     * Ora è deprecata ma mantiene compatibilità con lo slide show esistente.
-     * @deprecated — usa loadVideoForCurrentLesson()
-     */
-    const _legacyVideos = [
-        'https://mybrand-media-moon.s3.eu-central-1.amazonaws.com/SITO%20ASSET/Progetti/1.600K%20TIKTOK.mp4?response-content-disposition=inline&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDGV1LWNlbnRyYWwtMSJHMEUCIQDUvx%2B6A8sznxEWW4xlkeJZZicOzGtRJfLRd7aZfC5ZUwIgaw5ZUUESOU72WggR2uxY%2FTqLAcRLmV0BUCit4bgjThUqwgMIkv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgw0MTUyOTQ5NzU4OTYiDEBI%2BysXwXC19HlLVCqWA59kyGj8ZgHR9YtFnhJaBFcwL2j3c%2Bn291WsQ1anZFL9W6KYrHSWL4zzB7xEMrwOmm85X2C10fGZ6L40oxWJozoDnj%2B4CYZiFNchi7PGkhiIu%2Fw914vlYH%2BKpE8XiDeM2LKKs7KWKxgHnF4Y6xzkwou1J%2BGZyv39cm1wne9%2FsVXT%2FYfnUSoMkSGe4WfJ6hdiy12INpKh5h59s6ITUHBSNMnFU%2FAIYhefeCDeoUIOt4EGS6lsW186aiE0nTXfI1qtb2KKrEAYBmrOOlnCC%2BeFjou17oW5asMVhRyVCj%2BqFzOWx0LU%2FfN5nA1tELUw1qZxgAK%2FA39NobzNg0mAsHyAIOYuB5xY8hAUXx9%2FW%2B7uZ8cixk6aRETAmYm22uo9LGuhW%2BoJ4iU04mhd%2B8DZ914S83VCQwwLRcgZXwvKF%2BErtIsKWYV45ktvtpAEdPk6BUVR3%2BVc2GBfI7OnvSIfIb4DRP8BMGe0kFkc9Aejgl3P5IQZEthn5m9vDHMz5PVlwPBjzovWmEQZcl9mP5cvezeYs2qNsdSlmH0wpqLqzwY63gK2u5Wc6m9JzThkRD9e2RDX%2BX%2FODkxMzVhHHYWHx2nKL%2Fiup2C8htwVseHjAUdy8a%2Bs0cvpAjy0eeisHdg8zTYOEGk2FvsyHXUi%2BjqpXN6%2BFU0jZSo4vaYKL3qR1cFyTyJ3KXXeAxz8iH%2BGyJZZTqUZHegZ0nF2i5PZEdgGzOnougavMJL3ane1WOwZ7%2BK5b%2FWhpVr3gNdHX3BDSNHH1mIEhTvHw%2FXbCfzMV3fpcFSpE1mPvgo4Rh9bdO0FPg6qzAwf0cxXi73HtLuNkB3mNhQ5sehx%2FVAPC%2FcpTEgOiULbrV%2Fwbiy59BE17oGe2ijVpYB%2Bcmanf%2Bd8mYZdq3vFF29K1AxLtHODDItV4yDd6LIMp2b43XMlDKu95ztEOqWvGlGDQsVaOgNllWN5gCHX%2B1ahjNcM6xU%2BC4QqZmtNICKTFby6xlIQrM8vACspiIdSawj4GhYLGWiG3%2FHiRdXcug%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAWBMMCN6MCQLG5OFZ%2F20260506%2Feu-central-1%2Fs3%2Faws4_request&X-Amz-Date=20260506T005849Z&X-Amz-Expires=43200&X-Amz-SignedHeaders=host&X-Amz-Signature=99b4470360b07ecee61d19efc84018de59d1394597033db07445ede52b58fe5e',
-    ];
-
-    function loadLegacyVideo(index) {
-        const video = document.getElementById('promoVideo');
-        const loading = document.getElementById('videoLoading');
-        showLoading('Caricamento video...');
-        video.src = _legacyVideos[index % _legacyVideos.length];
-        video.load();
-        video.oncanplay = () => {
-            loading.style.display = 'none';
-            video.style.display = 'block';
-            video.muted = isMuted;
-            video.play().catch(e => console.log('Autoplay blocked:', e));
-        };
-        video.onerror = () => {
-            showError('Errore caricamento', 'Impossibile riprodurre il video. Controlla la connessione.');
-        };
-    }
-
-    // ============================================================
-    // SLIDE MANAGEMENT
-    // ============================================================
-
-    function showSlide(index) {
-        const slides = document.querySelectorAll('.slide');
-        slides.forEach((s, i) => s.classList.toggle('active', i === index));
-        currentSlide = index;
-
-        if (index === 0) {
-            // Slide video
-            loadVideoForCurrentLesson();
-            startProgress(CONFIG.videoDuration);
-        } else {
-            // Slide planning
-            document.getElementById('promoVideo').pause();
-            document.getElementById('youtubeContainer').innerHTML = '';
-            updatePlanning();
-            startProgress(CONFIG.planningDuration);
-        }
-    }
-
-    function nextSlide() {
-        const slides = document.querySelectorAll('.slide');
-        const next = (currentSlide + 1) % slides.length;
-
-        if (next === 0) {
-            currentVideoIndex = (currentVideoIndex + 1) % _legacyVideos.length;
-        }
-
-        showSlide(next);
-    }
-
-    // ============================================================
-    // PROGRESS BAR
-    // ============================================================
-
-    function startProgress(duration) {
-        const bar = document.getElementById('progressBar');
-        let progress = 0;
-        const step = 100 / (duration / 100);
-
-        clearInterval(progressTimer);
-        progressTimer = setInterval(() => {
-            progress += step;
-            bar.style.width = Math.min(progress, 100) + '%';
-
-            if (progress >= 100) {
-                clearInterval(progressTimer);
-                nextSlide();
-            }
-        }, 100);
-    }
-
-    // ============================================================
-    // PLANNING (invariato dalla versione precedente)
-    // ============================================================
-
-    function hashData(data) {
-        return JSON.stringify(data).split('').reduce((a, b) => {
-            a = ((a << 5) - a) + b.charCodeAt(0);
-            return a & a;
-        }, 0);
-    }
-
-    async function fetchClasses() {
-        try {
-            const resp = await fetch(`${CONFIG.apiUrl}?t=${Date.now()}`, {
-                method: 'GET',
-                headers: { 'Accept': 'application/json' }
-            });
-            if (!resp.ok) throw new Error('API Error');
-            return await resp.json();
-        } catch (err) {
-            console.error('[VideoPlayer] Fetch error:', err);
-            updateConnectionStatus(false);
-            return null;
-        }
-    }
-
-    function getTodayClasses(allData) {
-        if (!allData?.classes?.[CONFIG.location]) return [];
-        const dayName = ['Domenica','Lunedì','Martedì','Mercoledì','Giovedì','Venerdì','Sabato'][new Date().getDay()];
-        return allData.classes[CONFIG.location][dayName] || [];
-    }
-
-    const ROOMS = [
-        {
-            id: 'sala1', name: 'SALA 1',
-            filter: c => c.room?.toLowerCase().includes('sala 1') || (!c.room && c.category === 'fitness')
-        },
-        {
-            id: 'sala2', name: 'SALA 2',
-            filter: c => c.room?.toLowerCase().includes('sala 2') || (!c.room && c.category === 'acqua')
-        },
-        {
-            id: 'sala3', name: 'SALA 3 - REFORMER',
-            filter: c => c.room?.toLowerCase().includes('sala 3') || c.category === 'reformer'
-                      || c.name?.toLowerCase().includes('reformer') || c.name?.toLowerCase().includes('wbs')
-        },
-    ];
-
-    function getCurrentAndNext(classes) {
-        const now = new Date();
-        const currentTime = now.getHours() * 60 + now.getMinutes();
-
-        const sorted = [...classes].sort((a, b) => {
-            const [ah, am] = (a.time || '00:00').split(':').map(Number);
-            const [bh, bm] = (b.time || '00:00').split(':').map(Number);
-            return (ah * 60 + am) - (bh * 60 + bm);
-        });
-
-        let current = null;
-        let next = [];
-
-        for (const c of sorted) {
-            const [h, m] = (c.time || '00:00').split(':').map(Number);
-            const startTime = h * 60 + m;
-            const duration = parseInt(c.duration) || 60;
-            const endTime = startTime + duration;
-
-            if (currentTime >= startTime && currentTime < endTime) {
-                current = c;
-            } else if (startTime > currentTime && next.length < 2) {
-                next.push(c);
+        // ================================================================
+        // FETCH — CLASSI (dal sistema di pianificazione)
+        // ================================================================
+        async function fetchClasses() {
+            try {
+                const response = await fetch(`${CONFIG.apiUrl}?t=${Date.now()}`, {
+                    method: 'GET',
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                return await response.json();
+            } catch (error) {
+                console.error('[VideoPlayer] Errore fetch classi:', error);
+                updateConnectionStatus(false);
+                return null;
             }
         }
 
-        return { current, next };
-    }
+        // ================================================================
+        // SELEZIONE VIDEO
+        // ================================================================
 
-    function getRoomStatus(room, allClasses) {
-        const roomClasses = allClasses.filter(room.filter);
-        const { current, next } = getCurrentAndNext(roomClasses);
-        return {
-            room,
-            current,
-            next: next[0] || null,
-            status: current ? 'live' : (next[0] ? 'next' : 'free')
-        };
-    }
-
-    function getRoomColor(roomId) {
-        const colors = {
-            'sala1': 'var(--accent-pink)',
-            'sala2': 'var(--accent-cyan)',
-            'sala3': 'var(--accent-purple)',
-        };
-        return colors[roomId] || 'var(--text-primary)';
-    }
-
-    function renderRooms(allClasses) {
-        const container = document.getElementById('roomsGrid');
-        const roomStatuses = ROOMS.map(room => getRoomStatus(room, allClasses));
-
-        let html = '';
-        roomStatuses.forEach((status, i) => {
-            const { room, current, next, status: roomStatus } = status;
-            const cardClass = roomStatus === 'live' ? 'active' : (roomStatus === 'free' ? 'empty' : '');
-            const statusText = roomStatus === 'live' ? 'IN CORSO' : (roomStatus === 'next' ? 'PROSSIMO' : 'LIBERA');
-            const statusClass = roomStatus === 'live' ? 'live' : (roomStatus === 'next' ? 'next' : 'free');
-
-            html += `
-                <div class="room-card ${cardClass}" style="animation: fadeIn 0.5s ease ${i * 0.1}s forwards; opacity: 0;">
-                    <div class="room-header">
-                        <div class="room-name" style="color: ${getRoomColor(room.id)}">${room.name}</div>
-                        <div class="room-status ${statusClass}">${statusText}</div>
-                    </div>
-
-                    ${current ? `
-                        <div class="room-current">
-                            <div class="room-current-label">In corso</div>
-                            <div class="room-current-class">${current.name}</div>
-                            <div class="room-current-time">${current.time} &bull; ${current.duration}</div>
-                            <div class="room-current-instructor">&#128100; ${current.instructor}</div>
-                        </div>
-                        <div class="room-availability ${current.is_full ? 'full' : 'available'}">
-                            ${current.is_full ? 'SALA PIENA' : `${current.available_places} posti disponibili`}
-                        </div>
-                    ` : next ? `
-                        <div class="room-current">
-                            <div class="room-current-label">Prossimo corso</div>
-                            <div class="room-current-class" style="font-size: 20px; color: var(--text-secondary);">Sala libera</div>
-                        </div>
-                        <div class="room-next">
-                            <div class="room-next-label">A seguire</div>
-                            <div class="room-next-class">${next.name}</div>
-                            <div class="room-next-time">${next.time} &bull; ${next.duration}</div>
-                        </div>
-                        <div class="room-availability waiting">
-                            Prossimo alle ${next.time}
-                        </div>
-                    ` : `
-                        <div class="room-current">
-                            <div class="room-current-label">Stato</div>
-                            <div class="room-current-class" style="font-size: 20px; color: var(--accent-orange);">
-                                &#10024; Sala Libera
-                            </div>
-                            <div class="room-current-time" style="margin-top: 10px;">Nessun corso previsto</div>
-                        </div>
-                        <div class="room-availability waiting">
-                            A disposizione
-                        </div>
-                    `}
-                </div>
-            `;
-        });
-
-        container.innerHTML = html;
-    }
-
-    async function updatePlanning() {
-        const data = await fetchClasses();
-        if (!data) return;
-
-        const newHash = hashData(data);
-        if (newHash === lastDataHash) {
-            updateConnectionStatus(true);
-            return;
-        }
-
-        lastDataHash = newHash;
-        classesData = data;  // <<< aggiorna state per loadVideoForCurrentLesson
-        const todayClasses = getTodayClasses(data);
-
-        renderRooms(todayClasses);
-        updateConnectionStatus(true);
-    }
-
-    // ============================================================
-    // CONNECTION STATUS
-    // ============================================================
-
-    function updateConnectionStatus(online) {
-        const status = document.getElementById('connStatus');
-        const text = document.getElementById('connStatusText');
-        if (!status) return;
-        status.className = 'conn-status ' + (online ? '' : 'offline');
-        if (text) text.textContent = online ? 'Live' : 'Offline';
-    }
-
-    // ============================================================
-    // VIDEO CONTROLS — mute / play-pause
-    // ============================================================
-
-    function initVideoControls() {
-        const video = document.getElementById('promoVideo');
-        const muteBtn = document.getElementById('muteBtn');
-        const playPauseBtn = document.getElementById('playPauseBtn');
-
-        if (muteBtn) {
-            muteBtn.addEventListener('click', () => {
-                isMuted = !isMuted;
-                video.muted = isMuted;
-                muteBtn.innerHTML = isMuted ? '&#9835;' : '&#9834;';
-                muteBtn.setAttribute('aria-label', isMuted ? 'Attiva audio' : 'Disattiva audio');
-            });
-        }
-
-        if (playPauseBtn) {
-            playPauseBtn.addEventListener('click', () => {
-                if (video.paused) {
-                    video.play();
-                    playPauseBtn.innerHTML = '&#10074;&#10074;';
-                    playPauseBtn.setAttribute('aria-label', 'Metti in pausa');
-                } else {
-                    video.pause();
-                    playPauseBtn.innerHTML = '&#9654;';
-                    playPauseBtn.setAttribute('aria-label', 'Riproduci');
+        /**
+         * Determina quale video mostrare in base a:
+         * 1. Querystring ?lezione= (priorità massima)
+         * 2. Lezione attualmente in corso (dalla schedule)
+         * 3. Video promo / fallback
+         *
+         * @returns {{ url: string|null, source: string, label: string, slug: string|null }}
+         */
+        function selectVideo() {
+            // --- 1. Override da querystring ---
+            const params = getQueryParams();
+            if (params[CONFIG.lessonParam]) {
+                const forcedName = params[CONFIG.lessonParam];
+                const entry = findMappingEntry(forcedName, lessonMapping);
+                if (entry?.s3_url) {
+                    return {
+                        url: entry.s3_url,
+                        source: 'lesson',
+                        label: forcedName,
+                        slug: entry.slug
+                    };
                 }
-            });
+                // Se forzato ma senza mapping, prova almeno lo slug come video
+                const forcedSlug = encodeURIComponent(forcedName.replace(/\s+/g, '_'));
+                return {
+                    url: buildS3Url(forcedSlug),
+                    source: 'lesson',
+                    label: forcedName,
+                    slug: forcedSlug
+                };
+            }
+
+            // --- 2. Lezione in corso ---
+            const current = getCurrentClass();
+            if (current && current.name) {
+                const entry = findMappingEntry(current.name, lessonMapping);
+                if (entry?.s3_url) {
+                    return {
+                        url: entry.s3_url,
+                        source: 'lesson',
+                        label: current.name,
+                        slug: entry.slug
+                    };
+                }
+                // Lezione trovata ma nessun video specifico → video promo
+                if (CONFIG.promo_video_url) {
+                    return {
+                        url: CONFIG.promo_video_url,
+                        source: 'promo',
+                        label: current.name,
+                        slug: null
+                    };
+                }
+            }
+
+            // --- 3. Fallback promo ---
+            if (CONFIG.promo_video_url) {
+                return {
+                    url: CONFIG.promo_video_url,
+                    source: 'promo',
+                    label: 'Lume Fitness',
+                    slug: null
+                };
+            }
+
+            // --- 4. Fallback ultimo: nessun video configurato ---
+            return { url: null, source: 'none', label: null, slug: null };
         }
 
-        // Retry button
-        const retryBtn = document.getElementById('videoRetryBtn');
-        if (retryBtn) {
-            retryBtn.addEventListener('click', () => {
-                loadVideoForCurrentLesson();
-            });
+        // ================================================================
+        // GESTIONE ERRORI VIDEO (italiano)
+        // ================================================================
+        function showVideoError(title, description) {
+            const video = document.getElementById('promoVideo');
+            const loading = document.getElementById('videoLoading');
+            const error = document.getElementById('videoError');
+            const errorTitle = document.getElementById('videoErrorTitle');
+            const errorDesc = document.getElementById('videoErrorDesc');
+
+            if (video) video.style.display = 'none';
+            if (loading) loading.style.display = 'none';
+            if (error) {
+                errorTitle.textContent = title;
+                errorDesc.textContent = description;
+                error.classList.add('visible');
+            }
         }
 
-        // Keyboard: Space = toggle play/pause, M = toggle mute
-        document.addEventListener('keydown', (e) => {
-            if (currentSlide !== 0) return;
-            if (e.code === 'Space') {
-                e.preventDefault();
-                if (video.paused) video.play(); else video.pause();
+        function hideVideoError() {
+            const error = document.getElementById('videoError');
+            if (error) error.classList.remove('visible');
+        }
+
+        // ================================================================
+        // PLAYER VIDEO
+        // ================================================================
+        function loadVideoForLesson() {
+            const video = document.getElementById('promoVideo');
+            const loading = document.getElementById('videoLoading');
+            const loadingText = document.getElementById('videoLoadingText');
+            const infoBar = document.getElementById('videoInfoBar');
+            const lessonBadge = document.getElementById('videoLessonBadge');
+            const lessonNameEl = document.getElementById('videoLessonName');
+            const downloadLink = document.getElementById('videoDownloadLink');
+
+            // Seleziona video
+            const selection = selectVideo();
+            currentVideoSource = selection.source;
+            currentLessonSlug = selection.slug;
+
+            // Aggiorna UI info bar
+            if (lessonNameEl) lessonNameEl.textContent = selection.label || '—';
+            if (infoBar) {
+                infoBar.classList.toggle('visible', selection.url !== null);
             }
-            if (e.code === 'KeyM') {
-                isMuted = !isMuted;
-                video.muted = isMuted;
+
+            if (!selection.url) {
+                // Nessun video configurato
+                if (loadingText) loadingText.textContent = 'Nessun video configurato per questa lezione';
+                return;
             }
-        });
-    }
 
-    // ============================================================
-    // INIT
-    // ============================================================
-
-    async function init() {
-        // 1. Carica subito il mapping (parallelo)
-        await fetchMapping();
-
-        // 2. Carica dati schedule
-        await updatePlanning();
-
-        // 3. Avvia slide show
-        showSlide(0);
-
-        // 4. Inizializza controlli video
-        initVideoControls();
-
-        // 5. Refresh periodico planning
-        setInterval(async () => {
-            if (currentSlide === 1) {
-                await updatePlanning();
+            // Mostra loading con contesto
+            if (loadingText) {
+                loadingText.textContent = selection.label
+                    ? `Video per: ${selection.label}`
+                    : 'Caricamento video...';
             }
-            // Ricarica mapping ogni 5 minuti
-            await fetchMapping();
-        }, CONFIG.refreshInterval);
-    }
+            if (loading) loading.style.display = 'flex';
+            hideVideoError();
 
-    // Avvia
-    init();
+            // Imposta sorgente video
+            video.src = selection.url;
+            if (downloadLink) downloadLink.href = selection.url;
+
+            video.oncanplay = () => {
+                if (loading) loading.style.display = 'none';
+                video.style.display = 'block';
+                video.play().catch(err => {
+                    console.warn('[VideoPlayer] Autoplay bloccato:', err.message);
+                    // Non mostriamo errore — il browser potrebbe richiedere interazione
+                });
+            };
+
+            video.onerror = () => {
+                console.warn(`[VideoPlayer] Errore caricamento video: ${selection.url}`);
+                handleVideoLoadError(selection);
+            };
+
+            video.onended = () => {
+                // Video finito — passa alla prossima slide
+                console.log('[VideoPlayer] Video terminato');
+            };
+
+            video.load();
+        }
+
+        /**
+         * Gestisce gli errori di caricamento video con fallback a cascata.
+         * @param {{ url: string, source: string, label: string, slug: string }} selection
+         */
+        function handleVideoLoadError(selection) {
+            // Strategia fallback:
+            // 1. Se è un video S3 lezione → prova il promo
+            // 2. Se il promo fallisce → prova fallback YouTube
+            // 3. Se tutto fallisce → mostra errore in italiano
+
+            if (selection.source === 'lesson' && CONFIG.promo_video_url) {
+                console.log('[VideoPlayer] Video lezione non disponibile, provo promo...');
+                const video = document.getElementById('promoVideo');
+                video.src = CONFIG.promo_video_url;
+                video.load();
+                video.onerror = () => handleVideoLoadError({ ...selection, source: 'promo' });
+                return;
+            }
+
+            if (selection.source === 'promo' || (selection.source === 'lesson' && !CONFIG.promo_video_url)) {
+                // Prova YouTube embed come ultimo fallback
+                if (CONFIG.fallback_youtube_id) {
+                    console.log('[VideoPlayer] Provo fallback YouTube...');
+                    showYoutubeFallback();
+                    return;
+                }
+            }
+
+            // Tutto fallito
+            showVideoError(
+                'Video non disponibile',
+                `Impossibile caricare il video per "${selection.label || 'questa lezione'}". ` +
+                `Verifica che il file esista su S3 e che l'URL sia corretto.`
+            );
+        }
+
+        /**
+         * Mostra un iframe YouTube come fallback estremo.
+         * Usato solo quando non c'è nessun video S3 disponibile.
+         */
+        function showYoutubeFallback() {
+            const videoSlide = document.getElementById('videoSlide');
+            const video = document.getElementById('promoVideo');
+            const loading = document.getElementById('videoLoading');
+            const error = document.getElementById('videoError');
+
+            if (loading) loading.style.display = 'none';
+            if (video) video.style.display = 'none';
+            if (error) error.classList.remove('visible');
+
+            // Rimuovi iframe precedente se presente
+            const old = videoSlide?.querySelector('.youtube-fallback');
+            if (old) old.remove();
+
+            const iframe = document.createElement('iframe');
+            iframe.className = 'youtube-fallback';
+            iframe.setAttribute('src', `https://www.youtube.com/embed/${CONFIG.fallback_youtube_id}?autoplay=1&controls=1&rel=0`);
+            iframe.setAttribute('frameborder', '0');
+            iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+            iframe.setAttribute('allowfullscreen', '');
+            iframe.setAttribute('title', 'Video lezione — fallback');
+            iframe.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;';
+            iframe.setAttribute('aria-label', 'Video lezione da YouTube (fallback)');
+
+            if (videoSlide) {
+                videoSlide.appendChild(iframe);
+            }
+        }
+
+        // ================================================================
+        // ROOMS (pianificazione)
+        // ================================================================
+        const ROOMS = [
+            {
+                id: 'sala1',
+                name: 'SALA 1',
+                filter: c => c.room?.toLowerCase().includes('sala 1') || (!c.room && c.category === 'fitness')
+            },
+            {
+                id: 'sala2',
+                name: 'SALA 2',
+                filter: c => c.room?.toLowerCase().includes('sala 2') || (!c.room && c.category === 'acqua')
+            },
+            {
+                id: 'sala3',
+                name: 'SALA 3 - REFORMER',
+                filter: c => c.room?.toLowerCase().includes('sala 3') || c.category === 'reformer' ||
+                    c.name?.toLowerCase().includes('reformer') || c.name?.toLowerCase().includes('wbs')
+            },
+        ];
+
+        function getCurrentAndNext(classes) {
+            const now = new Date();
+            const currentMinutes = now.getHours() * 60 + now.getMinutes();
+
+            const sorted = [...(classes || [])].sort((a, b) => {
+                const [ah, am] = (a.time || '').split(':').map(Number);
+                const [bh, bm] = (b.time || '').split(':').map(Number);
+                return (ah * 60 + am) - (bh * 60 + bm);
+            });
+
+            let current = null;
+            let next = [];
+
+            for (const c of sorted) {
+                const [h, m] = (c.time || '').split(':').map(Number);
+                if (isNaN(h)) continue;
+                const startMinutes = h * 60 + m;
+                const duration = parseInt(c.duration) || 60;
+                const endMinutes = startMinutes + duration;
+
+                if (currentMinutes >= startMinutes && currentMinutes < endMinutes) {
+                    current = c;
+                } else if (startMinutes > currentMinutes && next.length < 2) {
+                    next.push(c);
+                }
+            }
+            return { current, next };
+        }
+
+        function getRoomStatus(room, allClasses) {
+            const roomClasses = (allClasses || []).filter(room.filter);
+            const { current, next } = getCurrentAndNext(roomClasses);
+            return {
+                room,
+                current,
+                next: next[0] || null,
+                status: current ? 'live' : (next[0] ? 'next' : 'free')
+            };
+        }
+
+        function getRoomColor(roomId) {
+            const colors = {
+                'sala1': 'var(--accent-pink)',
+                'sala2': 'var(--accent-cyan)',
+                'sala3': 'var(--accent-purple)',
+            };
+            return colors[roomId] || 'var(--text-primary)';
+        }
+
+        function renderRooms(allClasses) {
+            const container = document.getElementById('roomsGrid');
+            if (!container) return;
+
+            const roomStatuses = ROOMS.map(room => getRoomStatus(room, allClasses));
+
+            let html = '';
+            roomStatuses.forEach((status, i) => {
+                const { room, current, next, status: roomStatus } = status;
+
+                const cardClass = roomStatus === 'live' ? 'active' : (roomStatus === 'free' ? 'empty' : '');
+                const statusText = roomStatus === 'live' ? 'IN CORSO' : (roomStatus === 'next' ? 'PROSSIMO' : 'LIBERA');
+                const statusClass = roomStatus === 'live' ? 'live' : (roomStatus === 'next' ? 'next' : 'free');
+
+                html += `
+                    <div class="room-card ${cardClass}" style="animation: fadeIn 0.5s ease ${i * 0.1}s forwards; opacity: 0;" role="listitem">
+                        <div class="room-header">
+                            <div class="room-name" style="color: ${getRoomColor(room.id)}">${room.name}</div>
+                            <div class="room-status ${statusClass}">${statusText}</div>
+                        </div>
+                        ${current ? `
+                            <div class="room-current">
+                                <div class="room-current-label">In corso</div>
+                                <div class="room-current-class">${current.name || '—'}</div>
+                                <div class="room-current-time">${current.time || ''} &bull; ${current.duration || ''}</div>
+                                <div class="room-current-instructor">&#128100; ${current.instructor || '—'}</div>
+                            </div>
+                            <div class="room-availability ${current.is_full ? 'full' : 'available'}">
+                                ${current.is_full ? 'SALA PIENA' : `${current.available_places ?? '—'} posti disponibili`}
+                            </div>
+                        ` : next ? `
+                            <div class="room-current">
+                                <div class="room-current-label">Prossimo corso</div>
+                                <div class="room-current-class" style="font-size: 20px; color: var(--text-secondary);">Sala libera</div>
+                            </div>
+                            <div class="room-next">
+                                <div class="room-next-label">A seguire</div>
+                                <div class="room-next-class">${next.name || '—'}</div>
+                                <div class="room-next-time">${next.time || ''} &bull; ${next.duration || ''}</div>
+                            </div>
+                            <div class="room-availability waiting">
+                                Prossimo alle ${next.time || '—'}
+                            </div>
+                        ` : `
+                            <div class="room-current">
+                                <div class="room-current-label">Stato</div>
+                                <div class="room-current-class" style="font-size: 20px; color: var(--accent-orange);">&#10024; Sala Libera</div>
+                                <div class="room-current-time" style="margin-top: 10px;">Nessun corso previsto</div>
+                            </div>
+                            <div class="room-availability waiting">
+                                A disposizione
+                            </div>
+                        `}
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
+        }
+
+        // ================================================================
+        // UPDATE PLANNING
+        // ================================================================
+        async function updatePlanning() {
+            const data = await fetchClasses();
+            if (!data) return;
+
+            const newHash = hashData(data);
+            if (newHash === lastDataHash) {
+                updateConnectionStatus(true);
+                return;
+            }
+            lastDataHash = newHash;
+            classesData = data;
+
+            const today = new Date();
+            const dayName = ['Domenica','Lunedì','Martedì','Mercoledì','Giovedì','Venerdì','Sabato'][today.getDay()];
+            const todayClasses = data.classes?.[CONFIG.location]?.[dayName] || [];
+
+            renderRooms(todayClasses);
+            updateConnectionStatus(true);
+        }
+
+        // ================================================================
+        // SLIDE ROTATION
+        // ================================================================
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.slide');
+            slides.forEach((s, i) => s.classList.toggle('active', i === index));
+            currentSlide = index;
+
+            // Rimuovi YouTube fallback se torniamo sulla slide video
+            if (index === 0) {
+                const ytFallback = document.querySelector('.youtube-fallback');
+                if (ytFallback) ytFallback.remove();
+                hideVideoError();
+            }
+
+            if (index === 0) {
+                // Slide video — ricarica video basato su lezione attuale
+                loadVideoForLesson();
+                startProgress(CONFIG.videoDuration);
+            } else {
+                // Slide planning
+                const video = document.getElementById('promoVideo');
+                if (video) video.pause();
+                updatePlanning();
+                startProgress(CONFIG.planningDuration);
+            }
+        }
+
+        function nextSlide() {
+            const slides = document.querySelectorAll('.slide');
+            const next = (currentSlide + 1) % slides.length;
+
+            if (next === 0) {
+                currentVideoIndex = (currentVideoIndex + 1) % Math.max(
+                    CONFIG.videos?.length || 1,
+                    CONFIG.localVideos?.length || 1
+                );
+            }
+            showSlide(next);
+        }
+
+        // ================================================================
+        // PROGRESS BAR
+        // ================================================================
+        function startProgress(duration) {
+            const bar = document.getElementById('progressBar');
+            let progress = 0;
+            const step = 100 / (duration / 100);
+
+            clearInterval(progressTimer);
+            progressTimer = setInterval(() => {
+                progress += step;
+                if (bar) bar.style.width = Math.min(progress, 100) + '%';
+
+                if (progress >= 100) {
+                    clearInterval(progressTimer);
+                    nextSlide();
+                }
+            }, 100);
+        }
+
+        // ================================================================
+        // INIT
+        // ================================================================
+        async function init() {
+            // 1. Leggi querystring per lezione forzata
+            const params = getQueryParams();
+            if (params[CONFIG.lessonParam]) {
+                forcedLesson = params[CONFIG.lessonParam];
+                console.log(`[VideoPlayer] Lezione forzata da querystring: ${forcedLesson}`);
+            }
+
+            // 2. Carica mappatura lezioni → video
+            const mapping = await fetchMapping();
+            if (mapping) {
+                processMapping(mapping);
+                console.log('[VideoPlayer] Mapping caricato:', Object.keys(lessonMapping).length, 'lezioni');
+            } else {
+                console.warn('[VideoPlayer] Nessun mapping disponibile — uso fallback');
+            }
+
+            // 3. Carica dati iniziali classi
+            await updatePlanning();
+
+            // 4. Avvia rotazione slide
+            showSlide(0);
+
+            // 5. Refresh periodico
+            setInterval(() => {
+                if (currentSlide === 1) {
+                    updatePlanning();
+                }
+                // Ricarica anche il video se siamo sulla slide video
+                // (la lezione corrente potrebbe essere cambiata)
+                if (currentSlide === 0) {
+                    loadVideoForLesson();
+                }
+            }, CONFIG.refreshInterval);
+        }
+
+        // Avvia quando il DOM è pronto
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', init);
+        } else {
+            init();
+        }
     </script>
 </body>
 </html>
